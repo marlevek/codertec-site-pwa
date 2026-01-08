@@ -1,0 +1,110 @@
+/* ===============================
+   FIX COMPLETO PARA A VERSÃO EN
+   =============================== */
+
+:root {
+    --primary-color: #3782cc;
+    --secondary-color: #2a3a7c;
+    --accent-color: #4d7cfe;
+    --light-bg: #f8f9fa;
+    --warning-color: #ffc107;
+}
+
+/* HERO */
+.hero-section {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: #fff;
+    padding: 80px 0;
+    margin-bottom: 50px;
+}
+
+.hero-section h1 {
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+.hero-section p.lead {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.hero-cta .btn {
+    min-width: 190px;
+}
+
+
+/* =====================================================
+   FIX DOS ÍCONES – IMPEDE O estilos.css DE AUMENTAR
+   ===================================================== */
+
+.tech-logo {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain !important;
+    margin: 10px 15px !important;
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+
+.tech-logo:hover {
+    opacity: 1;
+}
+
+/* Wrapper igual ao PT */
+.tech-section {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    padding: 50px 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Cards iguais ao PT */
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #eee;
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.feature-list i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+/* Process, cards, stats — igual PT */
+.process-step {
+    text-align: center;
+    padding: 15px;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin: 0 auto 10px;
+}
+
+.stats-section {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    border-radius: 10px;
+    padding: 50px 20px;
+    margin: 50px 0;
+}

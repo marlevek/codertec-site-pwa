@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Automação de Processos | CoderTec</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a2540">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<!-- CSS ESPECÍFICO DA AUTOMAÇÃO (copiado do antigo) -->
+<style>
+    :root {
+        --primary-color: #3782cc;
+        --secondary-color: #2a3a7c;
+        --accent-color: #4d7cfe;
+        --light-bg: #f8f9fa;
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+        color: white;
+        padding: 80px 0;
+        margin-bottom: 40px;
+    }
+
+    .benefit-card {
+        transition: transform 0.3s ease;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-container {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .automation-icon {
+        background-color: rgba(55, 130, 204, 0.1);
+        color: var(--primary-color);
+    }
+
+    .process-section {
+        background-color: var(--light-bg);
+        border-radius: 10px;
+        padding: 40px;
+    }
+
+    .feature-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .feature-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .feature-list li:last-child {
+        border-bottom: none;
+    }
+
+    .feature-list li i {
+        color: var(--primary-color);
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+
+    .card-service {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+
+    .card-service:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-service .card-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+
+    .stats-section {
+        background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+        color: white;
+        border-radius: 10px;
+        padding: 50px 20px;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    .btn-primary:hover {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
+</style>
+
+<body>
+
+    <div id="header"></div>
+
+    <main>
+
+        <!-- HERO (copiado do antigo) -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold">Automação de Processos</h1>
+                        <p class="lead fs-4">
+                            Robotizamos tarefas manuais e repetitivas, liberando sua equipe para focar
+                            em estratégias de crescimento.
+                        </p>
+                        <a href="#services" class="btn btn-light btn-lg mt-3 text-black">
+                            Conheça Nossas Soluções
+                        </a>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <i class="bi bi-robot display-1 opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TODO O RESTO DO CONTEÚDO -->
+        <!-- Conteúdo principal -->
+        <div class="container py-5">
+            <!-- Seção: Benefícios da Automação -->
+            <section class="mb-5">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="fw-bold">Por que Automatizar seus Processos?</h2>
+                        <p class="lead">Chega de gastar horas com trabalhos manuais e repetitivos! A automação de
+                            processos
+                            é a chave para desbloquear o potencial completo da sua empresa.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card benefit-card p-4">
+                            <div class="icon-container automation-icon mx-auto">
+                                <i class="bi bi-lightning-charge-fill fs-4"></i>
+                            </div>
+                            <h4 class="text-center mb-3">Eficiência Máxima</h4>
+                            <p class="text-center">Execute tarefas complexas em minutos, não em horas. Otimize fluxos de
+                                trabalho e aumente a produtividade da sua equipe.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card benefit-card p-4">
+                            <div class="icon-container automation-icon mx-auto">
+                                <i class="bi bi-shield-check fs-4"></i>
+                            </div>
+                            <h4 class="text-center mb-3">Zero de Erros</h4>
+                            <p class="text-center">Diga adeus aos retrabalhos causados por falhas humanas. Processos
+                                automatizados executam tarefas com precisão absoluta.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card benefit-card p-4">
+                            <div class="icon-container automation-icon mx-auto">
+                                <i class="bi bi-graph-up-arrow fs-4"></i>
+                            </div>
+                            <h4 class="text-center mb-3">Economia Inteligente</h4>
+                            <p class="text-center">Reduza custos operacionais e libere sua equipe para funções mais
+                                importantes e estratégicas para o negócio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card p-4 h-100">
+                            <h4 class="mb-3">Vantagens Operacionais</h4>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Processos executados 24/7 sem interrupções
+                                </li>
+                                <li><i class="bi bi-check-circle-fill"></i> Padronização de atividades e procedimentos
+                                </li>
+                                <li><i class="bi bi-check-circle-fill"></i> Redução significativa de custos operacionais
+                                </li>
+                                <li><i class="bi bi-check-circle-fill"></i> Escalabilidade para crescer sem aumentar a
+                                    equipe</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Melhor aproveitamento do tempo da equipe
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card p-4 h-100">
+                            <h4 class="mb-3">Vantagens Estratégicas</h4>
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Tomada de decisão ágil com dados em tempo
+                                    real
+                                </li>
+                                <li><i class="bi bi-check-circle-fill"></i> Experiência do cliente superior e mais
+                                    rápida
+                                </li>
+                                <li><i class="bi bi-check-circle-fill"></i> Maior competitividade no mercado</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Inovação contínua nos processos de negócio
+                                </li>
+                                <li><i class="bi bi-check-circle-fill"></i> Compliance e auditoria simplificados</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Estatísticas -->
+            <section class="stats-section my-5">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">90%</div>
+                            <div class="stat-label">Redução de Erros</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">70%</div>
+                            <div class="stat-label">Economia de Tempo</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">5x</div>
+                            <div class="stat-label">Mais Produtividade</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Processos Padronizados</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Serviços de Automação -->
+            <section id="services" class="mt-5">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="fw-bold">Nossas Soluções de Automação</h2>
+                        <p class="lead">Implementamos robôs de software para transformar seus processos manuais em
+                            fluxos
+                            automatizados</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-6">
+                        <div class="card card-service p-4">
+                            <div class="card-icon text-center">
+                                <i class="bi bi-gear"></i>
+                            </div>
+                            <h3 class="text-center mb-3">Relatórios Automáticos</h3>
+                            <p class="text_card text-center">Criação de relatórios automáticos a partir de planilhas e
+                                sistemas internos, sem necessidade de intervenção manual.</p>
+                            <p class="text-center mt-3">
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalRelatorioVideo">
+                                    Veja exemplo
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-6">
+                        <div class="card card-service p-4">
+                            <div class="card-icon text-center">
+                                <i class="bi bi-cloud-arrow-down"></i>
+                            </div>
+                            <h3 class="text-center mb-3">Integração de Sistemas</h3>
+                            <p class="text_card text-center">Automação da integração entre sistemas internos e APIs
+                                externas, garantindo dados atualizados e confiáveis.</p>
+                            <p class="text-center mt-3">
+                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalIntegracao">
+                                    Veja exemplo
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-3">
+                    <!-- Card 3 -->
+                    <div class="col-md-6">
+                        <div class="card card-service p-4">
+                            <div class="card-icon text-center">
+                                <i class="bi bi-envelope-check"></i>
+                            </div>
+                            <h3 class="text-center mb-3">Processamento de E-mails</h3>
+                            <p class="text_card text-center">Automação do processamento de caixas de e-mail, extração de
+                                dados e encaminhamento inteligente de mensagens.</p>
+                            <p class="text-center mt-3">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEmails">
+                                    Saiba mais
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-6">
+                        <div class="card card-service p-4">
+                            <div class="card-icon text-center">
+                                <i class="bi bi-database-check"></i>
+                            </div>
+                            <h3 class="text-center mb-3">Atualização de Dados</h3>
+                            <p class="text_card text-center">Sincronização automática de bancos de dados, validação de
+                                informações e correção de inconsistências.</p>
+                            <p class="text-center mt-3">
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDados">
+                                    Saiba mais
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Processo de Implementação -->
+            <section class="process-section mt-5">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h2 class="fw-bold">Como Implementamos a Automação</h2>
+                        <p class="lead">Um processo estruturado para garantir o sucesso da sua automação</p>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="icon-container automation-icon mx-auto">
+                            <span class="fs-4 fw-bold">1</span>
+                        </div>
+                        <h5>Análise do Processo</h5>
+                        <p>Identificamos tarefas repetitivas e avaliamos o potencial de automação</p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="icon-container automation-icon mx-auto">
+                            <span class="fs-4 fw-bold">2</span>
+                        </div>
+                        <h5>Desenvolvimento</h5>
+                        <p>Criamos o robô de software personalizado para suas necessidades</p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="icon-container automation-icon mx-auto">
+                            <span class="fs-4 fw-bold">3</span>
+                        </div>
+                        <h5>Testes e Validação</h5>
+                        <p>Garantimos que a automação funcione perfeitamente antes da implantação</p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="icon-container automation-icon mx-auto">
+                            <span class="fs-4 fw-bold">4</span>
+                        </div>
+                        <h5>Implantação e Suporte</h5>
+                        <p>Implementamos a solução e oferecemos suporte contínuo</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modal - Vídeo Exemplo Relatório -->
+        <div class="modal fade" id="modalRelatorioVideo" tabindex="-1" aria-labelledby="modalRelatorioVideoLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalRelatorioVideoLabel">Exemplo de Relatório Automático</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>Veja o vídeo demonstrativo do Relatório Automático:</p>
+                        <video width="100%" height="auto" controls>
+                            <source src="/pt/videos/automacao/video_automacao_relatorio_excel.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeo HTML5
+                        </video>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Integração de Sistemas -->
+        <div class="modal fade" id="modalIntegracao" tabindex="-1" aria-labelledby="modalIntegracaoLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalIntegracaoLabel">Exemplo de Integração de Sistemas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>Veja o vídeo demonstrativo da integração automática via APIs:</p>
+                        <video width="100%" height="auto" controls>
+                            <source src="/pt/videos/automacao/exemplo_integracao_apis.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeo HTML5.
+                        </video>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modais adicionais (placeholders) -->
+        <div class="modal fade" id="modalEmails" tabindex="-1" aria-labelledby="modalEmailsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEmailsLabel">Processamento Automático de E-mails</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nossa solução de automação de e-mails permite:</p>
+                        <ul>
+                            <li>Leitura automática de caixas de entrada</li>
+                            <li>Extração de dados de anexos e corpos de e-mail</li>
+                            <li>Classificação e encaminhamento inteligente</li>
+                            <li>Respostas automáticas baseadas em conteúdo</li>
+                            <li>Integração com sistemas de CRM e ERP</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalDados" tabindex="-1" aria-labelledby="modalDadosLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalDadosLabel">Atualização Automática de Dados</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nossa solução de automação de dados oferece:</p>
+                        <ul>
+                            <li>Sincronização entre diferentes bancos de dados</li>
+                            <li>Validação e correção de informações</li>
+                            <li>Atualização em tempo real de sistemas</li>
+                            <li>Backup automático de informações críticas</li>
+                            <li>Relatórios de consistência de dados</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão voltar ao topo -->
+        <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+            <i class="bi bi-arrow-up-circle"></i>
+        </button>
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Automação Inteligente de Relatórios",
+  "description": "Script automatiza planilhas e dados em segundos.",
+  "thumbnailUrl": "https://codertec.com.br/demos/videos/automacao/video_automacao_relatorio_excel.mp4",
+  "uploadDate": "2025-01-01",
+  "contentUrl": "https://codertec.com.br/demos/videos/automacao/video_automacao_relatorio_excel.mp4",
+  "embedUrl": "https://codertec.com.br/demos/videos/automacao/video_automacao_relatorio_excel.mp4",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CoderTec",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://codertec.com.br/static/images/logo.png"
+    }
+  }
+}
+</script>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- JS GLOBAL -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include.js"></script>
+    <script src="/static/js/pwa-install.js"></script>
+    <script src="/static/js/btn_topo.js"></script>
+    <script src="/static/js/navbar-mobile-fix.js"></script>
+
+</body>
+
+</html>

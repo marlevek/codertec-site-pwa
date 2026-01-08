@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciência de Dados - CoderTec</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a2540">
+
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/889104c503.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: #3782cc;
+            --secondary-color: #2a3a7c;
+            --accent-color: #4d7cfe;
+            --light-bg: #f8f9fa;
+            --data-color: #00b894;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--data-color) 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon-container {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .data-icon {
+            background-color: rgba(0, 184, 148, 0.1);
+            color: var(--data-color);
+        }
+
+        .applications-section {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li i {
+            color: var(--data-color);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .card-service {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .card-service:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-service .card-icon {
+            font-size: 2.5rem;
+            color: var(--data-color);
+            margin-bottom: 15px;
+        }
+
+        .benefits-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--data-color) 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 50px 20px;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .benefit-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background-color: var(--data-color);
+            border-color: var(--data-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .application-card {
+            text-align: center;
+            padding: 20px 15px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .application-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .data-process {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .impact-card {
+            border-left: 4px solid var(--data-color);
+        }
+
+        .modal-body canvas {
+            width: 100% !important;
+            height: 400px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold">Ciência de Dados para Decisões Estratégicas</h1>
+                    <p class="lead fs-4">Transforme seus dados em decisões inteligentes com análises preditivas,
+                        dashboards e insights estratégicos.</p>
+                    <a href="#services" class="btn btn-light btn-lg mt-3 text-black">Conheça Nossas Soluções</a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="bi bi-graph-up-arrow display-1 opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <div class="container py-5">
+        <!-- Seção: O que fazemos -->
+        <section id="services" class="mb-5">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Do Dado à Decisão Estratégica</h2>
+                    <p class="lead">Antecipe comportamentos de mercado e necessidades dos clientes com modelos
+                        estatísticos avançados e algoritmos de machine learning.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6">
+                    <div class="card card-service p-4">
+                        <div class="card-icon text-center">
+                            <i class="bi bi-bar-chart-line"></i>
+                        </div>
+                        <h3 class="text-center mb-3">Análises Preditivas</h3>
+                        <p class="text-center">Preveja tendências, identifique padrões e antecipe resultados para tomar
+                            decisões mais assertivas e proativas.</p>
+                        <div class="text-center mt-3">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#predictiveModal">
+                                Veja exemplo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6">
+                    <div class="card card-service p-4">
+                        <div class="card-icon text-center">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h3 class="text-center mb-3">Modelos de Machine Learning</h3>
+                        <p class="text-center">Transforme dados brutos em modelos inteligentes para otimizar processos e
+                            prever resultados futuros com precisão.</p>
+                        <div class="text-center mt-3">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mlModal">
+                                Veja exemplo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Benefícios -->
+        <section class="benefits-section my-5">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-number">95%</div>
+                        <div class="benefit-label">Precisão nas Previsões</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-number">40%</div>
+                        <div class="benefit-label">Redução de Custos</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-number">3x</div>
+                        <div class="benefit-label">Mais Velocidade na Tomada de Decisão</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-number">100%</div>
+                        <div class="benefit-label">Decisões Baseadas em Dados</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Aplicações -->
+        <section class="applications-section mt-5">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Aplicações da Ciência de Dados</h2>
+                    <p class="lead">Soluções inteligentes que transformam dados em vantagem competitiva</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="application-card">
+                        <div class="icon-container data-icon mx-auto">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h4>Previsão de Vendas</h4>
+                        <p>Antecipe demanda, otimize estoque e planeje campanhas com base em tendências de mercado.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="application-card">
+                        <div class="icon-container data-icon mx-auto">
+                            <i class="bi bi-person-check"></i>
+                        </div>
+                        <h4>Análise de Clientes</h4>
+                        <p>Segmentação comportamental, previsão de churn e identificação de clientes mais valiosos.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="application-card">
+                        <div class="icon-container data-icon mx-auto">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4>Detecção de Fraudes</h4>
+                        <p>Identifique padrões suspeitos e previna perdas financeiras com algoritmos avançados.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card p-4 h-100 impact-card">
+                        <h4 class="mb-3">Impacto nos Negócios</h4>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Otimização de campanhas de marketing</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Redução de custos operacionais</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Aumento da retenção de clientes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Melhoria na experiência do cliente</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Identificação de novas oportunidades</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card p-4 h-100 impact-card">
+                        <h4 class="mb-3">Tecnologias Utilizadas</h4>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Python e R para análise estatística</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Machine Learning e Deep Learning</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Processamento de Big Data</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Visualização interativa de dados</li>
+                            <li><i class="bi bi-check-circle-fill"></i> APIs e integração em tempo real</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção: Processo de Trabalho -->
+        <section class="mt-5">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Nosso Processo em Ciência de Dados</h2>
+                    <p class="lead">Metodologia estruturada para extrair valor máximo dos seus dados</p>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="data-process">
+                        <div class="icon-container data-icon mx-auto">
+                            <span class="fs-4 fw-bold">1</span>
+                        </div>
+                        <h5>Coleta e Preparação</h5>
+                        <p>Integramos e limpamos dados de múltiplas fontes para análise</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="data-process">
+                        <div class="icon-container data-icon mx-auto">
+                            <span class="fs-4 fw-bold">2</span>
+                        </div>
+                        <h5>Análise Exploratória</h5>
+                        <p>Identificamos padrões, correlações e insights iniciais</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="data-process">
+                        <div class="icon-container data-icon mx-auto">
+                            <span class="fs-4 fw-bold">3</span>
+                        </div>
+                        <h5>Modelagem Preditiva</h5>
+                        <p>Desenvolvemos e validamos modelos de machine learning</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="data-process">
+                        <div class="icon-container data-icon mx-auto">
+                            <span class="fs-4 fw-bold">4</span>
+                        </div>
+                        <h5>Implantação e Monitoramento</h5>
+                        <p>Implementamos soluções e acompanhamos performance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center mt-5 pt-5">
+            <div class="card card-service p-5">
+                <h3 class="mb-3">Pronto para Transformar Dados em Vantagem Competitiva?</h3>
+                <p class="mb-4">Não espere o futuro chegar, crie-o. Entre em contato conosco e descubra como a Ciência
+                    de Dados pode revolucionar a tomada de decisão na sua empresa.</p>
+                <a href="/pt/index.html#contato" class="btn btn-primary btn-lg">Solicitar Consultoria</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal 1: Análises Preditivas -->
+    <div class="modal fade" id="predictiveModal" tabindex="-1" aria-labelledby="predictiveModalLabel">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="predictiveModalLabel">Exemplo de Análise Preditiva</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Exemplo de análise preditiva com gráficos e insights fictícios.</p>
+                    <canvas id="predictiveChart"></canvas>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Modelos de Machine Learning -->
+    <div class="modal fade" id="mlModal" tabindex="-1" aria-labelledby="mlModalLabel">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mlModalLabel">Exemplo de Modelos de Machine Learning</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Exemplo de dashboard com resultados de modelo de machine learning fictício.</p>
+                    <canvas id="mlChart"></canvas>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Botão voltar ao topo -->
+    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <div id="footer"></div>
+
+    <!-- JS GLOBAL -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include.js"></script>
+    <script src="/static/js/pwa-install.js"></script>
+    <script src="/static/js/btn_topo.js"></script>
+    <script src="/static/js/navbar-mobile-fix.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        let predictiveChart = null;
+        let mlChart = null;
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const predictiveModal = document.getElementById("predictiveModal");
+            const mlModal = document.getElementById("mlModal");
+
+            predictiveModal.addEventListener("shown.bs.modal", () => {
+                const canvas = document.getElementById("predictiveChart");
+                const ctx = canvas.getContext("2d");
+
+                if (predictiveChart) predictiveChart.destroy();
+
+                predictiveChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                        datasets: [{
+                            label: 'Vendas previstas',
+                            data: [120, 150, 140, 160, 180, 200],
+                            borderColor: '#3782cc',
+                            backgroundColor: 'rgba(55,130,204,0.2)',
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            });
+
+            mlModal.addEventListener("shown.bs.modal", () => {
+                const canvas = document.getElementById("mlChart");
+                const ctx = canvas.getContext("2d");
+
+                if (mlChart) mlChart.destroy();
+
+                mlChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Produto A', 'Produto B', 'Produto C', 'Produto D'],
+                        datasets: [{
+                            label: 'Precisão do Modelo (%)',
+                            data: [85, 78, 92, 88],
+                            backgroundColor: '#3782cc'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            });
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligência Artificial - CoderTec</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a2540">
+
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/889104c503.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+
+    <style>
+        :root {
+            --primary-color: #3782cc;
+            --secondary-color: #2a3a7c;
+            --accent-color: #4d7cfe;
+            --light-bg: #f8f9fa;
+            --ai-color: #8a2be2;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--ai-color) 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon-container {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .ai-icon {
+            background-color: rgba(138, 43, 226, 0.1);
+            color: var(--ai-color);
+        }
+
+        .applications-section {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li i {
+            color: var(--ai-color);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .card-service {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .card-service:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-service .card-icon {
+            font-size: 2.5rem;
+            color: var(--ai-color);
+            margin-bottom: 15px;
+        }
+
+        .benefits-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--ai-color) 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 50px 20px;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .benefit-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background-color: var(--ai-color);
+            border-color: var(--ai-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .application-card {
+            text-align: center;
+            padding: 20px 15px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .application-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ai-process {
+            text-align: center;
+            padding: 20px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold">Inteligência Artificial</h1>
+                    <p class="lead fs-4">Implementamos agentes de IA que agem por você, automatizando processos
+                        complexos e impulsionando seus resultados.</p>
+                    <a href="#applications" class="btn btn-light btn-lg mt-3 text-black">Conheça as Aplicações</a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="bi bi-cpu display-1 opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <div class="container py-5">
+        <!-- Seção: O que fazemos -->
+        <section class="mb-5">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Agentes de Inteligência Artificial</h2>
+                    <p class="lead">Implementamos agentes de IA que agem por você, desde atendentes virtuais 24h até
+                        sistemas inteligentes que transformam seu negócio.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Card Principal -->
+                <div class="col-12">
+                    <div class="card card-service p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <div class="card-icon">
+                                    <i class="bi bi-robot"></i>
+                                </div>
+                                <h3 class="mb-3">Soluções de IA Personalizadas</h3>
+                                <p>Desenvolvemos agentes inteligentes que automatizam processos complexos, analisam
+                                    dados e tomam decisões autônomas para seu negócio.</p>
+                                <div class="mt-4">
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalConteudoVideo">
+                                        Ver Exemplo Prático
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <i class="bi bi-magic display-1 text-purple"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Benefícios -->
+        <section class="benefits-section my-5">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-number">24/7</div>
+                        <div class="benefit-label">Atendimento Contínuo</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-number">90%</div>
+                        <div class="benefit-label">Redução de Tarefas Manuais</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-number">5x</div>
+                        <div class="benefit-label">Mais Eficiência</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-item">
+                        <div class="benefit-number">100%</div>
+                        <div class="benefit-label">Personalização</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Aplicações -->
+        <section id="applications" class="applications-section mt-5">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Aplicações da IA no Seu Negócio</h2>
+                    <p class="lead">Sistemas inteligentes que transformam operações e impulsionam resultados</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="application-card">
+                        <div class="icon-container ai-icon mx-auto">
+                            <i class="bi bi-chat-dots"></i>
+                        </div>
+                        <h4>Atendimento Virtual 24h</h4>
+                        <p>Chatbots inteligentes que qualificam vendas, respondem dúvidas e agendam compromissos
+                            automaticamente.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="application-card">
+                        <div class="icon-container ai-icon mx-auto">
+                            <i class="bi bi-file-text"></i>
+                        </div>
+                        <h4>Análise de Documentos</h4>
+                        <p>Sistemas que leem, interpretam e extraem informações de contratos, relatórios e documentos
+                            diversos.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="application-card">
+                        <div class="icon-container ai-icon mx-auto">
+                            <i class="bi bi-megaphone"></i>
+                        </div>
+                        <h4>Conteúdo para Redes Sociais</h4>
+                        <p>Geração automática de posts, legendas e conteúdo engajante para suas plataformas digitais.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="application-card">
+                        <div class="icon-container ai-icon mx-auto">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h4>Previsão de Demanda</h4>
+                        <p>Algoritmos que anteveem tendências de mercado e comportamentos de consumo para planejamento
+                            estratégico.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card p-4 h-100">
+                        <h4 class="mb-3">Para Empresas</h4>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Detecção automática de fraudes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Automação de tarefas administrativas</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Análise preditiva de mercado</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Otimização de processos internos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Relatórios inteligentes automáticos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card p-4 h-100">
+                        <h4 class="mb-3">Para Clínicas e Saúde</h4>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Suporte a decisões clínicas</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Análise de exames e laudos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Agendamento inteligente</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Monitoramento de pacientes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Gestão de estoque de medicamentos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Como Funciona -->
+        <section class="mt-5">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Como Desenvolvemos sua Solução de IA</h2>
+                    <p class="lead">Processo estruturado para implementação eficiente de inteligência artificial</p>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="ai-process">
+                        <div class="icon-container ai-icon mx-auto">
+                            <span class="fs-4 fw-bold">1</span>
+                        </div>
+                        <h5>Diagnóstico e Planejamento</h5>
+                        <p>Analisamos seus processos e identificamos oportunidades para aplicação de IA</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ai-process">
+                        <div class="icon-container ai-icon mx-auto">
+                            <span class="fs-4 fw-bold">2</span>
+                        </div>
+                        <h5>Desenvolvimento do Agente</h5>
+                        <p>Criamos e treinamos modelos de IA específicos para suas necessidades</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ai-process">
+                        <div class="icon-container ai-icon mx-auto">
+                            <span class="fs-4 fw-bold">3</span>
+                        </div>
+                        <h5>Implantação e Evolução</h5>
+                        <p>Implementamos a solução e ajustamos continuamente com base nos resultados</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center mt-5 pt-5">
+            <div class="card card-service p-5">
+                <h3 class="mb-3">Ganhe tempo para focar no que realmente importa: o seu negócio/clínica.</h3>
+                <p class="mb-4">Deixe as tarefas complexas com nossos agentes de IA e concentre-se na estratégia</p>
+                <a href="\pt\index.html#contato" class="btn btn-primary btn-lg">Solicitar Demonstração</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal - Vídeo Exemplo -->
+    <div class="modal fade" id="modalConteudoVideo" tabindex="-1" aria-labelledby="modalConteudoVideoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConteudoVideoLabel">Exemplo de Agente de IA para Gerar Conteúdo
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <video width="100%" height="auto" controls>
+                        <source src="/pt/videos/inteligencia_artificial/exemplo_agente_de_ia.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão voltar ao topo -->
+    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <div id="footer"></div>
+
+    <!-- JS GLOBAL -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include.js"></script>
+    <script src="/static/js/pwa-install.js"></script>
+    <script src="/static/js/btn_topo.js"></script>
+    <script src="/static/js/navbar-mobile-fix.js"></script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Inteligência Artificial para Negócios",
+  "description": "Sistema de IA para atendimento, automação e geração de insights.",
+  "thumbnailUrl": "https://codertec.com.br/demos/videos/inteligencia_artificial/exemplo_agente_de_ia.mp4",
+  "uploadDate": "2025-01-01",
+  "contentUrl": "https://codertec.com.br/demos/videos/inteligencia_artificial/exemplo_agente_de_ia.mp4",
+  "embedUrl": "https://codertec.com.br/demos/videos/inteligencia_artificial/exemplo_agente_de_ia.mp4",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CoderTec",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://codertec.com.br/static/images/logo.png"
+    }
+  }
+}
+</script>
+
+</body>
+
+</html>

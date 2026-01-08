@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Profissional para Dentistas - Demonstração</title>
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+
+    <style>
+        .hero-landing {
+            background: linear-gradient(135deg, #004aad, #3782cc);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-landing h1 {
+            font-weight: bold;
+            font-size: 2.4rem;
+        }
+
+        .hero-landing p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            background: #ffdd5c;
+            color: #002244;
+            font-weight: bold;
+            border-radius: 8px;
+            padding: 14px 28px;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .cta-btn:hover {
+            background: #ffd027;
+            color: #002244;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- HERO -->
+    <section class="hero-landing">
+        <h1>Seu Consultório com Atendimento Profissional 24h</h1>
+        <p>Site moderno + Atendente Inteligente + Agendamento automatizado</p>
+        <a href="https://wa.me/5541988615268" class="cta-btn">Quero ver uma demonstração</a>
+    </section>
+
+    <main class="servico-container">
+
+        <!-- Mock principal -->
+        <div class="text-center servico-destaque mt-4">
+            <img src="/static/images/mock_dentista.png" class="img-fluid rounded shadow" style="max-width:800px;"
+                alt="Mockup do Site Dentista">
+        </div>
+
+        <!-- Seção Humanização -->
+        <h2 class="mt-5 text-center">Acolhimento e Confiança</h2>
+        <p class="text-center" style="max-width:750px;margin:auto;">
+            Pacientes procuram mais que procedimentos. Procuram alguém que escuta, explica e acolhe.<br>
+            Seu site deve transmitir exatamente isso — mesmo quando você está em atendimento.
+        </p>
+
+        <!-- Chat IA Demonstração -->
+        <h2 class="mt-5 text-center">Seu Atendente Virtual com IA</h2>
+        <p class="text-center">Responde dúvidas, apresenta tratamentos e agenda avaliações sozinho.</p>
+
+        <div class="chat-demo shadow p-3 rounded mb-5" style="max-width:500px;margin:auto;background:white;">
+            <div class="d-flex mb-3">
+                <div class="p-2 rounded-3" style="background:#004aad; color:white; max-width:80%;">
+                    Olá 😊 Seja bem-vindo! Posso te ajudar com informações ou agendamento?
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mb-3">
+                <div class="bg-light border p-2 rounded-3" style="max-width:80%;">
+                    Gostaria de uma avaliação.
+                </div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="p-2 rounded-3" style="background:#004aad; color:white; max-width:80%;">
+                    Claro! Qual é seu nome e melhor horário para você?
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="https://wa.me/5541988615268" class="btn btn-primary btn-lg">Falar agora no WhatsApp</a>
+        </div>
+
+        <!-- Antes e Depois -->
+        <h2 class="mt-5 text-center">Antes e Depois</h2>
+        <div class="row g-4 mt-3 text-center">
+            <div class="col-md-4"><img src="/static/images/antes_depois_1.png" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-md-4"><img src="/static/images/antes_depois_2.png" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-md-4"><img src="/static/images/antes_depois_3.png" class="img-fluid rounded shadow-sm">
+            </div>
+        </div>
+
+        <!-- CTA Final -->
+        <div class="text-center mt-5">
+            <a href="https://wa.me/5541988615268" class="cta-btn">Quero um site assim para minha clínica 💙</a>
+        </div>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Botão voltar ao topo -->
+    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include.js"></script>
+    <script src="/static/js/btn_topo.js"></script>
+</body>
+
+</html>

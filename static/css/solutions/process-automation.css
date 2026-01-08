@@ -1,0 +1,110 @@
+        :root {
+            --primary-color: #3782cc;
+            --secondary-color: #2a3a7c;
+            --accent-color: #4d7cfe;
+            --light-bg: #f8f9fa;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+
+        .benefit-card {
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon-container {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .automation-icon {
+            background-color: rgba(55, 130, 204, 0.1);
+            color: var(--primary-color);
+        }
+
+        .process-section {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .card-service {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .card-service:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-service .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 50px 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+   

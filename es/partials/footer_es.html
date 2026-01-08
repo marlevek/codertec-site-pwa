@@ -1,0 +1,42 @@
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/codertec.ia" target="_blank">
+        <i class="bi bi-instagram"></i> Codertec.ia
+      </a>
+      <span class="brand-separator">|</span>
+      <a href="https://www.linkedin.com/in/marlevek" target="_blank">
+        <i class="bi bi-linkedin"></i> marlevek
+      </a>
+    </div>
+
+    <div class="services-col pt-5">
+      <h5>Servicios</h5>
+      <ul class="list-unstyled">
+        <li><a href="/es/soluciones/websites/">Sitios Web</a></li>
+        <li><a href="/es/soluciones/agentes-ia/">Agentes de IA</a></li>
+        <li><a href="/es/soluciones/webapps/">Automatización & Dashboards</a></li>
+      </ul>
+    </div>
+
+    <p class="pt-4">&copy; 2025 CoderTec. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- Chatbot loader -->
+<script>
+  (function () {
+    if (window.CHATBOT_LOADED) return;
+    window.CHATBOT_LOADED = true;
+
+    const isLocal = location.hostname.includes("127.0.0.1") || location.hostname.includes("localhost");
+
+    const script = document.createElement("script");
+    script.src = isLocal ? "/static/js/chatbot-loader.js" : "/static/js/chatbot-loader.js";
+    script.defer = true;
+    document.body.appendChild(script);
+
+    script.onload = () => console.log("💬 Chatbot ES carregado!");
+  })();
+</script>

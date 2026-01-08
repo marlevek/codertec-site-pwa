@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desenvolvimento Web | CoderTec</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0a2540">
+
+  <!-- Bootstrap e CSS -->
+  <link href="/static/css/estilos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+
+  <style>
+    :root {
+      --primary-color: #3782cc;
+      --secondary-color: #2a3a7c;
+      --accent-color: #4d7cfe;
+      --light-bg: #f8f9fa;
+      --warning-color: #ffc107;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+      color: white;
+      padding: 80px 0;
+      margin-bottom: 40px;
+    }
+
+    .service-card {
+      transition: transform 0.3s ease;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-container {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .webdev-icon {
+      background-color: rgba(55, 130, 204, 0.1);
+      color: var(--primary-color);
+    }
+
+    .tech-section {
+      background-color: var(--light-bg);
+      border-radius: 10px;
+      padding: 40px;
+    }
+
+    .feature-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .feature-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-list li i {
+      color: var(--primary-color);
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+
+    .card-service {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .card-service:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-service .card-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .stats-section {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+      color: white;
+      border-radius: 10px;
+      padding: 50px 20px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+
+    .btn-warning {
+      background-color: var(--warning-color);
+      border-color: var(--warning-color);
+      color: #000;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .tech-logo {
+      height: 50px;
+      margin: 10px 15px;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+
+    .tech-logo:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+
+<body>
+  <!-- Cabeçalho dinâmico -->
+  <div id="header"></div>
+
+  <!-- Cabeçalho dinâmico -->
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold">Desenvolvimento Web</h1>
+          <p class="lead fs-4">Criamos sites e aplicações web sob medida para impulsionar seu negócio com tecnologia
+            moderna e eficiente.</p>
+          <a href="#services" class="btn btn-light btn-lg mt-3 text-black">Conheça Nossas Soluções</a>
+        </div>
+        <div class="col-lg-4 text-center">
+          <i class="bi bi-code-slash display-1 opacity-75"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Sobre o Serviço -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4">O que fazemos</h2>
+      <p id="services">Na CoderTec, criamos sites sob medida para pequenas empresas que desejam presença digital moderna
+        e
+        eficiente. Utilizamos tecnologias como Django, Bootstrap e automações inteligentes.</p>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-window"></i> Sites institucionais e landing pages
+              </h5>
+              <p class="card-text">Criação de sites institucionais, páginas de captura e landing pages
+                otimizadas para conversão e responsividade.</p>
+              <!-- Texto guia -->
+              <p class="mt-3 mb-2"><strong>Veja exemplo:</strong></p>
+
+              <!-- Botões -->
+              <a href="https://www.climatis.com.br" target="_blank" class="btn btn-primary btn-sm me-2">Visitar Site
+                Climatis</a>
+              <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
+                data-bs-target="#modalLanding">
+                Ver Landing Page
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-speedometer2"></i> Aplicações web com painéis
+                administrativos</h5>
+              <p class="card-text">Desenvolvimento de sistemas web internos, dashboards e ferramentas
+                administrativas para gestão eficiente.</p>
+              <button type="button" class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal"
+                data-bs-target="#dashboardModal">
+                Ver exemplo
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-box-arrow-in-up-right"></i> Integração com APIs e
+                sistemas internos</h5>
+              <p class="card-text">Integramos seus sistemas e APIs para automatizar processos e
+                sincronizar informações de forma segura.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-search"></i> SEO e otimização de performance</h5>
+              <p class="card-text">Sites otimizados para SEO, carregamento rápido e melhor experiência do
+                usuário, aumentando conversões.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seção: Estatísticas -->
+      <section class="stats-section my-5">
+        <div class="row text-center">
+          <div class="col-md-3">
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Sites Responsivos</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-item">
+              <div class="stat-number">+40%</div>
+              <div class="stat-label">Conversões</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-item">
+              <div class="stat-number">3x</div>
+              <div class="stat-label">Mais Velocidade</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Suporte Técnico</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção: Tecnologias -->
+      <section class="tech-section mt-5">
+        <div class="row">
+          <div class="col-12 text-center mb-4">
+            <h2 class="fw-bold">Tecnologias que Utilizamos</h2>
+            <p class="lead">Trabalhamos com as melhores ferramentas para garantir qualidade e performance</p>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="tech-logo"
+              alt="Django">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="tech-logo"
+              alt="Python">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+              class="tech-logo" alt="Bootstrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              class="tech-logo" alt="JavaScript">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tech-logo"
+              alt="HTML5">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tech-logo"
+              alt="CSS3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              class="tech-logo" alt="PostgreSQL">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chartjs/chartjs-original.svg" class="tech-logo"
+              alt="Chart.js">
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="card p-4 h-100">
+              <h4 class="mb-3">Backend Robusto</h4>
+              <ul class="feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Django para desenvolvimento rápido e seguro</li>
+                <li><i class="bi bi-check-circle-fill"></i> APIs RESTful para integrações</li>
+                <li><i class="bi bi-check-circle-fill"></i> Banco de dados PostgreSQL</li>
+                <li><i class="bi bi-check-circle-fill"></i> Autenticação e autorização</li>
+                <li><i class="bi bi-check-circle-fill"></i> Processamento em background</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card p-4 h-100">
+              <h4 class="mb-3">Frontend Moderno</h4>
+              <ul class="feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Design responsivo e mobile-first</li>
+                <li><i class="bi bi-check-circle-fill"></i> Bootstrap para interfaces consistentes</li>
+                <li><i class="bi bi-check-circle-fill"></i> JavaScript para interatividade</li>
+                <li><i class="bi bi-check-circle-fill"></i> Gráficos e visualizações com Chart.js</li>
+                <li><i class="bi bi-check-circle-fill"></i> Otimização para SEO</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção: Processo de Desenvolvimento -->
+      <section class="mt-5">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2 class="fw-bold">Nosso Processo de Desenvolvimento</h2>
+            <p class="lead">Metodologia ágil para entregas rápidas e de qualidade</p>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-md-3">
+            <div class="process-step">
+              <div class="icon-container webdev-icon mx-auto">
+                <span class="fs-4 fw-bold">1</span>
+              </div>
+              <h5>Análise e Planejamento</h5>
+              <p>Entendemos suas necessidades e definimos escopo, funcionalidades e tecnologias</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="process-step">
+              <div class="icon-container webdev-icon mx-auto">
+                <span class="fs-4 fw-bold">2</span>
+              </div>
+              <h5>Design e Prototipagem</h5>
+              <p>Criamos wireframes e protótipos para validação antes do desenvolvimento</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="process-step">
+              <div class="icon-container webdev-icon mx-auto">
+                <span class="fs-4 fw-bold">3</span>
+              </div>
+              <h5>Desenvolvimento</h5>
+              <p>Implementamos frontend e backend com as melhores práticas de codificação</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="process-step">
+              <div class="icon-container webdev-icon mx-auto">
+                <span class="fs-4 fw-bold">4</span>
+              </div>
+              <h5>Entrega e Suporte</h5>
+              <p>Realizamos testes, implantação e oferecemos suporte técnico contínuo</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="text-center mt-5 pt-3">
+        <h3 class="mb-3">Pronto para levar seu negócio para o próximo nível?</h3>
+        <p class="mb-4">Solicite um orçamento sem compromisso e descubra como podemos ajudar</p>
+        <a href="\pt\index.html#contato" class="btn btn-warning btn-lg">Solicitar Orçamento</a>
+      </section>
+    </div>
+
+    </div>
+  </section>
+
+
+  <!-- Modal para exemplo de Landing Page -->
+  <div class="modal fade" id="modalLanding" tabindex="-1" aria-labelledby="modalLandingLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLandingLabel">Exemplo de Landing Page</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <iframe src="\pt\demos\django\sites-institucionais\index.html" width="100%" height="400px"
+            style="border:none;"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal exemplo painel adm -->
+  <div class="modal fade" id="dashboardModal" tabindex="-1" aria-labelledby="dashboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dashboardModalLabel">Aplicação Web: Painel Administrativo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Exemplo de dashboard para monitoramento de métricas e dados de uma empresa ou clínica.</p>
+
+          <!-- Cards de Métricas -->
+          <div class="row g-3 mb-4">
+            <div class="col-md-3">
+              <div class="card text-center p-3 shadow-sm">
+                <h6>Total de Usuários</h6>
+                <h3>125</h3>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card text-center p-3 shadow-sm">
+                <h6>Novos Clientes</h6>
+                <h3>23</h3>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card text-center p-3 shadow-sm">
+                <h6>Receita Mensal</h6>
+                <h3>R$ 18.400</h3>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card text-center p-3 shadow-sm">
+                <h6>Ordens de Serviço</h6>
+                <h3>56</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gráficos -->
+          <div class="row g-4">
+            <div class="col-md-6">
+              <canvas id="revenueChart"></canvas>
+            </div>
+            <div class="col-md-6">
+              <canvas id="tasksChart"></canvas>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Botão voltar ao topo -->
+  <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+    <i class="bi bi-arrow-up-circle"></i>
+  </button>
+
+  <div id="footer"></div>
+
+  <!-- JS GLOBAL -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/include.js"></script>
+  <script src="/static/js/pwa-install.js"></script>
+  <script src="/static/js/btn_topo.js"></script>
+  <script src="/static/js/navbar-mobile-fix.js"></script>
+
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+    const revenueChart = new Chart(revenueCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+        datasets: [{
+          label: 'Receita Mensal',
+          data: [12000, 15000, 14000, 18000, 17000, 18400],
+          borderColor: '#3782cc',
+          backgroundColor: 'rgba(55,130,204,0.2)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: true, position: 'top' },
+          title: { display: true, text: 'Receita Mensal' }
+        }
+      }
+    });
+
+    const tasksCtx = document.getElementById('tasksChart').getContext('2d');
+    const tasksChart = new Chart(tasksCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Concluídas', 'Em Andamento', 'Pendentes'],
+        datasets: [{
+          data: [30, 15, 11],
+          backgroundColor: ['#3782cc', '#002244', '#c1d7ec']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: true, position: 'bottom' },
+          title: { display: true, text: 'Status das Ordens de Serviço' }
+        }
+      }
+    });
+  </script>
+
+
+
+</body>
+
+</html>

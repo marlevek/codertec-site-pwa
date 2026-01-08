@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Apps para Clínicas e Consultórios - CoderTec</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a2540">
+
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- HERO -->
+    <header class="hero-servico text-center" style="background:#004aad;color:white;">
+        <h1>Web Apps para Clínicas e Consultórios</h1>
+        <p style="font-size:1.1rem;">Gestão inteligente, atendimento organizado e informações no lugar certo.</p>
+    </header>
+
+    <main class="servico-container">
+
+        <!-- Mock principal -->
+        <div class="text-center servico-destaque">
+            <img src="/static/images/mock_webapp_clinica.png" class="img-fluid rounded shadow" alt="Web App Clínica">
+        </div>
+
+        <!-- Benefícios Diretos -->
+        <h2 class="mt-5 text-center">O que o Web App resolve</h2>
+
+        <ul class="mt-3"
+            style="list-style:none;padding-left:0;font-size:1.05rem;line-height:1.9em;max-width:800px;margin:auto;text-align:center;">
+            <li>• Agenda organizada e fácil de visualizar</li>
+            <li>• Cadastro rápido de pacientes e atendimentos</li>
+            <li>• Repasses automáticos para profissionais</li>
+            <li>• Prontuário simples e seguro (opcional)</li>
+            <li>• Indicadores e produtividade na tela</li>
+        </ul>
+
+        <!-- Cards das Funcionalidades -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+
+            <div class="col">
+                <div class="card h-100 text-center p-3">
+                    <i class="bi bi-calendar-check fs-1" style="color:#004aad;"></i>
+                    <h5 class="mt-3">Agenda Inteligente</h5>
+                    <p>Visualização clara de horários, retornos e bloqueios.</p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 text-center p-3">
+                    <i class="bi bi-cash-coin fs-1" style="color:#004aad;"></i>
+                    <h5 class="mt-3">Repasses Automáticos</h5>
+                    <p>O sistema calcula os valores de cada profissional.</p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 text-center p-3">
+                    <i class="bi bi-bar-chart-line fs-1" style="color:#004aad;"></i>
+                    <h5 class="mt-3">Dashboard de Produtividade</h5>
+                    <p>Quantos atendimentos? Quais procedimentos? Quanto entrou?</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- IA e Automação -->
+        <h2 class="mt-5 text-center">IA que Auxilia no Atendimento</h2>
+        <p class="text-center">Envio automático de lembretes, confirmação de consulta e redução de faltas.</p>
+
+        <div class="chat-demo shadow p-3 rounded mb-5" style="max-width:500px;margin:auto;background:white;">
+            <div class="d-flex mb-3">
+                <div class="p-2 rounded-3" style="background:#004aad; color:white; max-width:80%;">
+                    Olá 😊 Passando para lembrar da sua consulta amanhã às 15h.
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mb-3">
+                <div class="bg-light border p-2 rounded-3" style="max-width:80%;">
+                    Obrigado! Confirmado ✅
+                </div>
+            </div>
+        </div>
+
+        <!-- Prova Social -->
+        <h2 class="mt-5 text-center">Resultados na Prática</h2>
+        <div class="row g-3 mt-3">
+            <div class="col-md-4">
+                <div class="card p-3 shadow-sm">“Organizou totalmente minha agenda.” — Dra. Aline</div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 shadow-sm">“Acabou a confusão dos repasses.” — Clínica OdontoVida</div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 shadow-sm">“O dashboard mostra tudo o que preciso em segundos.” — Dr. Paulo</div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-5">
+            <a href="https://wa.me/5541988615268" class="botao" target="_blank">
+                Quero ver uma demonstração
+            </a>
+        </div>
+
+    </main>
+
+     <!-- Botão voltar ao topo -->
+    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <div id="footer"></div>
+
+    <!-- JS GLOBAL -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include.js"></script>
+    <script src="/static/js/pwa-install.js"></script>
+    <script src="/static/js/btn_topo.js"></script>
+    <script src="/static/js/navbar-mobile-fix.js"></script>
+</body>
+
+</html>

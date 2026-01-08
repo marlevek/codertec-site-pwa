@@ -1,0 +1,94 @@
+# =====================================
+# SISTEMA OPERACIONAL
+# =====================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =====================================
+# EDITORES / IDEs
+# =====================================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# =====================================
+# NODE / FRONTEND (caso use npm no futuro)
+# =====================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =====================================
+# BUILD / CACHE
+# =====================================
+dist/
+build/
+.cache/
+.parcel-cache/
+.tmp/
+
+# =====================================
+# AMBIENTES / SEGREDOS
+# =====================================
+.env
+.env.*
+*.key
+*.pem
+
+# =====================================
+# LOGS
+# =====================================
+*.log
+
+# =====================================
+# PYTHON (se usar scripts auxiliares)
+# =====================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env/
+venv/
+.venv/
+
+# =====================================
+# BACKUPS / ARQUIVOS TEMPORÁRIOS
+# =====================================
+*.bak
+*.old
+*.swp
+*.tmp
+
+# =====================================
+# ARQUIVOS GERADOS AUTOMATICAMENTE
+# =====================================
+coverage/
+report/
+reports/
+
+# =====================================
+# DEPLOY LOCAL / HOSTING
+# =====================================
+.ftpconfig
+.sftp.json
+
+# =====================================
+# PWA / SERVICE WORKER (AJUSTE CONFORME NECESSIDADE)
+# =====================================
+# Ignore apenas se forem gerados automaticamente
+# service-worker.js
+# workbox-*.js
+
+# =====================================
+# MÍDIA PESADA (se NÃO quiser versionar)
+# =====================================
+# Ajuste conforme sua estratégia
+# *.mp4
+# *.mov
+# *.avi

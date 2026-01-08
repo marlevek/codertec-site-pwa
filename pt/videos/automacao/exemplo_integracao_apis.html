@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Integração com APIs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { background-color: #f8f9fa; padding: 20px; }
+        .step { margin: 20px 0; padding: 20px; border-radius: 10px; background-color: #ffffff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .step h4 { color: #3782cc; }
+        .arrow { font-size: 2em; text-align: center; margin: 10px 0; color: #002244; }
+        .btn-demo { margin-top: 10px; }
+        table { width: 100%; margin-top: 15px; }
+        th, td { text-align: center; }
+        .img-dashboard { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center mb-4">Simulação de Integração com APIs</h1>
+
+        <!-- Passo 1 -->
+        <div class="step text-center">
+            <h4>1️⃣ Coleta de Dados</h4>
+            <p>Dados do cliente coletados em formulário ou planilha.</p>
+            <button class="btn btn-primary btn-demo" onclick="alert('Simulando envio de dados...')">Enviar Dados</button>
+        </div>
+
+        <div class="arrow">⬇️</div>
+
+        <!-- Passo 2 -->
+        <div class="step text-center">
+            <h4>2️⃣ Processamento pelo Sistema</h4>
+            <p>O sistema processa os dados e aplica regras automáticas.</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Serviço</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>Instalação</td>
+                        <td>Processado ✅</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Souza</td>
+                        <td>Manutenção</td>
+                        <td>Processado ✅</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="arrow">⬇️</div>
+
+        <!-- Passo 3 -->
+        <div class="step text-center">
+            <h4>3️⃣ Resultado Final</h4>
+            <p>Atualização de dashboard e envio de relatório automático para gestor.</p>
+            <!-- Dashboard simulado local ou via placeholder confiável -->
+            <img src="https://placehold.co/600x300/3782cc/ffffff?text=Dashboard+Simulado" 
+                 alt="Dashboard Simulado" class="img-dashboard mt-2">
+        </div>
+    </div>
+
+</body>
+</html>

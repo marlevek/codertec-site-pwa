@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards - CoderTec</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a2540">
+    
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/889104c503.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #1a2a6c 0%, #2a3a7c 100%);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .benefit-card {
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .health-section {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .business-icon {
+            background-color: rgba(55, 130, 204, 0.1);
+            color: #3782cc;
+        }
+
+        .health-icon {
+            background-color: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li i {
+            color: #3782cc;
+            margin-right: 10px;
+        }
+
+        .modal-body canvas {
+            width: 100% !important;
+            height: 400px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold">Dashboards que Colocam sua Empresa na Sua Tela</h1>
+                    <p class="lead">Monitore métricas-chave em tempo real, visualize dados de forma clara e tome
+                        decisões ágeis baseadas em evidências.</p>
+                    <a href="#benefits" class="btn btn-light btn-lg mt-3 text-black">Descubra os Benefícios</a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="bi bi-bar-chart-fill display-1 opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Dashboards que Colocam sua Empresa na Sua Tela</h1>
+        <p class="text-center">Monitore métricas-chave em tempo real, visualize dados de forma clara e tome decisões
+            ágeis.</p>
+
+        <!-- Cards de Dashboards -->
+        <div class="row g-4 mt-5">
+
+            <!-- Card 1 -->
+            <div class="col-md-6">
+                <div class="card p-3 shadow-sm">
+                    <h3 class="pt-3 pb-2"><i class="bi bi-bar-chart"></i> Dashboard Financeiro</h3>
+                    <p class="text_card">Acompanhe receitas, despesas e lucros em tempo real com gráficos interativos e
+                        relatórios automáticos.</p>
+                    <p class="text-center">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#financeModal">
+                            Veja exemplo
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6">
+                <div class="card p-3 shadow-sm">
+                    <h3 class="pt-3 pb-2"><i class="bi bi-graph-up-arrow"></i> Dashboard de Vendas</h3>
+                    <p class="text_card">Visualize performance de vendas, produtos mais vendidos e comportamento de
+                        clientes com dashboards dinâmicos.</p>
+                    <p class="text-center">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#salesModal">
+                            Veja exemplo
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Exemplo Real — Restaurante Sabor & Arte -->
+        <section class="py-5">
+            <div class="container">
+
+                <h2 class="text-center mb-4">🎥 Exemplo de Inteligência Comercial para Restaurantes</h2>
+
+                <p class="text-center" style="max-width:780px; margin:auto;">
+                    O restaurante <strong>Sabor & Arte</strong> queria entender quais pratos trazem mais lucro,
+                    quando o movimento cai e quais clientes são mais fiéis. Desenvolvemos um
+                    <strong>Dashboard de Inteligência Comercial</strong> que permite visualizar vendas por horário,
+                    categoria, margem e comportamento do consumidor — tudo automaticamente, sem planilhas manuais.
+                </p>
+
+                <video controls class="w-100 rounded shadow" style="max-width:900px; margin:auto; display:block;">
+                    <source src="/pt/videos/dashboard/dashboard-restaurante.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo HTML5.
+                </video>
+
+                <ul class="mt-4" style="max-width:800px;margin:auto;font-size:1.1em;">
+                    <li>Descobrir os pratos que realmente trazem lucro</li>
+                    <li>Identificar horários de baixa para criar promoções inteligentes</li>
+                    <li>Segmentar clientes e aumentar fidelidade</li>
+                    <li>Tomar decisões com dados reais — não com suposições</li>
+                </ul>
+
+                <div class="text-center mt-5">
+                    <a href="https://wa.me/5541988615268" class="botao" target="_blank">
+                        Quero um dashboard assim no meu negócio 📊
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção: Benefícios para Empresas -->
+        <section id="benefits" class="mt-5 pt-5">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Como os Dashboards Transformam Empresas</h2>
+                    <p class="lead">Visualização de dados que impulsiona resultados estratégicos</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card benefit-card h-100 p-4">
+                        <div class="icon-container business-icon mx-auto">
+                            <i class="bi bi-lightning-charge-fill fs-4"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Decisões Ágeis e Informadas</h4>
+                        <p>Reduza o tempo entre a coleta de dados e a tomada de decisão. Com informações em tempo real,
+                            sua equipe pode responder rapidamente a oportunidades e ameaças.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card benefit-card h-100 p-4">
+                        <div class="icon-container business-icon mx-auto">
+                            <i class="bi bi-eye-fill fs-4"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Transparência e Visibilidade</h4>
+                        <p>Mantenha todos os departamentos alinhados com os mesmos dados e métricas. Dashboards
+                            compartilhados promovem uma cultura de transparência e responsabilidade.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card benefit-card h-100 p-4">
+                        <div class="icon-container business-icon mx-auto">
+                            <i class="bi bi-graph-up-arrow fs-4"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Identificação de Tendências</h4>
+                        <p>Detecte padrões e tendências de mercado antes dos concorrentes. Visualizações intuitivas
+                            ajudam a identificar oportunidades de crescimento e otimização.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card p-4 h-100">
+                        <h4 class="mb-3">Benefícios para Gestores</h4>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Monitoramento de KPIs em tempo real</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Alocação eficiente de recursos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Identificação de gargalos operacionais</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Acompanhamento de desempenho da equipe</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Projeções financeiras mais precisas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card p-4 h-100">
+                        <h4 class="mb-3">Benefícios para Equipes</h4>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Metas claras e acompanhamento em tempo real</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Autonomia para tomada de decisões</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Redução de tarefas manuais de relatórios</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Melhor comunicação entre departamentos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Reconhecimento rápido de conquistas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Dashboards para Saúde -->
+        <section class="health-section mt-5 p-5">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Dashboards para Profissionais de Saúde</h2>
+                    <p class="lead">Tecnologia que melhora a qualidade do atendimento e a gestão hospitalar</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card benefit-card h-100 p-4">
+                        <div class="icon-container health-icon mx-auto">
+                            <i class="bi bi-heart-pulse fs-4"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Monitoramento de Pacientes</h4>
+                        <p>Visualize dados vitais de pacientes em tempo real, permitindo intervenções rápidas e
+                            precisas. Acompanhe histórico médico, medicamentos e evolução do tratamento em um único
+                            painel.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card benefit-card h-100 p-4">
+                        <div class="icon-container health-icon mx-auto">
+                            <i class="bi bi-clipboard2-pulse fs-4"></i>
+                        </div>
+                        <h4 class="text-center mb-3">Gestão Hospitalar</h4>
+                        <p>Otimize a ocupação de leitos, controle de estoque de medicamentos e acompanhe eficiência de
+                            equipes. Reduza tempos de espera e melhore a experiência do paciente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-8 mx-auto">
+                    <div class="card p-4">
+                        <h4 class="text-center mb-4">Aplicações Práticas na Saúde</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5><i class="bi bi-check-lg text-success"></i> Para Clínicas e Hospitais</h5>
+                                <ul>
+                                    <li>Controle de leitos e taxa de ocupação</li>
+                                    <li>Tempo médio de permanência</li>
+                                    <li>Indicadores de qualidade assistencial</li>
+                                    <li>Gestão de filas e agendamentos</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5><i class="bi bi-check-lg text-success"></i> Para Profissionais</h5>
+                                <ul>
+                                    <li>Prontuários eletrônicos visualizados graficamente</li>
+                                    <li>Acompanhamento de resultados de exames</li>
+                                    <li>Indicadores de desempenho clínico</li>
+                                    <li>Alertas para medicamentos e procedimentos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card p-4">
+                        <h4 class="text-center mb-3">Impacto dos Dashboards na Saúde</h4>
+                        <p>Na área da saúde, a visualização de dados não é apenas uma ferramenta de gestão, mas um
+                            instrumento que pode salvar vidas. Dashboards especializados permitem:</p>
+
+                        <div class="row text-center mt-4">
+                            <div class="col-md-3">
+                                <div class="icon-container health-icon mx-auto">
+                                    <i class="bi bi-clock fs-4"></i>
+                                </div>
+                                <h5>Resposta Rápida</h5>
+                                <p>Identificação imediata de alterações no estado dos pacientes</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="icon-container health-icon mx-auto">
+                                    <i class="bi bi-shield-check fs-4"></i>
+                                </div>
+                                <h5>Segurança do Paciente</h5>
+                                <p>Redução de erros médicos através de alertas e verificações</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="icon-container health-icon mx-auto">
+                                    <i class="bi bi-cash-coin fs-4"></i>
+                                </div>
+                                <h5>Otimização de Custos</h5>
+                                <p>Melhor gestão de recursos e redução de desperdícios</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="icon-container health-icon mx-auto">
+                                    <i class="bi bi-person-check fs-4"></i>
+                                </div>
+                                <h5>Experiência do Paciente</h5>
+                                <p>Atendimento mais ágil e personalizado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal 1: Dashboard Financeiro -->
+    <div class="modal fade" id="financeModal" tabindex="-1" aria-labelledby="financeModalLabel">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="financeModalLabel">Exemplo de Dashboard Financeiro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Exemplo de dashboard financeiro com gráficos fictícios.</p>
+                    <canvas id="financeChart"></canvas>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Dashboard de Vendas -->
+    <div class="modal fade" id="salesModal" tabindex="-1" aria-labelledby="salesModalLabel">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="salesModalLabel">Exemplo de Dashboard de Vendas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Exemplo de dashboard de vendas mostrando produtos, vendas e performance fictícia.</p>
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão voltar ao topo -->
+    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <div id="footer"></div>
+
+    <!-- JS GLOBAL -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include.js"></script>
+    <script src="/static/js/pwa-install.js"></script>
+    <script src="/static/js/btn_topo.js"></script>
+    <script src="/static/js/navbar-mobile-fix.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        let financeChart = null;
+        let salesChart = null;
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const financeModal = document.getElementById("financeModal");
+            const salesModal = document.getElementById("salesModal");
+
+            financeModal.addEventListener("shown.bs.modal", () => {
+                const canvas = document.getElementById("financeChart");
+                const ctx = canvas.getContext("2d");
+
+                if (financeChart) financeChart.destroy();
+
+                financeChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                        datasets: [
+                            {
+                                label: 'Receita',
+                                data: [5000, 7000, 6500, 7200, 8000, 8500],
+                                borderColor: '#3782cc',
+                                backgroundColor: 'rgba(55,130,204,0.2)',
+                                fill: true,
+                                tension: 0.3
+                            },
+                            {
+                                label: 'Despesa',
+                                data: [3000, 3500, 3200, 4000, 3800, 3900],
+                                borderColor: '#cc5533',
+                                backgroundColor: 'rgba(204,85,51,0.2)',
+                                fill: true,
+                                tension: 0.3
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            });
+
+            salesModal.addEventListener("shown.bs.modal", () => {
+                const canvas = document.getElementById("salesChart");
+                const ctx = canvas.getContext("2d");
+
+                if (salesChart) salesChart.destroy();
+
+                salesChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Produto A', 'Produto B', 'Produto C', 'Produto D'],
+                        datasets: [{
+                            label: 'Vendas',
+                            data: [120, 150, 100, 180],
+                            backgroundColor: '#3782cc'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+#chatbot-wrapper {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+}
+
+#chatbot-btn {
+    background-color: #004a99; /* cor do botão */
+    -webkit-mask-image: url('/en/static/images/dermatology/bot-icon.svg');
+    mask-image: url('/en/static/images/dermatology/bot-icon.svg');
+    -webkit-mask-size: 60%;
+    mask-size: 60%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    border: none;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-image: none;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+#chatbot-window {
+    width: 320px;
+    height: 440px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 30px rgba(0,0,0,.2);
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+}
+
+#chatbot-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #003f7f;
+    padding: 14px;
+    color: white;
+    border-radius: 12px 12px 0 0;
+}
+
+#chatbot-header img {
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#chatbot-messages {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+}
+
+.message {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    max-width: 80%;
+}
+
+.bot { background: #eaf1ff; color:#003f7f; align-self: flex-start;
+    border: 1px solid #d7e7ff}
+.user { background: #003f7f; color:white; margin-left:auto; }
+
+#chatbot-input-area { display:flex; border-top:1px solid #ddd; }
+#chatbot-input { flex:1; border:none; padding:12px; }
+#chatbot-send { background:#003f7f;border:none;color:white;padding:0 16px;cursor:pointer; }

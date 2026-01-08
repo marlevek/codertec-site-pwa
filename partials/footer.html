@@ -1,0 +1,43 @@
+<footer class="footer">
+  <div class="footer-container">
+    <div class="social-links">
+    <a href="https://www.instagram.com/codertec.ia" class="instagram" target="_blank" rel="noopener noreferrer">
+      <i class="bi bi-instagram"></i> Codertec.ia
+    </a>
+     <span class="brand-separator">|</span>
+    <a href="https://www.linkedin.com/in/marlevek" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bi-linkedin"></i> marlevek</a>
+    </div>
+    <div class="services-col">
+    <div class="col pt-5">
+      <h5>Serviços em Curitiba</h5>
+      <ul class="list-unstyled">
+        <li><a href="/pt/websites-em-curitiba/">Criação de Websites</a></li>
+        <li><a href="/pt/inteligencia-artificial-em-curitiba/">Inteligência Artificial</a></li>
+        <li><a href="/pt/automacao-empresarial-em-curitiba/">Automação Empresarial</a></li>
+      </ul>
+    </div>
+</div>
+    <p class="pt-4">&copy; 2025 CoderTec. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ✅ Chatbot Loader com fallback -->
+<script>
+  (function () {
+    // Evita múltiplos carregamentos
+    if (window.CHATBOT_LOADED) return;
+    window.CHATBOT_LOADED = true;
+
+    // Caminho dinâmico
+    const script = document.createElement("script");
+    script.src =
+      location.hostname === "127.0.0.1" || location.hostname === "localhost"
+        ? "static/js/chatbot-loader.js"
+        : "/static/js/chatbot-loader.js";
+    script.defer = true;
+    document.body.appendChild(script);
+
+    script.onload = () => console.log("💬 Chatbot loader carregado e executado com sucesso!");
+    script.onerror = () => console.error("❌ Erro ao carregar chatbot-loader.js");
+  })();
+</script>

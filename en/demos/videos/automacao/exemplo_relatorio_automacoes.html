@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Relatórios Automáticos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+        }
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #3782cc;
+            color: white;
+        }
+        td {
+            background-color: #e9ecef;
+        }
+        .btn-export {
+            background-color: #3782cc;
+            color: white;
+            margin-right: 10px;
+        }
+        .btn-export:hover {
+            background-color: #002244;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Relatórios Automáticos - Exemplo</h2>
+
+    <!-- Tabela simulando planilha -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title text-center">Relatório de Serviços</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Serviço</th>
+                        <th>Data</th>
+                        <th>Valor (R$)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaRelatorio">
+                    <!-- JS vai preencher -->
+                </tbody>
+            </table>
+            <div class="text-center mt-3">
+                <button class="btn btn-export" onclick="exportCSV()">Exportar CSV</button>
+                <button class="btn btn-export" onclick="exportExcel()">Exportar Excel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biblioteca SheetJS -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+    <script>
+        // Dados simulados
+        const relatorio = [
+            {cliente: 'Maria Silva', servico: 'Implante Dentário', data: '10/10/2025', valor: 3500, status: 'Concluído'},
+            {cliente: 'João Souza', servico: 'Clareamento', data: '11/10/2025', valor: 800, status: 'Pendente'},
+            {cliente: 'Ana Costa', servico: 'Aparelho Ortodôntico', data: '12/10/2025', valor: 2500, status: 'Concluído'},
+            {cliente: 'Carlos Lima', servico: 'Implante Dentário', data: '12/10/2025', valor: 3500, status: 'Em andamento'},
+            {cliente: 'Fernanda Rocha', servico: 'Profilaxia', data: '13/10/2025', valor: 300, status: 'Concluído'}
+        ];
+
+        const tabelaBody = document.getElementById('tabelaRelatorio');
+        relatorio.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td>${item.cliente}</td>
+                             <td>${item.servico}</td>
+                             <td>${item.data}</td>
+                             <td>${item.valor}</td>
+                             <td>${item.status}</td>`;
+            tabelaBody.appendChild(row);
+        });
+
+        // Export CSV com BOM
+        function exportCSV() {
+            let csvContent = "\uFEFF"; // BOM UTF-8
+            csvContent += "Cliente,Serviço,Data,Valor,Status\n";
+            relatorio.forEach(item => {
+                csvContent += `${item.cliente},${item.servico},${item.data},${item.valor},${item.status}\n`;
+            });
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.setAttribute("download", "relatorio_automatico.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Export Excel com SheetJS
+        function exportExcel() {
+            const ws = XLSX.utils.json_to_sheet(relatorio);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, "Relatorio");
+            XLSX.writeFile(wb, "relatorio_automatico.xlsx");
+        }
+    </script>
+
+</body>
+</html>

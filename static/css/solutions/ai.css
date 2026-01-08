@@ -1,0 +1,104 @@
+:root {
+    --primary-color: #3782cc;
+    --secondary-color: #2a3a7c;
+    --accent-color: #4d7cfe;
+    --light-bg: #f8f9fa;
+    --ai-color: #8a2be2;
+}
+
+/* HERO */
+.hero-section {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--ai-color) 100%);
+    color: white;
+    padding: 80px 0;
+    margin-bottom: 40px;
+}
+
+/* MAIN CARD */
+.service-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--ai-color);
+    margin-bottom: 15px;
+}
+
+/* ICON CIRCLE */
+.icon-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.ai-icon {
+    background-color: rgba(138, 43, 226, 0.1);
+    color: var(--ai-color);
+}
+
+/* BENEFITS */
+.benefits-section {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--ai-color) 100%);
+    color: white;
+    border-radius: 10px;
+    padding: 50px 20px;
+}
+
+.benefit-item {
+    text-align: center;
+}
+
+.benefit-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.benefit-label {
+    opacity: 0.9;
+}
+
+/* APPLICATION CARDS */
+.application-card {
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+.application-card:hover {
+    transform: translateY(-5px);
+}
+
+/* PROCESS */
+.ai-process {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+/* CTA BUTTONS */
+.btn-primary {
+    background-color: var(--ai-color);
+    border-color: var(--ai-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}

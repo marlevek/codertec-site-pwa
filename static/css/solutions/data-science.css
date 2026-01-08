@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #3782cc;
+    --secondary-color: #2a3a7c;
+    --accent-color: #4d7cfe;
+    --light-bg: #f8f9fa;
+    --data-color: #00b894;
+}
+
+/* HERO */
+.hero-section {
+    background: linear-gradient(135deg, var(--secondary-color), var(--data-color));
+    color: white;
+    padding: 80px 0;
+    margin-bottom: 40px;
+}
+
+/* CARDS */
+.card-service {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: .3s;
+}
+
+.card-service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--data-color);
+    margin-bottom: 15px;
+}
+
+/* BENEFITS */
+.benefits-section {
+    background: linear-gradient(135deg, var(--secondary-color), var(--data-color));
+    color: white;
+    border-radius: 10px;
+    padding: 50px 20px;
+}
+
+.benefit-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* APPLICATION CARDS */
+.application-card {
+    background: white;
+    padding: 20px 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: .3s;
+}
+
+.application-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-container {
+    width: 70px;
+    height: 70px;
+    background: rgba(0,184,148,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* PROCESS */
+.data-process {
+    padding: 20px 10px;
+}
+
+/* CTA */
+.impact-card {
+    border-left: 4px solid var(--data-color);
+}
