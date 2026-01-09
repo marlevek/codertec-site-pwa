@@ -10,9 +10,9 @@ use PHPMailer\PHPMailer\Exception;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $nombre  = htmlspecialchars($_POST['nombre'] ?? '');
-    $correo  = htmlspecialchars($_POST['correo'] ?? '');
-    $mensaje = htmlspecialchars($_POST['mensaje'] ?? '');
+    $name    = htmlspecialchars($_POST['name'] ?? '');
+    $email   = htmlspecialchars($_POST['email'] ?? '');
+    $message = htmlspecialchars($_POST['message'] ?? '');
 
     $mail = new PHPMailer(true);
 
@@ -28,23 +28,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $mail->setFrom($emailConfig['username'], 'CoderTec');
         $mail->addAddress('marcelo@codertec.com.br');
-        $mail->addReplyTo($correo);
+        $mail->addReplyTo($email);
 
         $mail->isHTML(true);
-        $mail->Subject = 'Nuevo Contacto desde el Sitio Web - CoderTec';
+        $mail->Subject = 'New Contact from Website - CoderTec';
         $mail->Body = "
-            <h2>Contacto vía Website</h2>
-            <p><strong>Nombre:</strong> {$nombre}</p>
-            <p><strong>Email:</strong> {$correo}</p>
-            <p><strong>Mensaje:</strong> {$mensaje}</p>
+            <h2>Website Contact</h2>
+            <p><strong>Name:</strong> {$name}</p>
+            <p><strong>Email:</strong> {$email}</p>
+            <p><strong>Message:</strong><br>{$message}</p>
         ";
 
         $mail->send();
 
-        header("Location: /es/gracias.html");
+        header("Location: /en/thank-you.html");
         exit();
 
     } catch (Exception $e) {
-        echo "Error al enviar: {$mail->ErrorInfo}";
+        echo "Error sending message: {$mail->ErrorInfo}";
     }
 }

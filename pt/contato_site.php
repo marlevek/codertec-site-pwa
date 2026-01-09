@@ -6,6 +6,9 @@ require 'PHPMailer/src/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+// ✅ carregar config
+$emailConfig = require __DIR__ . '/../config/email.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $nome = htmlspecialchars($_POST['nome']);
