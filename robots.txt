@@ -1,0 +1,43 @@
+User-agent: *
+
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /blog/wp-admin/
+Disallow: /blog/wp-login.php
+Disallow: /blog/?s=
+Disallow: /search
+Disallow: /*?s=
+Disallow: /*/?s=
+Disallow: /*/feed/
+Disallow: /*/feeds/
+Disallow: /*/amp/
+
+Allow: /wp-admin/admin-ajax.php
+
+
+# ❌ Páginas técnicas / conversão
+Disallow: /offline.html
+Disallow: /obrigado.html
+Disallow: /es/gracias.html
+
+# ❌ Busca interna e parâmetros
+Disallow: /*?*
+Disallow: /*&*
+
+# ❌ Feeds e variações inúteis
+Disallow: /*/feed/
+Disallow: /*/feeds/
+Disallow: /*/amp/
+
+# ❌ Demos internas (se não quiser indexar)
+# Ajuste conforme sua estratégia
+Disallow: /pt/demos/
+Disallow: /en/demos/
+Disallow: /es/demos/
+
+# ✅ Tudo o resto liberado
+Allow: /
+
+# 📍 Sitemap principal
+Sitemap: https://codertec.com.br/sitemap.xml
+Sitemap: https://codertec.com.br/blog/sitemaps.xml

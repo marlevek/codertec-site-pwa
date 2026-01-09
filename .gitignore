@@ -92,3 +92,6 @@ reports/
 # *.mp4
 # *.mov
 # *.avi
+
+# Configurações sensíveis
+/config/email.php

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://codertec.com.br/pt/</loc>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://codertec.com.br/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://codertec.com.br/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codertec.com.br/pt/" />
+  </url>
+
+  <!-- SERVIÇOS -->
+  <url>
+    <loc>https://codertec.com.br/pt/servicos/desenvolvimento-web/</loc>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/servicos/desenvolvimento-web/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://codertec.com.br/en/services/web-development/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://codertec.com.br/es/servicios/desarrollo-web/" />
+  </url>
+
+  <!-- SOLUÇÕES -->
+  <url>
+    <loc>https://codertec.com.br/pt/solucoes/agentes-ia/</loc>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/solucoes/agentes-ia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://codertec.com.br/en/solutions/ai-agents/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://codertec.com.br/es/soluciones/agentes-ia/" />
+  </url>
+
+</urlset>

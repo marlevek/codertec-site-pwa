@@ -30,13 +30,21 @@ const CORE_ASSETS = [
   "/static/js/chatbot-loader.js"
 ];
 
-// INSTALL
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(CORE_ASSETS))
+    caches.open(CACHE_NAME).then(async cache => {
+      await Promise.all(
+        CORE_ASSETS.map(url =>
+          fetch(url)
+            .then(res => res.ok && cache.put(url, res))
+            .catch(() => console.warn("Falha ao cachear:", url))
+        )
+      );
+    })
   );
   self.skipWaiting();
 });
+
 
 // ACTIVATE
 self.addEventListener("activate", event => {
@@ -61,15 +69,33 @@ self.addEventListener("fetch", event => {
   // Navegação (HTML)
   if (event.request.mode === "navigate") {
     event.respondWith(
-      fetch(event.request).catch(() => caches.match(OFFLINE_URL))
+      fetch(event.request)
+        .then(response => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then(cache =>
+            cache.put(event.request, copy)
+          );
+          return response;
+        })
+        .catch(() =>
+          caches.match(event.request).then(r => r || caches.match(OFFLINE_URL))
+        )
     );
     return;
   }
 
+
   // Assets
   event.respondWith(
-    caches.match(event.request).then(response =>
-      response || fetch(event.request)
-    )
+    caches.match(event.request).then(cached => {
+      const fetchPromise = fetch(event.request).then(networkResponse => {
+        caches.open(CACHE_NAME).then(cache =>
+          cache.put(event.request, networkResponse.clone())
+        );
+        return networkResponse;
+      });
+      return cached || fetchPromise;
+    })
   );
+
 });
