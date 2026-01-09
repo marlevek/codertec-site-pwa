@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboards - CoderTec</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0a2540">
+
+  <link rel="stylesheet" href="/static/css/estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/889104c503.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+  <!-- Header ES -->
+  <div id="header"></div>
+
+  <!-- Contenido principal -->
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Dashboards que Ponen tu Empresa en tu Pantalla</h1>
+    <p class="text-center">Monitorea métricas clave en tiempo real, visualiza datos de forma clara y toma decisiones
+      ágiles.</p>
+
+    <!-- Tarjetas de Dashboards -->
+    <div class="row g-4 mt-5">
+
+      <!-- Tarjeta 1 -->
+      <div class="col-md-6">
+        <div class="card p-3 shadow-sm">
+          <h3 class="pt-3 pb-2"><i class="bi bi-bar-chart"></i> Dashboard Financiero</h3>
+          <p class="text_card">Sigue ingresos, gastos y beneficios en tiempo real con gráficos interactivos e informes
+            automáticos.</p>
+          <p class="text-center">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#financeModal">
+              Ver ejemplo
+            </button>
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="col-md-6">
+        <div class="card p-3 shadow-sm">
+          <h3 class="pt-3 pb-2"><i class="bi bi-graph-up-arrow"></i> Dashboard de Ventas</h3>
+          <p class="text_card">Visualiza el rendimiento de ventas, los productos más vendidos y el comportamiento de los
+            clientes con dashboards dinámicos.</p>
+          <p class="text-center">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#salesModal">
+              Ver ejemplo
+            </button>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal 1: Dashboard Financiero -->
+  <div class="modal fade" id="financeModal" tabindex="-1" aria-labelledby="financeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="financeModalLabel">Ejemplo de Dashboard Financiero</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ejemplo de dashboard financiero con gráficos ficticios.</p>
+          <canvas id="financeChart"></canvas>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Dashboard de Ventas -->
+  <div class="modal fade" id="salesModal" tabindex="-1" aria-labelledby="salesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="salesModalLabel">Ejemplo de Dashboard de Ventas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ejemplo de dashboard de ventas mostrando productos, ventas y rendimiento ficticio.</p>
+          <canvas id="salesChart"></canvas>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER AUTO-IMPORTADO -->
+  <div id="footer"></div>
+
+  <!-- Botão voltar ao topo -->
+  <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+    <i class="bi bi-arrow-up-circle"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/include_es.js"></script>
+  <script src="/static/js/btn_topo.js"></script>
+
+  <!-- Botão instalar PWA -->
+  <script src="/static/js/pwa-install.js"></script>
+
+  <!-- Correção do menu mobile -->
+  <script src="/static/js/navbar-mobile-fix.js"></script>
+
+  <script>document.addEventListener("DOMContentLoaded", () => {
+      if (window.location.hash) {
+        const el = document.querySelector(window.location.hash);
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 150);
+        }
+      }
+    });</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Dashboard Financiero
+    const financeCtx = document.getElementById('financeChart').getContext('2d');
+    new Chart(financeCtx, {
+      type: 'line',
+      data: {
+        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Ingresos',
+          data: [5000, 7000, 6500, 7200, 8000, 8500],
+          borderColor: '#3782cc',
+          backgroundColor: 'rgba(55,130,204,0.2)',
+          fill: true,
+          tension: 0.3
+        }, {
+          label: 'Gastos',
+          data: [3000, 3500, 3200, 4000, 3800, 3900],
+          borderColor: '#cc5533',
+          backgroundColor: 'rgba(204,85,51,0.2)',
+          fill: true,
+          tension: 0.3
+        }]
+      }
+    });
+
+    // Dashboard de Ventas
+    const salesCtx = document.getElementById('salesChart').getContext('2d');
+    new Chart(salesCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Producto A', 'Producto B', 'Producto C', 'Producto D'],
+        datasets: [{
+          label: 'Ventas',
+          data: [120, 150, 100, 180],
+          backgroundColor: '#3782cc'
+        }]
+      }
+    });
+  </script>
+
+
+
+</body>
+
+</html>

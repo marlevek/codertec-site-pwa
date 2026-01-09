@@ -30,7 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("📌 DOM carregado — iniciando loadPartial...");
     loadPartial("header", "header_en.html");
     loadPartial("footer", "footer_en.html");
-    loadPartial("hero", "hero.html");   // <--- ADICIONE ESTA LINHA
+    
+     // ✅ Hero só carrega se existir na página
+    if (document.getElementById("hero")) {
+        loadPartial("hero", "hero.html");
+    }
 });
 
 

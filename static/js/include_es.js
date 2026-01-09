@@ -30,7 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("📌 DOM carregado — iniciando loadPartial...");
     loadPartial("header", "header_es.html");
     loadPartial("footer", "footer_es.html");
-    loadPartial("hero", "hero.html");
+
+    // ✅ Hero só carrega se existir na página
+    if (document.getElementById("hero")) {
+        loadPartial("hero", "hero.html");
+    }
 });
 
 function loadChatbot() {

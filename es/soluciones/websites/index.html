@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitios Web Profesionales - CoderTec</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link rel="stylesheet" href="/static/css/chatbot.css">
+
+    
+
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <header class="hero-servico text-center">
+        <h1 class="mt-4">Sitios Web Profesionales</h1>
+        <p>Diseño moderno, rápido y optimizado para convertir visitas en contactos reales.</p>
+    </header>
+
+    <main class="servico-container">
+
+        <h2 class="text-center">Modelos Disponibles</h2>
+        <p class="text-center mb-4">Elija el estilo que mejor representa su consultorio o empresa.</p>
+
+        <div class="row g-4">
+
+            <!-- Sitio Dentista -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="/static/images/mock_dentista.png" class="card-img-top" alt="Sitio para Dentistas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sitio para Dentistas</h5>
+                        <p class="card-text">Sitio acogedor y profesional, ideal para dentistas de familia.</p>
+                        <a href="/es/soluciones/websites/dentista.html" class="btn btn-primary">Ver Ejemplo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sitio Clínica -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="/static/images/mock_clinica.png" class="card-img-top" alt="Sitio para Clínicas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sitio para Clínicas</h5>
+                        <p class="card-text">Estructura seria, confiable y organizada para equipos profesionales.</p>
+                        <a href="/es/soluciones/websites/clinica.html" class="btn btn-primary">Ver Ejemplo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sitio para Negocios (Genérico) -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="/static/images/mock_negocio.png" class="card-img-top" alt="Sitio Web para Negocios">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sitio Web + Panel Administrativo</h5>
+                        <p class="card-text">Ideal para clínicas, salones, hoteles y comercios.</p>
+                        <a href="/es/soluciones/websites/negocio-inteligente.html" class="btn btn-primary">Ver
+                            Ejemplo</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-5">
+            <a href="https://wa.me/5541996131762" class="botao">
+                Quiero un sitio web para mi consultorio
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER AUTO-IMPORTADO -->
+    <div id="footer"></div>
+
+    <!-- Botão voltar ao topo -->
+    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include_es.js"></script>
+    <script src="/static/js/btn_topo.js"></script>
+
+    <!-- Botão instalar PWA -->
+    <script src="/static/js/pwa-install.js"></script>
+
+    <!-- Correção do menu mobile -->
+    <script src="/static/js/navbar-mobile-fix.js"></script>
+
+    <script>document.addEventListener("DOMContentLoaded", () => {
+            if (window.location.hash) {
+                const el = document.querySelector(window.location.hash);
+                if (el) {
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 150);
+                }
+            }
+        });</script>
+</body>
+
+</html>

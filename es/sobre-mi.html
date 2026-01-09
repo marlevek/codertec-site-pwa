@@ -10,6 +10,10 @@
     <meta name="author" content="Marcelo Zagonel Levek">
     <title>Sobre Marcelo Zagonel Levek - CoderTec</title>
 
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a2540">
+
     <!-- Bootstrap CSS e ícones -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -38,9 +42,12 @@
                 </div>
                 <div class="col-md-8">
                     <h1 class="titulos">Marcelo Zagonel Levek</h1>
-                    <h4 class="text-muted mb-3">Científico de Datos | Desarrollador Web | Especialista en Automatización e IA</h4>
-                    <p>Soy un apasionado por la tecnología y por ayudar a pequeñas empresas y profesionales de la salud a
-                        automatizar procesos, analizar datos y tomar decisiones inteligentes. Desarrollando soluciones en Python, Django,
+                    <h4 class="text-muted mb-3">Científico de Datos | Desarrollador Web | Especialista en Automatización
+                        e IA</h4>
+                    <p>Soy un apasionado por la tecnología y por ayudar a pequeñas empresas y profesionales de la salud
+                        a
+                        automatizar procesos, analizar datos y tomar decisiones inteligentes. Desarrollando soluciones
+                        en Python, Django,
                         dashboards y agentes de inteligencia artificial.</p>
                 </div>
             </div>
@@ -62,7 +69,8 @@
                             data-desc="Formación Superior en Ciencia de Datos, Estadística y Machine Learning con Python.">
                         <div class="card-body">
                             <h5 class="card-title">Ciencia de Datos</h5>
-                            <p class="card-text">Formación superior en ciencia de datos y machine learning con Python.</p>
+                            <p class="card-text">Formación superior en ciencia de datos y machine learning con Python.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -92,7 +100,8 @@
                             data-desc="Curso de WordPress para desarrolladores: creación de temas desde cero.">
                         <div class="card-body">
                             <h5 class="card-title">Temas WordPress</h5>
-                            <p class="card-text">Curso de WordPress para desarrolladores: creación de temas desde cero.</p>
+                            <p class="card-text">Curso de WordPress para desarrolladores: creación de temas desde cero.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -103,7 +112,8 @@
                         <img src="/static/images/Certificado-apilcacoes-streamlit-e-IA.png"
                             class="card-img-top certificado-img" alt="Certificado Streamlit con IA"
                             data-bs-toggle="modal" data-bs-target="#modalCertificado"
-                            data-img="/static/images/Certificado-apilcacoes-streamlit-e-IA.png" data-title="Streamlit e IA"
+                            data-img="/static/images/Certificado-apilcacoes-streamlit-e-IA.png"
+                            data-title="Streamlit e IA"
                             data-desc="12 aplicaciones web de Inteligencia Artificial y Streamlit.">
                         <div class="card-body">
                             <h5 class="card-title">Streamlit e IA</h5>
@@ -115,9 +125,8 @@
                 <!-- Certificado 5 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card shadow-sm h-100 border-0">
-                        <img src="/static/images/Certificado-django-app-web.png"
-                            class="card-img-top certificado-img" alt="Certificado Django Master"
-                            data-bs-toggle="modal" data-bs-target="#modalCertificado"
+                        <img src="/static/images/Certificado-django-app-web.png" class="card-img-top certificado-img"
+                            alt="Certificado Django Master" data-bs-toggle="modal" data-bs-target="#modalCertificado"
                             data-img="/static/images/Certificado-django-app-web.png" data-title="Django Master"
                             data-desc="Aplicaciones web con Python y Django.">
                         <div class="card-body">
@@ -171,26 +180,25 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- FOOTER AUTO-IMPORTADO -->
     <div id="footer"></div>
 
-    <!-- Botón flotante de WhatsApp -->
-    <div class="whatsapp-float">
-        <a href="https://wa.me/5541988615268?text=¡Hola!%20Quisiera%20saber%20más%20sobre%20tus%20servicios%20de%20automatización%20e%20IA"
-            target="_blank" class="whatsapp-link" aria-label="Contáctanos por WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
 
-    <!-- Botón volver arriba -->
-    <button id="btnVoltarAoTopo" title="Volver arriba" aria-label="Volver arriba">
+    <!-- Botão voltar ao topo -->
+    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
         <i class="bi bi-arrow-up-circle"></i>
     </button>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include_es.js"></script>
     <script src="/static/js/btn_topo.js"></script>
-    
-   <script src="/static/js/include_es.js"></script>
+
+    <!-- Botão instalar PWA -->
+    <script src="/static/js/pwa-install.js"></script>
+
+    <!-- Correção do menu mobile -->
+    <script src="/static/js/navbar-mobile-fix.js"></script>
 
 
 </body>

@@ -21,7 +21,13 @@ async function loadComponent(id, file) {
 document.addEventListener("DOMContentLoaded", () => {
   loadComponent("header", "header.html");
   loadComponent("footer", "footer.html");
+
+  // Hero só se existir
+  if (document.getElementById("hero")) {
+    loadComponent("hero", "hero.html");
+  }
 });
+
 
 function injectChatbotLoader() {
   // Evita duplicar

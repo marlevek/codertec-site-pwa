@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Artificial - CoderTec</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a2540">
+
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/889104c503.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Contenido principal -->
+    <div class="container py-5">
+        <h1 class="text-center mb-4 mt-4">Inteligencia Artificial</h1>
+        <p class="text-center">Implementamos agentes de IA que actúan por ti.</p>
+
+        <!-- Tarjeta de Inteligencia Artificial -->
+        <div class="row g-4 mt-5">
+            <!-- Tarjeta -->
+            <div class="col-md-12">
+                <div class="card p-3 shadow-sm">
+                    <h3 class="pt-3 pb-2"><i class="bi bi-gear"> </i>Agente de Inteligencia Artificial</h3>
+                    <p class="text_card">
+                        Implementamos agentes de IA que actúan por ti: desde un asistente virtual disponible 24h
+                        que califica ventas, hasta <span style="font-weight: bold;">sistemas inteligentes</span> que:
+                    <ul>
+                        <li>analizan documentos</li>
+                        <li>generan contenido para redes sociales</li>
+                        <li>predicen la demanda o detectan fraudes automáticamente</li>
+                        <li>automatizan tareas administrativas y apoyan decisiones clínicas</li>
+                        <li>entre otros.</li>
+                    </ul>
+                    Gana tiempo para enfocarte en lo que realmente importa: tu negocio o clínica.
+                    </p>
+                    <p class="text-center">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalConteudoVideo">
+                            Ver ejemplo
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal - Ejemplo de Video -->
+        <div class="modal fade" id="modalConteudoVideo" tabindex="-1" aria-labelledby="modalConteudoVideoLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalConteudoVideoLabel">Ejemplo de Agente de IA para Generar
+                            Contenido</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <video width="100%" height="auto" controls>
+                            <source src="/es/demos/videos/inteligencia_artificial/ejemplo_agente_ia.mp4"
+                                type="video/mp4">
+                            Tu navegador no admite video HTML5.
+                        </video>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER AUTO-IMPORTADO -->
+    <div id="footer"></div>
+
+    <!-- Botão voltar ao topo -->
+    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include_es.js"></script>
+    <script src="/static/js/btn_topo.js"></script>
+
+    <!-- Botão instalar PWA -->
+    <script src="/static/js/pwa-install.js"></script>
+
+    <!-- Correção do menu mobile -->
+    <script src="/static/js/navbar-mobile-fix.js"></script>
+
+    <script>document.addEventListener("DOMContentLoaded", () => {
+            if (window.location.hash) {
+                const el = document.querySelector(window.location.hash);
+                if (el) {
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 150);
+                }
+            }
+        });</script>
+
+</body>
+
+</html>

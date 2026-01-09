@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web Profesional para Dentistas - CoderTec</title>
+
+     <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a2540">
+
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- HERO -->
+    <header class="hero-servico text-center">
+        <h1>Sitio Web Profesional para Dentistas</h1>
+        <p>Atención humana, confianza y cuidado para todas las edades.</p>
+    </header>
+
+    <main class="servico-container">
+
+        <!-- Mock principal -->
+        <div class="text-center servico-destaque">
+            <img src="/static/images/mock_dentista.png" alt="Sitio para Dentistas" class="img-fluid rounded shadow">
+        </div>
+
+        <!-- Sobre la Profesional -->
+        <section class="mt-5 text-center">
+            <img src="/static/images/dentista_ilustracao.png" alt="Dentista" class="img-fluid mb-4"
+                style="max-width: 220px; border-radius: 12px;">
+
+            <h2>Sobre la Profesional</h2>
+
+            <p class="mt-3" style="font-size: 1.1em; font-style: italic;">
+                “Creo que una sonrisa comienza con acogida.”
+            </p>
+
+            <p class="mt-3">
+                Cada paciente es recibido con calma, paciencia y atención.
+                Queremos que se sienta seguro para preguntar, entender cada paso
+                y confiar en el proceso sin miedo.
+            </p>
+        </section>
+
+        <!-- Chat IA -->
+        <h2 class="mt-5 text-center">Asistente Virtual con IA</h2>
+        <p class="text-center">Tu paciente recibe respuestas inmediatas con claridad y amabilidad.</p>
+
+        <div class="chat-demo shadow p-3 rounded mb-5" style="max-width:450px;margin:auto;background:white;">
+            <div class="d-flex mb-3">
+                <div class="bg-primary text-white p-2 rounded-3" style="max-width:80%;">
+                    ¡Hola 😊! Soy el asistente de la clínica.<br>
+                    ¿Cómo puedo ayudarte hoy?
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mb-3">
+                <div class="bg-light border p-2 rounded-3" style="max-width:80%;">
+                    Me gustaría una evaluación.
+                </div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="bg-primary text-white p-2 rounded-3" style="max-width:80%;">
+                    Perfecto 😊 ¿Prefieres por la mañana o por la tarde?
+                </div>
+            </div>
+        </div>
+
+        <!-- Tratamientos -->
+        <h2 class="mt-5 text-center">Cuidado para Cada Sonrisa</h2>
+        <p class="text-center">
+            Acompañamos a niños, jóvenes y adultos con atención cercana y tranquila.
+        </p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <div class="col">
+                <div class="card h-100 text-center p-3">
+                    <i class="bi bi-emoji-smile fs-1 text-primary"></i>
+                    <h5 class="mt-3">Consulta y Prevención</h5>
+                    <p>Seguimiento para mantener la salud bucal en equilibrio.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center p-3">
+                    <i class="bi bi-shield-plus fs-1 text-primary"></i>
+                    <h5 class="mt-3">Limpieza y Flúor</h5>
+                    <p>Prevención para todas las edades.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center p-3">
+                    <i class="bi bi-heart-pulse fs-1 text-primary"></i>
+                    <h5 class="mt-3">Restauraciones</h5>
+                    <p>Tratamiento cuidadoso para recuperar bienestar y naturalidad.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Antes y Después -->
+        <h2 class="mt-5 text-center">Antes y Después</h2>
+        <div class="row g-4 mt-3 text-center">
+            <div class="col-md-4"><img src="/static/images/antes_depois_1.png" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-md-4"><img src="/static/images/antes_depois_2.png" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-md-4"><img src="/static/images/antes_depois_3.png" class="img-fluid rounded shadow-sm">
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-5">
+            <a href="https://wa.me/5541988615268" class="botao">Quiero este sitio en mi clínica</a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER AUTO-IMPORTADO -->
+    <div id="footer"></div>
+
+    <!-- Botão voltar ao topo -->
+    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include_es.js"></script>
+    <script src="/static/js/btn_topo.js"></script>
+
+    <!-- Botão instalar PWA -->
+    <script src="/static/js/pwa-install.js"></script>
+
+    <!-- Correção do menu mobile -->
+    <script src="/static/js/navbar-mobile-fix.js"></script>
+
+    <script>document.addEventListener("DOMContentLoaded", () => {
+            if (window.location.hash) {
+                const el = document.querySelector(window.location.hash);
+                if (el) {
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 150);
+                }
+            }
+        });</script>
+</body>
+
+</html>

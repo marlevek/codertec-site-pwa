@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desarrollo Web | CoderTec</title>
+
+  <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a2540">
+
+  <!-- Bootstrap y CSS -->
+  <link href="/static/css/estilos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <!-- Encabezado dinámico -->
+  <div id="header"></div>
+
+  <!-- Sección del servicio -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Qué hacemos</h2>
+      <p>En CoderTec, creamos sitios web a medida para pequeñas empresas que buscan una presencia digital moderna y eficiente. Utilizamos tecnologías como Django, Bootstrap y automatizaciones inteligentes.</p>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-window"></i> Sitios institucionales y páginas de aterrizaje</h5>
+              <p class="card-text">Diseño y desarrollo de sitios institucionales, páginas de captura y landing pages optimizadas para conversión y adaptabilidad.</p>
+              <p class="mt-3 mb-2"><strong>Ver ejemplo:</strong></p>
+              <a href="https://www.climatis.com.br" target="_blank" class="btn btn-primary btn-sm me-2">Visitar sitio Climatis</a>
+              <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalLanding">
+                Ver Landing Page
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-speedometer2"></i> Aplicaciones web con paneles administrativos</h5>
+              <p class="card-text">Desarrollo de sistemas web internos, dashboards y herramientas administrativas para una gestión eficiente.</p>
+              <button type="button" class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#dashboardModal">
+                Ver ejemplo
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-box-arrow-in-up-right"></i> Integración con APIs y sistemas internos</h5>
+              <p class="card-text">Integramos tus sistemas y APIs para automatizar procesos y sincronizar información de forma segura y confiable.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-search"></i> SEO y optimización de rendimiento</h5>
+              <p class="card-text">Sitios optimizados para SEO, carga rápida y mejor experiencia de usuario, aumentando la visibilidad y las conversiones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="/es/index.html#contacto" class="btn btn-warning btn-lg">Solicitar Presupuesto</a>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- Modal: Landing Page -->
+  <div class="modal fade" id="modalLanding" tabindex="-1" aria-labelledby="modalLandingLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLandingLabel">Ejemplo de Landing Page</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <iframe src="/es/demos/django/sites-institucionales/index.html" width="100%" height="400px" style="border:none;"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Dashboard -->
+  <div class="modal fade" id="dashboardModal" tabindex="-1" aria-labelledby="dashboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dashboardModalLabel">Aplicación Web: Panel Administrativo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ejemplo de dashboard para monitoreo de métricas y datos de una empresa o clínica.</p>
+
+          <div class="row g-3 mb-4">
+            <div class="col-md-3"><div class="card text-center p-3 shadow-sm"><h6>Total de Usuarios</h6><h3>125</h3></div></div>
+            <div class="col-md-3"><div class="card text-center p-3 shadow-sm"><h6>Nuevos Clientes</h6><h3>23</h3></div></div>
+            <div class="col-md-3"><div class="card text-center p-3 shadow-sm"><h6>Ingresos Mensuales</h6><h3>$18.400</h3></div></div>
+            <div class="col-md-3"><div class="card text-center p-3 shadow-sm"><h6>Órdenes de Servicio</h6><h3>56</h3></div></div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6"><canvas id="revenueChart"></canvas></div>
+            <div class="col-md-6"><canvas id="tasksChart"></canvas></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+    const revenueChart = new Chart(revenueCtx, {
+      type: 'line',
+      data: {
+        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Ingresos Mensuales',
+          data: [12000, 15000, 14000, 18000, 17000, 18400],
+          borderColor: '#3782cc',
+          backgroundColor: 'rgba(55,130,204,0.2)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: true, position: 'top' },
+          title: { display: true, text: 'Ingresos Mensuales' }
+        }
+      }
+    });
+
+    const tasksCtx = document.getElementById('tasksChart').getContext('2d');
+    const tasksChart = new Chart(tasksCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Completadas', 'En Progreso', 'Pendientes'],
+        datasets: [{
+          data: [30, 15, 11],
+          backgroundColor: ['#3782cc','#002244','#c1d7ec']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: true, position: 'bottom' },
+          title: { display: true, text: 'Estado de las Órdenes de Servicio' }
+        }
+      }
+    });
+  </script>
+
+ <!-- FOOTER AUTO-IMPORTADO -->
+    <div id="footer"></div>
+
+
+    <!-- Botão voltar ao topo -->
+    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include_es.js"></script>
+    <script src="/static/js/btn_topo.js"></script>
+
+    <!-- Botão instalar PWA -->
+    <script src="/static/js/pwa-install.js"></script>
+
+    <!-- Correção do menu mobile -->
+    <script src="/static/js/navbar-mobile-fix.js"></script>
+
+    <script>document.addEventListener("DOMContentLoaded", () => {
+            if (window.location.hash) {
+                const el = document.querySelector(window.location.hash);
+                if (el) {
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 150);
+                }
+            }
+        });</script>
+
+
+</body>
+</html>
