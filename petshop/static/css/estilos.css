@@ -1,0 +1,487 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* HEADER TRANSPARENTE */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: 0.4s ease;
+  background: transparent;
+}
+
+/* CONTAINER CENTRAL */
+.header-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Quando rolar */
+.header.header-scrolled {
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header.header-scrolled .logo {
+  color: #0052cc;
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  transition: 0.4s;
+}
+
+.header.header-scrolled .logo {
+  color: #0052cc;
+}
+
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #ffffff;
+  transition: 0.4s;
+}
+
+.header.header-scrolled .menu a {
+  color: #333;
+}
+
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: -4px 0 14px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 80px 25px;
+  gap: 20px;
+  transform: translateX(100%);
+  /* ← Esconde totalmente */
+  transition: transform 0.35s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+  /* ← Mostra */
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 850px) {
+  .menu {
+    display: none;
+    /* esconde menu normal */
+  }
+
+  .hamburger {
+    display: block;
+    /* mostra o hamburger */
+  }
+}
+
+
+/* Botão Agendar */
+.cta {
+  background: #ffffff;
+  color: #0052cc;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  white-space: nowrap;
+  /* impede quebrar linha */
+}
+
+.header.header-scrolled .cta {
+  background: #0052cc;
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8fbff;
+}
+
+.hero .btn {
+  margin-top: 15px;
+  display: inline-block;
+  background: #007bff;
+  padding: 12px 20px;
+  color: #fff;
+  border-radius: 25px;
+}
+
+#servicos,
+#sobre,
+#depoimentos,
+#contato,
+#antesdepois {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.hero {
+  position: relative;
+  height: 75vh;
+  background: url("/static/images/imgem-animais-veterinario-feliz.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 94, 255, 0.45);
+  /* overlay azul suave */
+  backdrop-filter: brightness(0.9);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.hero .btn {
+  background: #ffffff;
+  color: #005eff;
+  font-weight: bold;
+  padding: 14px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.hero .btn:hover {
+  background: #dcecff;
+}
+
+.antes-depois {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.antes-depois h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.antes-depois p {
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.ad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ad-item {
+  position: relative;
+}
+
+.ad-item img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #ececec;
+  object-fit: cover;
+  height: 200px;
+}
+
+.ad-item span {
+  display: block;
+  font-size: 14px;
+  margin-top: 6px;
+  color: #005eff;
+  font-weight: bold;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #007bff, #0052cc);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 50px;
+}
+
+.cta-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+.btn-cta {
+  display: inline-block;
+  background: #fff;
+  color: #0052cc;
+  font-weight: bold;
+  padding: 14px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.btn-cta:hover {
+  background: #dcecff;
+}
+
+.footer {
+  background: #002244;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 50px;
+  margin-top: 60px;
+}
+
+.footer-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  margin: 6px 0;
+  opacity: 0.85;
+  font-size: 15px;
+}
+
+.footer-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #002244;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 18px;
+  transition: 0.3s;
+}
+
+.footer-btn:hover {
+  background: #c7d9ff;
+}
+
+.footer-map {
+  margin-top: 40px;
+}
+
+.footer-copy {
+  background: #00172e;
+  padding: 18px;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 40px;
+}
+
+.footer-map {
+  margin-top: 40px;
+}
+
+.map-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 0;
+  border-radius: 4px;
+  opacity: 0.95;
+}
+
+.map-image:hover {
+  opacity: 1;
+}
+
+.depoimentos {
+  text-align: center;
+  padding: 70px 20px;
+  background: #f8fbff;
+}
+
+.depoimentos h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #00316e;
+}
+
+.dep-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.dep-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  border: 1px solid #e6eef8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.dep-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.dep-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.dep-item h4 {
+  margin: 8px 0 6px;
+  font-size: 18px;
+  color: #002f75;
+}
+
+.dep-item p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.4em;
+}
+
+.dep-nome {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #0052cc;
+  font-weight: bold;
+}
+
+/* Fundo escuro ao abrir menu */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s ease;
+  z-index: 900;
+  /* menor que menu, maior que a página */
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ícone hambúrguer padrão (quando o header está transparente) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #ffffff;
+  /* branco para overlay no hero */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Quando rolar (header-scrolled) → o fundo fica branco, então o ícone deve ser azul */
+.header.header-scrolled .hamburger {
+  color: #0052cc;
+  /* mesma cor do botão Agendar */
+}
+
+@media (max-width: 850px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Corrige a rolagem das âncoras para baixo do header */
+section {
+  scroll-margin-top: 110px;
+  /* ajuste fino conforme tamanho do header */
+}
+
+html {
+  scroll-behavior: smooth;
+}

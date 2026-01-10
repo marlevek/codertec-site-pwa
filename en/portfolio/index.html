@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio • CoderTec</title>
 
-   <!-- PWA -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#0a2540">
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0a2540">
 
   <!-- Bootstrap + Icons + Global CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -17,10 +17,12 @@
   <link rel="stylesheet" href="/static/css/estilos.css">
   <link rel="stylesheet" href="/static/css/solutions/portfolio.css">
   <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
-  <link rel="alternate" href="https://codertec.com.br/" hreflang="pt-br" />
-  <link rel="alternate" href="https://codertec.com.br/es/" hreflang="es" />
-  <link rel="alternate" href="https://codertec.com.br/en/" hreflang="en" />
-  <link rel="alternate" href="https://codertec.com.br/" hreflang="x-default" />
+
+  <link rel="canonical" href="https://codertec.com.br/en/portfolio/">
+  <link rel="alternate" hreflang="en" href="https://codertec.com.br/en/portfolio/">
+  <link rel="alternate" hreflang="pt-BR" href="https://codertec.com.br/pt/portfolio.html">
+  <link rel="alternate" hreflang="es" href="https://codertec.com.br/es/portfolio/">
+  <link rel="alternate" hreflang="x-default" href="https://codertec.com.br/pt/portfolio.html">
 
 </head>
 
@@ -29,7 +31,7 @@
   <!-- Dynamic Header -->
   <div id="header"></div>
 
-   <!-- HERO -->
+  <!-- HERO -->
   <section class="portfolio-hero">
     <h1>Portfolio of Solutions</h1>
     <p>Real projects designed to increase digital presence, credibility and measurable results.</p>
@@ -171,20 +173,24 @@
   </section>
 
   <!-- Footer -->
-    <div id="footer"></div>
+  <div id="footer"></div>
 
 
-    <!-- back to top -->
-    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
-        <i class="bi bi-arrow-up-circle"></i>
-    </button>
+  <!-- back to top -->
+  <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+    <i class="bi bi-arrow-up-circle"></i>
+  </button>
 
-    <!-- JS GLOBAL -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/js/include_en.js"></script>
-    <script src="/static/js/pwa-install.js"></script>
-    <script src="/static/js/btn_topo.js"></script>
-    <script src="/static/js/navbar-mobile-fix.js"></script>
+  <!-- JS GLOBAL -->
+  <script src="/static/js/include_en.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/btn_topo.js"></script>
+
+  <!-- Botão instalar PWA -->
+  <script src="/static/js/pwa-install.js"></script>
+
+  <!-- Correção do menu mobile -->
+  <script src="/static/js/navbar-mobile-fix.js"></script>
 
 
 </body>
