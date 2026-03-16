@@ -27,10 +27,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="CoderTec - Desenvolvimento de apps web, ciência de dados, IA e automação com Python para pequenas empresas.">
+        content="A CoderTec desenvolve soluções em inteligência artificial, automação, dashboards, ciência de dados, sistemas web e SaaS para empresas, clínicas e profissionais.">
     <meta name="keywords" content="desenvolvimento web, ciência de dados, IA, automação, Dashboards, pequenas empresas">
     <meta name="author" content="CoderTec">
-    <title>CoderTec - Soluções em Tecnologia</title>
+    <title>CoderTec | IA, Automação, Dashboards e SaaS para Empresas e Clínicas</title>
 
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#0a2540">
@@ -53,6 +53,37 @@
         .hero-subtitle {
             font-size: 1.2rem;
             color: #778899
+        }
+
+        .section-lead {
+            max-width: 820px;
+            margin: 0 auto 2rem;
+            color: #5f6f82;
+        }
+
+        .home-card {
+            height: 100%;
+            border: 1px solid #dbe5ef;
+            box-shadow: 0 10px 24px rgba(10, 37, 64, 0.06);
+        }
+
+        .home-card .card-body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .home-card h3 {
+            font-size: 1.3rem;
+        }
+
+        .home-card p {
+            color: #425466;
+        }
+
+        .home-card .btn {
+            margin-top: auto;
+            align-self: flex-start;
         }
     </style>
 
@@ -97,9 +128,10 @@
     <!-- Seção Home -->
     <header class="text-center py-5">
         <div class="container">
-            <h1>Automação, Inteligência Artificial e Ciência de Dados para sua empresa</h1>
-            <h2 style="padding: 20px; color:lightslategray">Desenvolvemos sites, dashboards e soluções web para
-                profissionais da saúde e pequenas empresas.</h2>
+            <h1 class="hero-title">Soluções em IA, automação, dashboards e SaaS para empresas e clínicas</h1>
+            <p class="hero-subtitle px-3" style="max-width: 920px; margin: 0 auto 20px;">Desenvolvemos produtos e
+                soluções sob medida para ajudar pequenas empresas, clínicas e profissionais a vender mais, automatizar
+                processos e operar com mais eficiência.</p>
 
 
             <!-- Mini Formulário -->
@@ -123,140 +155,174 @@
         </div>
     </header>
 
-    <!-- Seção Sobre -->
-    <section id="sobre" class="py-5 bg-light">
+    <!-- Seção Produtos -->
+    <section id="produtos" class="py-5 bg-light">
         <div class="container">
-            <div class="titulos"><i class="bi bi-gear"></i> Sobre a Codertec</div>
-            <p>Na CoderTec, desenvolvemos sites e aplicações web, ciência de dados, dashboards, automação e agentes de
-                inteligência artificial
-                com Python para impulsionar negócios.</p>
-            <p>Nosso foco é criar soluções inovadoras que otimizam processos, aumentam a produtividade e melhoram a
-                tomada de decisão para o seu negócio.</p>
-            <p>Entregamos ferramentas personalizadas que atendem às necessidades específicas do seu negócio.</p>
-            <!-- WhatsApp -->
-            <div class="whatsapp-float">
-                <a href="https://wa.me/5541988615268?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20automação%20e%20IA"
-                    target="_blank" class="whatsapp-link" aria-label="Fale conosco no WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
+            <h2 class="titulos">Produtos e SaaS da CoderTec</h2>
+            <p class="section-lead">Conheça nossas soluções digitais para nichos específicos, com foco em automação,
+                produtividade e crescimento.</p>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card home-card">
+                        <div class="card-body p-4">
+                            <h3 class="pt-1"><i class="bi bi-heart-pulse"></i> PsicoAssist</h3>
+                            <p>Solução com IA e automação para psicólogos e clínicas organizarem atendimentos,
+                                reduzirem tarefas manuais e ganharem eficiência.</p>
+                            <p class="mb-2"><a href="https://psicoassist.codertec.com.br/" class="btn btn-primary">Conhecer o
+                                    PsicoAssist</a></p>
+                            <p class="small mt-0 mb-0 text-muted">Ou, se preferir, <a href="produtos/psicoassist/"
+                                    class="link-primary fw-semibold">ver resumo institucional na CoderTec</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card home-card">
+                        <div class="card-body p-4">
+                            <h3 class="pt-1"><i class="bi bi-robot"></i> Atendente Virtual Inteligente 24h</h3>
+                            <p>Assistente com IA para responder contatos, qualificar oportunidades e apoiar
+                                agendamentos com mais velocidade.</p>
+                            <a href="/pt/solucoes/agentes-ia/" class="btn btn-primary">Ver solução</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card home-card">
+                        <div class="card-body p-4">
+                            <h3 class="pt-1"><i class="bi bi-hospital"></i> Web App para Clínicas e Consultórios</h3>
+                            <p>Sistema web com agenda, repasses automáticos e dashboard para organizar a operação da
+                                clínica.</p>
+                            <a href="/pt/solucoes/webapps/" class="btn btn-primary">Ver solução</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card home-card">
+                        <div class="card-body p-4">
+                            <h3 class="pt-1"><i class="bi bi-clipboard-data"></i> SmartPMOC</h3>
+                            <p>Solução digital para empresas de climatização com monitoramento, relatórios e presença
+                                web orientada a operação.</p>
+                            <a href="/pt/solucoes/websites/smartpmoc.html" class="btn btn-primary">Ver solução</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card home-card">
+                        <div class="card-body p-4">
+                            <h3 class="pt-1"><i class="bi bi-megaphone"></i> Gerador de Conteúdo com IA</h3>
+                            <p>Automação para criar posts, legendas e conteúdos para redes sociais com apoio de
+                                inteligência artificial.</p>
+                            <a href="/pt/servicos/inteligencia-artificial/" class="btn btn-primary">Ver solução</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="titulos pt-5">Por Que Escolher a CoderTec?</div>
-            <ul style="font-size: large;">
-                <li><span class="text_bold">Soluções Personalizadas:</span> Entendemos que cada negócio é único. Por
-                    isso, criamos soluções sob medida,
-                    alinhadas
-                    aos seus objetivos e desafios.</li>
-                <li><span class="text_bold">Tecnologia de Ponta:</span> Utilizamos as ferramentas e frameworks mais
-                    modernos do mercado, garantindo
-                    eficiência,
-                    segurança e performance.</li>
-                <li><span class="text_bold">Foco em Resultados:</span> Nosso trabalho vai além do código. Nosso objetivo
-                    é entregar valor real,
-                    impulsionando o
-                    crescimento e a eficiência do seu negócio.</li>
-                <li><span class="text_bold">Suporte Contínuo:</span> Oferecemos suporte técnico e manutenção para
-                    garantir que suas soluções continuem
-                    funcionando
-                    perfeitamente.</li>
-            </ul>
         </div>
     </section>
-    <!-- Botão voltar ao topo -->
-    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
-        <i class="bi bi-arrow-up-circle"></i>
-    </button>
 
     <!-- Seção Serviços -->
     <section id="servicos" class="py-5">
         <div class="container">
-            <div class="titulos">Nossos Serviços</div>
+            <h2 class="titulos">Serviços sob medida</h2>
+            <p class="section-lead">Projetos personalizados de desenvolvimento web, dashboards, automação, ciência de
+                dados e inteligência artificial para empresas e profissionais.</p>
             <div class="row">
                 <div class="col-md-6 g-3">
-                    <div class="card">
-                        <h3 class="pt-3 p-2"><i class="bi bi-laptop"></i> Desenvolvimento Web Completo</h3>
-                        <p class="text_card">Criamos a presença online ideal para o seu negócio. Desenvolvemos tanto
-                            <span style="font-weight: bold;">websites institucionais</span> impactantes quanto <span
-                                style="font-weight: bold;">aplicações web poderosas</span> – como dashboards e sistemas
-                            de
-                            gestão – que são funcionais, escaláveis e proporcionam a melhor experiência para o seu
-                            cliente
-                            ou equipe.
-                        </p>
-                        <p class="text-center"><a href="servicos/desenvolvimento-web/" class="btn btn-primary">Veja na
-                                prática!</a></p>
+                    <div class="card home-card">
+                        <div class="card-body p-4">
+                            <h3 class="pt-1"><i class="bi bi-laptop"></i> Desenvolvimento Web</h3>
+                            <p>Criamos websites, landing pages, sistemas web e áreas administrativas alinhadas ao seu
+                                processo comercial e operacional.</p>
+                            <p class="text-center"><a href="servicos/desenvolvimento-web/" class="btn btn-primary">Ver
+                                    desenvolvimento web sob medida</a></p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 g-3">
-                    <div class="card">
-                        <h3 class="pt-3 p-2"><i class="bi bi-graph-up-arrow"></i> Ciência de Dados para Decisões
-                            Estratégicas
-                        </h3>
-                        <p class="text_card">Vá além de relatórios do passado. Nossas análises preveem cenários futuros,
-                            identificam
-                            oportunidades de crescimento escondidas nos seus dados e reduzem riscos antes que eles
-                            aconteçam. <span style="font-weight: bold;">Tome decisões com confiança</span>, não com
-                            palpite.</p>
-                        <p class="text-center"><a href="servicos/ciencia-de-dados/" class="btn btn-primary">Veja na
-                                prática!</a></p>
+                    <div class="card home-card">
+                        <div class="card-body p-4">
+                            <h3 class="pt-1"><i class="bi bi-bar-chart-line"></i> Dashboards</h3>
+                            <p>Painéis visuais para acompanhar indicadores, desempenho, vendas, finanças e gargalos em
+                                tempo real.</p>
+                            <p class="text-center"><a href="servicos/dashboards/" class="btn btn-primary">Ver
+                                    dashboards personalizados</a></p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 g-3">
-                    <div class="card">
-                        <h3 class="pt-3 p-2"><i class="bi bi-bar-chart-line"></i> Dashboards que Colocam sua Empresa na
-                            Sua Tela
-                        </h3>
-                        <p class="text_card">Tenha todas as métricas-chave do seu negócio disponíveis em tempo real, de
-                            forma visual e
-                            intuitiva. Monitore performance, identifique gargalos e <span style="font-weight: bold;">
-                                tome decisões ágeis </span>sem precisar de
-                            planilhas complexas ou relatórios demorados.</p>
-                        <p class="text-center"><a href="servicos/dashboards/" class="btn btn-primary">Veja na
-                                prática!</a></p>
+                    <div class="card home-card">
+                        <div class="card-body p-4">
+                            <h3 class="pt-1"><i class="bi bi-code-slash"></i> Automação</h3>
+                            <p>Automatizamos tarefas manuais, integrações entre sistemas, relatórios e rotinas que
+                                consomem tempo da sua equipe.</p>
+                            <p class="text-center"><a href="servicos/automacao/" class="btn btn-primary">Ver automação
+                                    de processos</a></p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 g-3">
-                    <div class="card">
-                        <h3 class="pt-3 p-2"><i class="bi bi-code-slash"></i> Automação de Processos</h3>
-                        <p class="text_card"> Robotizamos tarefas manuais e repetitivas, como relatórios, integração de
-                            sistemas e gestão de
-                            dados. Sua equipe ganha tempo para atividades estratégicas que geram crescimento e inovação.
-                        </p>
-                        <p class="text-center"><a href="servicos/automacao/" class="btn btn-primary">Veja na
-                                prática!</a></p>
+                    <div class="card home-card">
+                        <div class="card-body p-4">
+                            <h3 class="pt-1"><i class="bi bi-graph-up-arrow"></i> Ciência de Dados</h3>
+                            <p>Transformamos dados em análises, previsões e insights para apoiar decisões com mais
+                                confiança.</p>
+                            <p class="text-center"><a href="servicos/ciencia-de-dados/" class="btn btn-primary">Ver
+                                    ciência de dados</a></p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 g-3">
-                    <div class="card">
-                        <h3 class="pt-3 p-2"><i class="bi bi-robot"></i> Inteligência Artificial Prática para seu
-                            Negócio</h3>
-                        <p class="text_card">Implementamos agentes de IA que agem por você: desde um atendente virtual
-                            24h que qualifica
-                            vendas, até <span style="font-weight: bold;">sistemas inteligentes</span> que analisam
-                            documentos, preveem demanda ou detectam fraudes automaticamente. Ganhe eficiência radical e
-                            uma
-                            vantagem competitiva definitiva.</p>
-                        <p class="text-center"><a href="servicos/inteligencia-artificial/" class="btn btn-primary">Veja
-                                na prática!</a></p>
+                    <div class="card home-card">
+                        <div class="card-body p-4">
+                            <h3 class="pt-1"><i class="bi bi-robot"></i> IA para Negócios</h3>
+                            <p>Implementamos agentes de IA, análise de documentos, geração de conteúdo e automações
+                                inteligentes para acelerar atendimento e operação.</p>
+                            <p class="text-center"><a href="servicos/inteligencia-artificial/" class="btn btn-primary">Ver
+                                    inteligência artificial</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="titulos"><i class="bi bi-gear"></i> Sobre a CoderTec</h2>
+            <p>Na CoderTec, desenvolvemos produtos digitais e soluções sob medida em desenvolvimento web, dashboards,
+                automação, ciência de dados e inteligência artificial para impulsionar negócios.</p>
+            <p>Nosso foco é criar soluções inovadoras que otimizam processos, aumentam a produtividade e melhoram a
+                tomada de decisão para o seu negócio.</p>
+            <p>Combinamos ofertas mais prontas, quando isso acelera a entrega, com projetos personalizados para
+                necessidades específicas.</p>
+
+            <h2 class="titulos pt-5">Por Que Escolher a CoderTec?</h2>
+            <ul style="font-size: large;">
+                <li><span class="text_bold">Clareza entre produto e projeto:</span> indicamos quando uma solução pronta
+                    atende bem e quando vale desenvolver algo sob medida.</li>
+                <li><span class="text_bold">Tecnologia de Ponta:</span> utilizamos ferramentas e frameworks modernos
+                    para entregar eficiência, segurança e performance.</li>
+                <li><span class="text_bold">Foco em Resultados:</span> nosso objetivo é entregar valor real, com ganhos
+                    de produtividade, vendas e eficiência operacional.</li>
+                <li><span class="text_bold">Suporte Contínuo:</span> oferecemos suporte técnico e manutenção para manter
+                    suas soluções funcionando com consistência.</li>
+            </ul>
         </div>
     </section>
 
     <!--seção missão e valores-->
     <section id="missao">
         <div class="container py-5">
-            <div class="titulos">Nossa Missão</div>
+            <h2 class="titulos">Nossa Missão</h2>
             <p>Na CoderTec, nossa missão é <span style="font-weight: bold;">descomplicar a tecnologia para pequenas
                     empresas</span>. Utilizamos Python, Data
                 Science e Inteligência Artificial para criar soluções práticas que <span
                     style="font-weight: bold;">automatizam tarefas, clareiam
-                    decisões e liberam o potencial de crescimento</span> do seu negócio.</p>
+                decisões e liberam o potencial de crescimento</span> do seu negócio.</p>
 
             <p>Acreditamos que a inovação deve ser acessível. Por isso, nos dedicamos a ser o parceiro estratégico que
                 transforma desafios operacionais em vantagens competitivas tangíveis.</p>
-            <div class="titulos pt-5">Nossos Valores</div>
+            <h2 class="titulos pt-5">Nossos Valores</h2>
             <div class="row row-cols-1 row-cols-md-2 g-5">
                 <div class="col">
                     <div class="card">
@@ -307,34 +373,34 @@
     </section>
 
     <div class="container pt-5">
-        <div class="titulos">Transforme Seu Negócio com a CoderTec</div>
-        <p class="pt-2">Seja para desenvolver um website, uma aplicação web, analisar dados, automatizar processos ou
-            implementar um agente de inteligência artificial estamos
-            prontos para ajudar.</p>
+        <h2 class="titulos">Transforme Seu Negócio com a CoderTec</h2>
+        <p class="pt-2">Seja para contratar um produto digital da CoderTec ou desenvolver uma solução sob medida,
+            estamos prontos para ajudar.</p>
         <p>Entre em contato conosco e descubra como podemos levar seu negócio para o próximo nível</p>.
     </div>
 
     <!-- Seção Contato -->
     <section id="contato" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center text-primary">Fale Conosco</h2>
-            <p>Preencha seus dados para receber uma demonstração gratuita da CoderTec. Nenhum software será instalado e
-                seus dados estarão seguros.</p>
+            <h2 class="text-center text-primary">Fale com a CoderTec sobre seu projeto</h2>
+            <p>Se você precisa de um site, sistema web, dashboard, automação, solução com IA ou projeto de dados,
+                envie sua mensagem. Vamos entender seu cenário e propor a melhor solução para o seu negócio.</p>
             <form class="shadow p-4" action="/contact.php" method="POST">
                 <input type="hidden" name="lang" value="pt">
                 <div class="mb-3">
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" name='nome' id="nome" required>
+                    <label for="nome" class="form-label">Seu nome</label>
+                    <input type="text" class="form-control" name='nome' id="nome" placeholder="Como podemos chamar você?" required>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">E-mail</label>
-                    <input type="email" class="form-control" name="email" id="email" required>
+                    <label for="email" class="form-label">Seu e-mail</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="nome@empresa.com.br" required>
                 </div>
                 <div class="mb-3">
-                    <label for="mensagem" class="form-label">Mensagem</label>
-                    <textarea class="form-control" name="mensagem" id="mensagem" rows="4" required></textarea>
+                    <label for="mensagem" class="form-label">Projeto ou necessidade</label>
+                    <textarea class="form-control" name="mensagem" id="mensagem" rows="4"
+                        placeholder="Conte brevemente se você busca desenvolvimento web, dashboards, automação, ciência de dados, IA ou uma solução sob medida." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary">Solicitar orçamento</button>
             </form>
         </div>
     </section>

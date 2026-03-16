@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvimento Web | CoderTec</title>
+  <meta name="description"
+    content="A CoderTec desenvolve sites, landing pages, sistemas web e aplicações sob medida para empresas, clínicas e profissionais.">
+  <title>Desenvolvimento Web sob medida | CoderTec</title>
 
   <!-- PWA -->
   <link rel="manifest" href="/manifest.json">
@@ -165,6 +167,35 @@
     .tech-logo:hover {
       opacity: 1;
     }
+
+    .section-intro {
+      max-width: 860px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .audience-card,
+    .problem-card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      height: 100%;
+    }
+
+    .problem-card {
+      background: #fff;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+      color: white;
+      border-radius: 12px;
+      padding: 48px 24px;
+    }
+
+    .cta-section h2,
+    .cta-section p {
+      color: #d9ecff;
+    }
   </style>
 </head>
 
@@ -173,18 +204,15 @@
   <!-- Cabeçalho dinâmico -->
   <div id="header"></div>
 
-  <!-- Cabeçalho dinâmico -->
-  <div id="header"></div>
-
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-8">
-          <h1 class="display-4 fw-bold">Desenvolvimento Web</h1>
-          <p class="lead fs-4">Criamos sites e aplicações web sob medida para impulsionar seu negócio com tecnologia
-            moderna e eficiente.</p>
-          <a href="#services" class="btn btn-light btn-lg mt-3 text-black">Conheça Nossas Soluções</a>
+          <h1 class="display-4 fw-bold">Desenvolvimento Web sob medida para empresas, clínicas e profissionais</h1>
+          <p class="lead fs-4">Criamos sites, sistemas web, landing pages e aplicações sob medida para empresas e
+            profissionais que precisam vender mais, automatizar processos e melhorar sua presença digital.</p>
+          <a href="#o-que-desenvolvemos" class="btn btn-light btn-lg mt-3 text-black">Ver o que desenvolvemos</a>
         </div>
         <div class="col-lg-4 text-center">
           <i class="bi bi-code-slash display-1 opacity-75"></i>
@@ -196,23 +224,22 @@
   <!-- Seção Sobre o Serviço -->
   <section class="py-5">
     <div class="container">
-      <h2 class="mb-4">O que fazemos</h2>
-      <p id="services">Na CoderTec, criamos sites sob medida para pequenas empresas que desejam presença digital moderna
-        e
-        eficiente. Utilizamos tecnologias como Django, Bootstrap e automações inteligentes.</p>
+      <div id="o-que-desenvolvemos" class="text-center mb-4">
+        <h2 class="mb-3">O que desenvolvemos</h2>
+        <p class="section-intro">Desenvolvemos soluções web pensadas para presença digital, operação e crescimento.
+          Cada projeto é estruturado conforme o momento do negócio, com foco em clareza comercial, eficiência e
+          facilidade de uso.</p>
+      </div>
 
       <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
         <div class="col">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-window"></i> Sites institucionais e landing pages
-              </h5>
-              <p class="card-text">Criação de sites institucionais, páginas de captura e landing pages
-                otimizadas para conversão e responsividade.</p>
-              <!-- Texto guia -->
+              <h3 class="card-title h5"><i class="bi bi-window"></i> Sites institucionais e landing pages
+              </h3>
+              <p class="card-text">Páginas profissionais para apresentar sua empresa, gerar confiança e transformar
+                visitas em contatos, agendamentos ou pedidos de orçamento.</p>
               <p class="mt-3 mb-2"><strong>Veja exemplo:</strong></p>
-
-              <!-- Botões -->
               <a href="https://www.climatis.com.br" target="_blank" class="btn btn-primary btn-sm me-2">Visitar Site
                 Climatis</a>
               <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
@@ -225,10 +252,9 @@
         <div class="col">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-speedometer2"></i> Aplicações web com painéis
-                administrativos</h5>
-              <p class="card-text">Desenvolvimento de sistemas web internos, dashboards e ferramentas
-                administrativas para gestão eficiente.</p>
+              <h3 class="card-title h5"><i class="bi bi-speedometer2"></i> Sistemas web sob medida</h3>
+              <p class="card-text">Aplicações para organizar processos, centralizar informações, reduzir retrabalho e
+                dar mais controle à sua operação.</p>
               <button type="button" class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal"
                 data-bs-target="#dashboardModal">
                 Ver exemplo
@@ -239,119 +265,117 @@
         <div class="col">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-box-arrow-in-up-right"></i> Integração com APIs e
-                sistemas internos</h5>
-              <p class="card-text">Integramos seus sistemas e APIs para automatizar processos e
-                sincronizar informações de forma segura.</p>
+              <h3 class="card-title h5"><i class="bi bi-bar-chart-line"></i> Portais, dashboards e áreas
+                administrativas</h3>
+              <p class="card-text">Painéis e ambientes internos para acompanhar indicadores, cadastros, atendimento,
+                vendas e rotinas operacionais em um só lugar.</p>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card h-100 shadow-sm">
             <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-search"></i> SEO e otimização de performance</h5>
-              <p class="card-text">Sites otimizados para SEO, carregamento rápido e melhor experiência do
-                usuário, aumentando conversões.</p>
+              <h3 class="card-title h5"><i class="bi bi-hospital"></i> Aplicações para clínicas e empresas</h3>
+              <p class="card-text">Projetos para quem precisa integrar formulários, relatórios, agenda, processos
+                internos e atendimento com mais organização.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Seção: Estatísticas -->
       <section class="stats-section my-5">
-        <div class="row text-center">
-          <div class="col-md-3">
-            <div class="stat-item">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Sites Responsivos</div>
+        <div class="row">
+          <div class="col-12 text-center mb-4">
+            <h2 class="fw-bold">Para quem é</h2>
+            <p class="section-intro mb-0">Esse tipo de projeto faz sentido para operações que precisam sair do improviso
+              digital e ganhar uma estrutura mais profissional.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card audience-card p-4 text-dark">
+              <div class="icon-container webdev-icon mx-auto">
+                <i class="bi bi-building fs-3"></i>
+              </div>
+              <h3 class="h5 text-center">Pequenas empresas</h3>
+              <p class="text-center mb-0">Negócios que precisam vender melhor online e profissionalizar sua presença
+                digital.</p>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="stat-item">
-              <div class="stat-number">+40%</div>
-              <div class="stat-label">Conversões</div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card audience-card p-4 text-dark">
+              <div class="icon-container webdev-icon mx-auto">
+                <i class="bi bi-heart-pulse fs-3"></i>
+              </div>
+              <h3 class="h5 text-center">Clínicas e consultórios</h3>
+              <p class="text-center mb-0">Operações que precisam organizar atendimento, agenda, repasses ou captação de
+                pacientes.</p>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="stat-item">
-              <div class="stat-number">3x</div>
-              <div class="stat-label">Mais Velocidade</div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card audience-card p-4 text-dark">
+              <div class="icon-container webdev-icon mx-auto">
+                <i class="bi bi-person-workspace fs-3"></i>
+              </div>
+              <h3 class="h5 text-center">Profissionais liberais</h3>
+              <p class="text-center mb-0">Especialistas que querem um site mais forte, páginas de conversão e contato
+                mais organizado.</p>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="stat-item">
-              <div class="stat-number">24/7</div>
-              <div class="stat-label">Suporte Técnico</div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card audience-card p-4 text-dark">
+              <div class="icon-container webdev-icon mx-auto">
+                <i class="bi bi-file-earmark-spreadsheet fs-3"></i>
+              </div>
+              <h3 class="h5 text-center">Operações manuais</h3>
+              <p class="text-center mb-0">Equipes que ainda dependem de planilhas, WhatsApp solto e processos pouco
+                integrados.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Seção: Tecnologias -->
       <section class="tech-section mt-5">
         <div class="row">
           <div class="col-12 text-center mb-4">
-            <h2 class="fw-bold">Tecnologias que Utilizamos</h2>
-            <p class="lead">Trabalhamos com as melhores ferramentas para garantir qualidade e performance</p>
+            <h2 class="fw-bold">Problemas que ajudamos a resolver</h2>
+            <p class="section-intro">O desenvolvimento web faz mais sentido quando resolve problemas reais do negócio, e
+              não apenas quando coloca uma página no ar.</p>
           </div>
         </div>
 
-        <div class="row text-center">
-          <div class="col-12">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="tech-logo"
-              alt="Django">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="tech-logo"
-              alt="Python">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-              class="tech-logo" alt="Bootstrap">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-              class="tech-logo" alt="JavaScript">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tech-logo"
-              alt="HTML5">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tech-logo"
-              alt="CSS3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-              class="tech-logo" alt="PostgreSQL">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chartjs/chartjs-original.svg" class="tech-logo"
-              alt="Chart.js">
-          </div>
-        </div>
-
-        <div class="row mt-4">
+        <div class="row mt-4 g-4">
           <div class="col-md-6">
-            <div class="card p-4 h-100">
-              <h4 class="mb-3">Backend Robusto</h4>
+            <div class="problem-card p-4 h-100">
+              <h3 class="h4 mb-3">Presença digital e geração de oportunidades</h3>
               <ul class="feature-list">
-                <li><i class="bi bi-check-circle-fill"></i> Django para desenvolvimento rápido e seguro</li>
-                <li><i class="bi bi-check-circle-fill"></i> APIs RESTful para integrações</li>
-                <li><i class="bi bi-check-circle-fill"></i> Banco de dados PostgreSQL</li>
-                <li><i class="bi bi-check-circle-fill"></i> Autenticação e autorização</li>
-                <li><i class="bi bi-check-circle-fill"></i> Processamento em background</li>
+                <li><i class="bi bi-check-circle-fill"></i> Site desatualizado ou que não transmite profissionalismo</li>
+                <li><i class="bi bi-check-circle-fill"></i> Dificuldade para transformar visitas em contatos</li>
+                <li><i class="bi bi-check-circle-fill"></i> Páginas sem foco comercial ou sem clareza da oferta</li>
+                <li><i class="bi bi-check-circle-fill"></i> Falta de estrutura para campanhas, formulários e captação</li>
               </ul>
             </div>
           </div>
-
           <div class="col-md-6">
-            <div class="card p-4 h-100">
-              <h4 class="mb-3">Frontend Moderno</h4>
+            <div class="problem-card p-4 h-100">
+              <h3 class="h4 mb-3">Organização, operação e integração</h3>
               <ul class="feature-list">
-                <li><i class="bi bi-check-circle-fill"></i> Design responsivo e mobile-first</li>
-                <li><i class="bi bi-check-circle-fill"></i> Bootstrap para interfaces consistentes</li>
-                <li><i class="bi bi-check-circle-fill"></i> JavaScript para interatividade</li>
-                <li><i class="bi bi-check-circle-fill"></i> Gráficos e visualizações com Chart.js</li>
-                <li><i class="bi bi-check-circle-fill"></i> Otimização para SEO</li>
+                <li><i class="bi bi-check-circle-fill"></i> Processos manuais e excesso de controles em planilhas</li>
+                <li><i class="bi bi-check-circle-fill"></i> Dificuldade para organizar atendimento e informações</li>
+                <li><i class="bi bi-check-circle-fill"></i> Necessidade de integrar dados, formulários ou relatórios</li>
+                <li><i class="bi bi-check-circle-fill"></i> Falta de visibilidade sobre indicadores e rotinas internas</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Seção: Processo de Desenvolvimento -->
       <section class="mt-5">
         <div class="row">
           <div class="col-12 text-center mb-5">
-            <h2 class="fw-bold">Nosso Processo de Desenvolvimento</h2>
-            <p class="lead">Metodologia ágil para entregas rápidas e de qualidade</p>
+            <h2 class="fw-bold">Como a CoderTec pode ajudar</h2>
+            <p class="lead">Desenvolvemos a solução certa para o estágio do seu negócio, conectando web, operação e
+              crescimento.</p>
           </div>
         </div>
 
@@ -361,8 +385,8 @@
               <div class="icon-container webdev-icon mx-auto">
                 <span class="fs-4 fw-bold">1</span>
               </div>
-              <h5>Análise e Planejamento</h5>
-              <p>Entendemos suas necessidades e definimos escopo, funcionalidades e tecnologias</p>
+              <h3 class="h5">Entendimento do cenário</h3>
+              <p>Mapeamos objetivo, público, rotina e gargalos para definir o que realmente precisa ser desenvolvido.</p>
             </div>
           </div>
           <div class="col-md-3">
@@ -370,8 +394,8 @@
               <div class="icon-container webdev-icon mx-auto">
                 <span class="fs-4 fw-bold">2</span>
               </div>
-              <h5>Design e Prototipagem</h5>
-              <p>Criamos wireframes e protótipos para validação antes do desenvolvimento</p>
+              <h3 class="h5">Estrutura da solução</h3>
+              <p>Organizamos páginas, fluxos, formulários, áreas internas e prioridades para a entrega fazer sentido comercial e operacional.</p>
             </div>
           </div>
           <div class="col-md-3">
@@ -379,8 +403,8 @@
               <div class="icon-container webdev-icon mx-auto">
                 <span class="fs-4 fw-bold">3</span>
               </div>
-              <h5>Desenvolvimento</h5>
-              <p>Implementamos frontend e backend com as melhores práticas de codificação</p>
+              <h3 class="h5">Desenvolvimento sob medida</h3>
+              <p>Construímos o projeto com foco em usabilidade, desempenho, SEO on-page e facilidade de manutenção.</p>
             </div>
           </div>
           <div class="col-md-3">
@@ -388,18 +412,24 @@
               <div class="icon-container webdev-icon mx-auto">
                 <span class="fs-4 fw-bold">4</span>
               </div>
-              <h5>Entrega e Suporte</h5>
-              <p>Realizamos testes, implantação e oferecemos suporte técnico contínuo</p>
+              <h3 class="h5">Integrações e evolução</h3>
+              <p>Quando fizer sentido, conectamos o projeto com automação, dashboards e IA para ampliar resultados.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Call to Action -->
       <section class="text-center mt-5 pt-3">
-        <h3 class="mb-3">Pronto para levar seu negócio para o próximo nível?</h3>
-        <p class="mb-4">Solicite um orçamento sem compromisso e descubra como podemos ajudar</p>
-        <a href="\pt\index.html#contato" class="btn btn-warning btn-lg">Solicitar Orçamento</a>
+        <div class="cta-section">
+          <h2 class="mb-3">Fale com a CoderTec sobre seu projeto</h2>
+          <p class="mb-4">Se você precisa de um site, landing page, sistema web ou aplicação sob medida, vamos entender
+            seu cenário e estruturar a melhor solução.</p>
+          <p class="mb-4">Esse projeto também pode evoluir com <a href="/pt/servicos/automacao/"
+              class="link-light fw-semibold">automação de processos</a> e <a href="/pt/servicos/dashboards/"
+              class="link-light fw-semibold">dashboards personalizados</a>, quando isso fizer sentido para a operação.
+          </p>
+          <a href="/pt/index.html#contato" class="btn btn-warning btn-lg">Solicitar projeto sob medida</a>
+        </div>
       </section>
     </div>
 

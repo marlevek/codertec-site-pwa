@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciência de Dados - CoderTec</title>
+    <meta name="description"
+        content="A CoderTec desenvolve análises, insights e soluções em ciência de dados para empresas, clínicas e profissionais tomarem decisões com mais clareza.">
+    <title>Ciência de dados para empresas e clínicas | CoderTec</title>
 
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
@@ -171,6 +173,35 @@
             width: 100% !important;
             height: 400px !important;
         }
+
+        .section-intro {
+            max-width: 860px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .audience-card,
+        .problem-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .problem-card {
+            background: #fff;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--data-color) 100%);
+            color: #d9fff4;
+            border-radius: 12px;
+            padding: 48px 24px;
+        }
+
+        .cta-section h2,
+        .cta-section p {
+            color: #d9fff4;
+        }
     </style>
 </head>
 
@@ -183,10 +214,11 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h1 class="display-4 fw-bold">Ciência de Dados para Decisões Estratégicas</h1>
-                    <p class="lead fs-4">Transforme seus dados em decisões inteligentes com análises preditivas,
-                        dashboards e insights estratégicos.</p>
-                    <a href="#services" class="btn btn-light btn-lg mt-3 text-black">Conheça Nossas Soluções</a>
+                    <h1 class="display-4 fw-bold">Ciência de dados para empresas, clínicas e profissionais</h1>
+                    <p class="lead fs-4">Transformamos dados em análises, insights e suporte à decisão para empresas e
+                        profissionais que precisam entender melhor sua operação, identificar oportunidades e agir com
+                        mais clareza.</p>
+                    <a href="#o-que-entregamos" class="btn btn-light btn-lg mt-3 text-black">Ver o que entregamos</a>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="bi bi-graph-up-arrow display-1 opacity-75"></i>
@@ -198,12 +230,12 @@
     <!-- Conteúdo principal -->
     <div class="container py-5">
         <!-- Seção: O que fazemos -->
-        <section id="services" class="mb-5">
+        <section id="o-que-entregamos" class="mb-5">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="fw-bold">Do Dado à Decisão Estratégica</h2>
-                    <p class="lead">Antecipe comportamentos de mercado e necessidades dos clientes com modelos
-                        estatísticos avançados e algoritmos de machine learning.</p>
+                    <h2 class="fw-bold">O que entregamos</h2>
+                    <p class="section-intro lead">Criamos análises e soluções orientadas por dados para ajudar o negócio
+                        a interpretar melhor informações, identificar padrões e tomar decisões com mais base.</p>
                 </div>
             </div>
 
@@ -211,12 +243,12 @@
                 <!-- Card 1 -->
                 <div class="col-md-6">
                     <div class="card card-service p-4">
-                        <div class="card-icon text-center">
-                            <i class="bi bi-bar-chart-line"></i>
-                        </div>
-                        <h3 class="text-center mb-3">Análises Preditivas</h3>
-                        <p class="text-center">Preveja tendências, identifique padrões e antecipe resultados para tomar
-                            decisões mais assertivas e proativas.</p>
+                            <div class="card-icon text-center">
+                                <i class="bi bi-bar-chart-line"></i>
+                            </div>
+                        <h3 class="text-center mb-3">Análises de dados e identificação de padrões</h3>
+                        <p class="text-center">Investigamos comportamento, desempenho, tendências e relações entre dados
+                            para gerar clareza e apoiar decisões mais seguras.</p>
                         <div class="text-center mt-3">
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#predictiveModal">
                                 Veja exemplo
@@ -228,12 +260,12 @@
                 <!-- Card 2 -->
                 <div class="col-md-6">
                     <div class="card card-service p-4">
-                        <div class="card-icon text-center">
-                            <i class="bi bi-cpu"></i>
-                        </div>
-                        <h3 class="text-center mb-3">Modelos de Machine Learning</h3>
-                        <p class="text-center">Transforme dados brutos em modelos inteligentes para otimizar processos e
-                            prever resultados futuros com precisão.</p>
+                            <div class="card-icon text-center">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+                        <h3 class="text-center mb-3">Relatórios analíticos e suporte à decisão</h3>
+                        <p class="text-center">Estruturamos análises, estudos de desempenho e modelos quando fizer
+                            sentido, conectando os dados ao contexto real da operação.</p>
                         <div class="text-center mt-3">
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mlModal">
                                 Veja exemplo
@@ -244,31 +276,55 @@
             </div>
         </section>
 
-        <!-- Seção: Benefícios -->
+        <!-- Seção: Para quem é -->
         <section class="benefits-section my-5">
-            <div class="row text-center">
-                <div class="col-md-3">
-                    <div class="benefit-item">
-                        <div class="benefit-number">95%</div>
-                        <div class="benefit-label">Precisão nas Previsões</div>
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="fw-bold">Para quem é</h2>
+                    <p class="section-intro lead mb-0">Ciência de dados faz sentido para operações que já acumulam
+                        informações, mas ainda não conseguem transformar isso em leitura estratégica.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card audience-card p-4 text-dark">
+                        <div class="icon-container data-icon mx-auto">
+                            <i class="bi bi-building fs-3"></i>
+                        </div>
+                        <h3 class="h5 text-center">Pequenas empresas</h3>
+                        <p class="text-center mb-0">Negócios que precisam entender melhor vendas, clientes, operação e
+                            oportunidades de crescimento.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="benefit-item">
-                        <div class="benefit-number">40%</div>
-                        <div class="benefit-label">Redução de Custos</div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card audience-card p-4 text-dark">
+                        <div class="icon-container data-icon mx-auto">
+                            <i class="bi bi-heart-pulse fs-3"></i>
+                        </div>
+                        <h3 class="h5 text-center">Clínicas e consultórios</h3>
+                        <p class="text-center mb-0">Operações que querem analisar atendimento, agenda, repasses,
+                            faturamento e eficiência com mais clareza.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="benefit-item">
-                        <div class="benefit-number">3x</div>
-                        <div class="benefit-label">Mais Velocidade na Tomada de Decisão</div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card audience-card p-4 text-dark">
+                        <div class="icon-container data-icon mx-auto">
+                            <i class="bi bi-person-workspace fs-3"></i>
+                        </div>
+                        <h3 class="h5 text-center">Gestores</h3>
+                        <p class="text-center mb-0">Líderes que precisam decidir com mais base e menos achismo no dia a
+                            dia do negócio.</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="benefit-item">
-                        <div class="benefit-number">100%</div>
-                        <div class="benefit-label">Decisões Baseadas em Dados</div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card audience-card p-4 text-dark">
+                        <div class="icon-container data-icon mx-auto">
+                            <i class="bi bi-database fs-3"></i>
+                        </div>
+                        <h3 class="h5 text-center">Operações com histórico</h3>
+                        <p class="text-center mb-0">Negócios com dados históricos que querem identificar padrões,
+                            gargalos e tendências.</p>
                     </div>
                 </div>
             </div>
@@ -278,39 +334,34 @@
         <section class="applications-section mt-5">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="fw-bold">Aplicações da Ciência de Dados</h2>
-                    <p class="lead">Soluções inteligentes que transformam dados em vantagem competitiva</p>
+                    <h2 class="fw-bold">Problemas que ajudamos a resolver</h2>
+                    <p class="section-intro lead">A ciência de dados entra quando o negócio tem informação, mas ainda
+                        não consegue extrair leitura, prioridade e direção com confiança.</p>
                 </div>
             </div>
 
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="application-card">
-                        <div class="icon-container data-icon mx-auto">
-                            <i class="bi bi-graph-up"></i>
-                        </div>
-                        <h4>Previsão de Vendas</h4>
-                        <p>Antecipe demanda, otimize estoque e planeje campanhas com base em tendências de mercado.</p>
+                <div class="col-md-6">
+                    <div class="card problem-card p-4 h-100">
+                        <h3 class="h4 mb-3">Leitura e interpretação dos dados</h3>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Dificuldade para interpretar dados com clareza</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Decisões baseadas em achismo</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Baixa visibilidade sobre desempenho e tendências</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Falta de clareza sobre gargalos e oportunidades</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="application-card">
-                        <div class="icon-container data-icon mx-auto">
-                            <i class="bi bi-person-check"></i>
-                        </div>
-                        <h4>Análise de Clientes</h4>
-                        <p>Segmentação comportamental, previsão de churn e identificação de clientes mais valiosos.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="application-card">
-                        <div class="icon-container data-icon mx-auto">
-                            <i class="bi bi-shield-check"></i>
-                        </div>
-                        <h4>Detecção de Fraudes</h4>
-                        <p>Identifique padrões suspeitos e previna perdas financeiras com algoritmos avançados.</p>
+                <div class="col-md-6">
+                    <div class="card problem-card p-4 h-100">
+                        <h3 class="h4 mb-3">Estrutura e aproveitamento da informação</h3>
+                        <ul class="feature-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Informações espalhadas em fontes diferentes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dificuldade para comparar períodos, equipes ou unidades</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Falta de prioridade sobre o que analisar</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Necessidade de transformar histórico em apoio à decisão</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -318,26 +369,26 @@
             <div class="row mt-4">
                 <div class="col-md-6">
                     <div class="card p-4 h-100 impact-card">
-                        <h4 class="mb-3">Impacto nos Negócios</h4>
+                        <h3 class="h4 mb-3">Exemplos práticos de análise</h3>
                         <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Otimização de campanhas de marketing</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Redução de custos operacionais</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Aumento da retenção de clientes</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Melhoria na experiência do cliente</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Identificação de novas oportunidades</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Estudos de comportamento de clientes e demanda</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Análise de operação, produtividade e desempenho</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Avaliação de tendências e sazonalidade</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Relatórios analíticos para gestão e planejamento</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Apoio à decisão com base em dados históricos</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="card p-4 h-100 impact-card">
-                        <h4 class="mb-3">Tecnologias Utilizadas</h4>
+                        <h3 class="h4 mb-3">Como isso pode ser aplicado</h3>
                         <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Python e R para análise estatística</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Machine Learning e Deep Learning</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Processamento de Big Data</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Visualização interativa de dados</li>
-                            <li><i class="bi bi-check-circle-fill"></i> APIs e integração em tempo real</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Empresas que querem entender melhor vendas e operação</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Clínicas que precisam analisar agenda, repasses e atendimento</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Gestores que querem mais clareza para priorizar ações</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Operações que precisam unir análise, dashboards e dados</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Projetos que podem evoluir para automação ou IA quando fizer sentido</li>
                         </ul>
                     </div>
                 </div>
@@ -347,8 +398,9 @@
         <section class="mt-5">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="fw-bold">Nosso Processo em Ciência de Dados</h2>
-                    <p class="lead">Metodologia estruturada para extrair valor máximo dos seus dados</p>
+                    <h2 class="fw-bold">Como a CoderTec pode ajudar</h2>
+                    <p class="section-intro lead">Conectamos análise, interpretação e contexto do negócio para que os
+                        dados virem direção prática, e não só informação acumulada.</p>
                 </div>
             </div>
 
@@ -358,8 +410,8 @@
                         <div class="icon-container data-icon mx-auto">
                             <span class="fs-4 fw-bold">1</span>
                         </div>
-                        <h5>Coleta e Preparação</h5>
-                        <p>Integramos e limpamos dados de múltiplas fontes para análise</p>
+                        <h3 class="h5">Entendimento do cenário</h3>
+                        <p>Mapeamos o problema, os dados disponíveis e as perguntas que o negócio precisa responder.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -367,8 +419,8 @@
                         <div class="icon-container data-icon mx-auto">
                             <span class="fs-4 fw-bold">2</span>
                         </div>
-                        <h5>Análise Exploratória</h5>
-                        <p>Identificamos padrões, correlações e insights iniciais</p>
+                        <h3 class="h5">Estruturação da análise</h3>
+                        <p>Organizamos, tratamos e exploramos os dados para identificar padrões, sinais e oportunidades.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -376,8 +428,8 @@
                         <div class="icon-container data-icon mx-auto">
                             <span class="fs-4 fw-bold">3</span>
                         </div>
-                        <h5>Modelagem Preditiva</h5>
-                        <p>Desenvolvemos e validamos modelos de machine learning</p>
+                        <h3 class="h5">Geração de insights</h3>
+                        <p>Transformamos os achados em leitura prática para apoiar decisão, priorização e ação.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -385,8 +437,8 @@
                         <div class="icon-container data-icon mx-auto">
                             <span class="fs-4 fw-bold">4</span>
                         </div>
-                        <h5>Implantação e Monitoramento</h5>
-                        <p>Implementamos soluções e acompanhamos performance</p>
+                        <h3 class="h5">Evolução da solução</h3>
+                        <p>Quando necessário, conectamos o projeto com dashboards, automação e IA para ampliar valor.</p>
                     </div>
                 </div>
             </div>
@@ -394,11 +446,15 @@
 
         <!-- Call to Action -->
         <section class="text-center mt-5 pt-5">
-            <div class="card card-service p-5">
-                <h3 class="mb-3">Pronto para Transformar Dados em Vantagem Competitiva?</h3>
-                <p class="mb-4">Não espere o futuro chegar, crie-o. Entre em contato conosco e descubra como a Ciência
-                    de Dados pode revolucionar a tomada de decisão na sua empresa.</p>
-                <a href="/pt/index.html#contato" class="btn btn-primary btn-lg">Solicitar Consultoria</a>
+            <div class="cta-section">
+                <h2 class="mb-3">Fale com a CoderTec sobre seus dados</h2>
+                <p class="mb-4">Se sua empresa ou clínica precisa entender melhor o que está acontecendo na operação,
+                    podemos estruturar uma análise sob medida para gerar mais clareza e apoiar decisões melhores.</p>
+                <p class="mb-4">Quando fizer sentido, essa leitura pode ganhar escala com <a
+                        href="/pt/servicos/dashboards/" class="link-light fw-semibold">dashboards personalizados</a> e
+                    aplicações de <a href="/pt/servicos/inteligencia-artificial/"
+                        class="link-light fw-semibold">inteligência artificial</a>.</p>
+                <a href="/pt/index.html#contato" class="btn btn-light btn-lg text-black">Solicite uma análise sob medida</a>
             </div>
         </section>
     </div>

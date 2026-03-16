@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboards - CoderTec</title>
+    <meta name="description"
+        content="A CoderTec desenvolve dashboards personalizados e indicadores para empresas, clínicas e profissionais acompanharem resultados com mais clareza e rapidez.">
+    <title>Dashboards personalizados para empresas e clínicas | CoderTec</title>
 
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
@@ -89,6 +91,35 @@
             width: 100% !important;
             height: 400px !important;
         }
+
+        .section-intro {
+            max-width: 860px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .audience-card,
+        .problem-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .problem-card {
+            background: #fff;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1a2a6c 0%, #2a3a7c 100%);
+            color: #d9ecff;
+            border-radius: 12px;
+            padding: 48px 24px;
+        }
+
+        .cta-section h2,
+        .cta-section p {
+            color: #d9ecff;
+        }
     </style>
 </head>
 
@@ -102,10 +133,10 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h1 class="display-4 fw-bold">Dashboards que Colocam sua Empresa na Sua Tela</h1>
-                    <p class="lead">Monitore métricas-chave em tempo real, visualize dados de forma clara e tome
-                        decisões ágeis baseadas em evidências.</p>
-                    <a href="#benefits" class="btn btn-light btn-lg mt-3 text-black">Descubra os Benefícios</a>
+                    <h1 class="display-4 fw-bold">Dashboards e indicadores para empresas, clínicas e profissionais</h1>
+                    <p class="lead">Desenvolvemos dashboards personalizados para transformar dados em decisões mais
+                        rápidas, claras e estratégicas, com foco em gestão, produtividade e resultados.</p>
+                    <a href="#o-que-entregamos" class="btn btn-light btn-lg mt-3 text-black">Ver o que entregamos</a>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="bi bi-bar-chart-fill display-1 opacity-75"></i>
@@ -116,9 +147,11 @@
 
     <!-- Conteúdo principal -->
     <div class="container py-5">
-        <h1 class="text-center mb-4">Dashboards que Colocam sua Empresa na Sua Tela</h1>
-        <p class="text-center">Monitore métricas-chave em tempo real, visualize dados de forma clara e tome decisões
-            ágeis.</p>
+        <div id="o-que-entregamos" class="text-center mb-4">
+            <h2 class="mb-3">O que entregamos</h2>
+            <p class="section-intro">Criamos painéis para acompanhar números importantes do negócio sem depender de
+                planilhas soltas, relatórios manuais ou dados espalhados em vários sistemas.</p>
+        </div>
 
         <!-- Cards de Dashboards -->
         <div class="row g-4 mt-5">
@@ -126,7 +159,7 @@
             <!-- Card 1 -->
             <div class="col-md-6">
                 <div class="card p-3 shadow-sm">
-                    <h3 class="pt-3 pb-2"><i class="bi bi-bar-chart"></i> Dashboard Financeiro</h3>
+                    <h3 class="pt-3 pb-2"><i class="bi bi-bar-chart"></i> Dashboards financeiros</h3>
                     <p class="text_card">Acompanhe receitas, despesas e lucros em tempo real com gráficos interativos e
                         relatórios automáticos.</p>
                     <p class="text-center">
@@ -140,7 +173,7 @@
             <!-- Card 2 -->
             <div class="col-md-6">
                 <div class="card p-3 shadow-sm">
-                    <h3 class="pt-3 pb-2"><i class="bi bi-graph-up-arrow"></i> Dashboard de Vendas</h3>
+                    <h3 class="pt-3 pb-2"><i class="bi bi-graph-up-arrow"></i> Dashboards comerciais</h3>
                     <p class="text_card">Visualize performance de vendas, produtos mais vendidos e comportamento de
                         clientes com dashboards dinâmicos.</p>
                     <p class="text-center">
@@ -151,6 +184,22 @@
                 </div>
             </div>
 
+            <div class="col-md-6">
+                <div class="card p-3 shadow-sm">
+                    <h3 class="pt-3 pb-2"><i class="bi bi-speedometer2"></i> Dashboards operacionais</h3>
+                    <p class="text_card">Acompanhe produtividade, atendimento, filas, status de tarefas, ordens de
+                        serviço e gargalos da operação em tempo real.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card p-3 shadow-sm">
+                    <h3 class="pt-3 pb-2"><i class="bi bi-heart-pulse"></i> Painéis para clínicas e empresas</h3>
+                    <p class="text_card">Organize indicadores de agenda, faturamento, repasses, ocupação, atendimento e
+                        desempenho em um painel personalizado.</p>
+                </div>
+            </div>
+
         </div>
 
 
@@ -158,7 +207,7 @@
         <section class="py-5">
             <div class="container">
 
-                <h2 class="text-center mb-4">🎥 Exemplo de Inteligência Comercial para Restaurantes</h2>
+                <h2 class="text-center mb-4">Exemplo prático de dashboard no negócio</h2>
 
                 <p class="text-center" style="max-width:780px; margin:auto;">
                     O restaurante <strong>Sabor & Arte</strong> queria entender quais pratos trazem mais lucro,
@@ -188,109 +237,110 @@
         </section>
 
 
-        <!-- Seção: Benefícios para Empresas -->
+        <!-- Seção: Para quem é -->
         <section id="benefits" class="mt-5 pt-5">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="fw-bold">Como os Dashboards Transformam Empresas</h2>
-                    <p class="lead">Visualização de dados que impulsiona resultados estratégicos</p>
+                    <h2 class="fw-bold">Para quem é</h2>
+                    <p class="lead">Dashboards fazem sentido quando a operação precisa enxergar resultados com mais
+                        rapidez e clareza.</p>
                 </div>
             </div>
 
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card benefit-card h-100 p-4">
+                    <div class="card audience-card h-100 p-4">
                         <div class="icon-container business-icon mx-auto">
-                            <i class="bi bi-lightning-charge-fill fs-4"></i>
+                            <i class="bi bi-building fs-4"></i>
                         </div>
-                        <h4 class="text-center mb-3">Decisões Ágeis e Informadas</h4>
-                        <p>Reduza o tempo entre a coleta de dados e a tomada de decisão. Com informações em tempo real,
-                            sua equipe pode responder rapidamente a oportunidades e ameaças.</p>
+                        <h3 class="h4 text-center mb-3">Pequenas empresas</h3>
+                        <p>Negócios que precisam acompanhar faturamento, vendas, produtividade e operação sem depender
+                            de relatórios manuais.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card benefit-card h-100 p-4">
+                    <div class="card audience-card h-100 p-4">
                         <div class="icon-container business-icon mx-auto">
-                            <i class="bi bi-eye-fill fs-4"></i>
+                            <i class="bi bi-heart-pulse fs-4"></i>
                         </div>
-                        <h4 class="text-center mb-3">Transparência e Visibilidade</h4>
-                        <p>Mantenha todos os departamentos alinhados com os mesmos dados e métricas. Dashboards
-                            compartilhados promovem uma cultura de transparência e responsabilidade.</p>
+                        <h3 class="h4 text-center mb-3">Clínicas e consultórios</h3>
+                        <p>Operações que precisam enxergar agenda, atendimento, repasses, ocupação, indicadores clínicos
+                            e desempenho financeiro.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card benefit-card h-100 p-4">
+                    <div class="card audience-card h-100 p-4">
                         <div class="icon-container business-icon mx-auto">
-                            <i class="bi bi-graph-up-arrow fs-4"></i>
+                            <i class="bi bi-file-earmark-spreadsheet fs-4"></i>
                         </div>
-                        <h4 class="text-center mb-3">Identificação de Tendências</h4>
-                        <p>Detecte padrões e tendências de mercado antes dos concorrentes. Visualizações intuitivas
-                            ajudam a identificar oportunidades de crescimento e otimização.</p>
+                        <h3 class="h4 text-center mb-3">Gestores e equipes</h3>
+                        <p>Times que usam planilhas, sistemas separados e dados espalhados, mas precisam acompanhar
+                            resultados em tempo real.</p>
                     </div>
                 </div>
             </div>
 
             <div class="row mt-4">
                 <div class="col-md-6">
-                    <div class="card p-4 h-100">
-                        <h4 class="mb-3">Benefícios para Gestores</h4>
+                    <div class="card problem-card p-4 h-100">
+                        <h3 class="h4 mb-3">Problemas que ajudamos a resolver</h3>
                         <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Monitoramento de KPIs em tempo real</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Alocação eficiente de recursos</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Identificação de gargalos operacionais</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Acompanhamento de desempenho da equipe</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Projeções financeiras mais precisas</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dificuldade para enxergar números importantes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dados espalhados em planilhas e sistemas</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Demora para tomar decisão</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Falta de indicadores claros para gestão</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Baixa visibilidade sobre faturamento, produtividade ou atendimento</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-md-6">
-                    <div class="card p-4 h-100">
-                        <h4 class="mb-3">Benefícios para Equipes</h4>
+                    <div class="card problem-card p-4 h-100">
+                        <h3 class="h4 mb-3">Indicadores que podem entrar no painel</h3>
                         <ul class="feature-list">
-                            <li><i class="bi bi-check-circle-fill"></i> Metas claras e acompanhamento em tempo real</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Autonomia para tomada de decisões</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Redução de tarefas manuais de relatórios</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Melhor comunicação entre departamentos</li>
-                            <li><i class="bi bi-check-circle-fill"></i> Reconhecimento rápido de conquistas</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Receita, despesa, margem e fluxo de caixa</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Vendas, ticket médio e conversão</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Agenda, atendimento e produtividade</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Estoque, ordens, repasses e metas</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Indicadores personalizados por operação</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção: Dashboards para Saúde -->
+        <!-- Seção: Usos práticos -->
         <section class="health-section mt-5 p-5">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="fw-bold">Dashboards para Profissionais de Saúde</h2>
-                    <p class="lead">Tecnologia que melhora a qualidade do atendimento e a gestão hospitalar</p>
+                    <h2 class="fw-bold">Exemplos de indicadores e usos práticos</h2>
+                    <p class="lead">Os painéis podem ser desenhados para o contexto da sua operação, do comercial ao
+                        atendimento.</p>
                 </div>
             </div>
 
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card benefit-card h-100 p-4">
-                        <div class="icon-container health-icon mx-auto">
-                            <i class="bi bi-heart-pulse fs-4"></i>
+                        <div class="icon-container business-icon mx-auto">
+                            <i class="bi bi-briefcase fs-4"></i>
                         </div>
-                        <h4 class="text-center mb-3">Monitoramento de Pacientes</h4>
-                        <p>Visualize dados vitais de pacientes em tempo real, permitindo intervenções rápidas e
-                            precisas. Acompanhe histórico médico, medicamentos e evolução do tratamento em um único
-                            painel.</p>
+                        <h3 class="h4 text-center mb-3">Para empresas e operações comerciais</h3>
+                        <p>Acompanhe vendas, faturamento, carteira de clientes, produtividade, pedidos, metas e
+                            performance da equipe em um só ambiente.</p>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="card benefit-card h-100 p-4">
                         <div class="icon-container health-icon mx-auto">
-                            <i class="bi bi-clipboard2-pulse fs-4"></i>
+                            <i class="bi bi-heart-pulse fs-4"></i>
                         </div>
-                        <h4 class="text-center mb-3">Gestão Hospitalar</h4>
-                        <p>Otimize a ocupação de leitos, controle de estoque de medicamentos e acompanhe eficiência de
-                            equipes. Reduza tempos de espera e melhore a experiência do paciente.</p>
+                        <h3 class="h4 text-center mb-3">Para clínicas e consultórios</h3>
+                        <p>Visualize agenda, repasses, ocupação, faturamento, atendimento, retornos e indicadores de
+                            desempenho da operação assistencial.</p>
                     </div>
                 </div>
             </div>
@@ -298,24 +348,24 @@
             <div class="row mt-4">
                 <div class="col-md-8 mx-auto">
                     <div class="card p-4">
-                        <h4 class="text-center mb-4">Aplicações Práticas na Saúde</h4>
+                        <h3 class="text-center mb-4">Aplicações práticas dos dashboards</h3>
                         <div class="row">
                             <div class="col-md-6">
-                                <h5><i class="bi bi-check-lg text-success"></i> Para Clínicas e Hospitais</h5>
+                                <h4 class="h5"><i class="bi bi-check-lg text-success"></i> Para empresas</h4>
                                 <ul>
-                                    <li>Controle de leitos e taxa de ocupação</li>
-                                    <li>Tempo médio de permanência</li>
-                                    <li>Indicadores de qualidade assistencial</li>
-                                    <li>Gestão de filas e agendamentos</li>
+                                    <li>Faturamento por período, equipe ou unidade</li>
+                                    <li>Volume de vendas e produtos mais rentáveis</li>
+                                    <li>Produtividade operacional e status de tarefas</li>
+                                    <li>Indicadores comerciais e funil de atendimento</li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
-                                <h5><i class="bi bi-check-lg text-success"></i> Para Profissionais</h5>
+                                <h4 class="h5"><i class="bi bi-check-lg text-success"></i> Para clínicas e profissionais</h4>
                                 <ul>
-                                    <li>Prontuários eletrônicos visualizados graficamente</li>
-                                    <li>Acompanhamento de resultados de exames</li>
-                                    <li>Indicadores de desempenho clínico</li>
-                                    <li>Alertas para medicamentos e procedimentos</li>
+                                    <li>Agenda, no-show e taxa de ocupação</li>
+                                    <li>Faturamento, repasses e recebimentos</li>
+                                    <li>Indicadores de atendimento e retorno</li>
+                                    <li>Alertas e acompanhamento de rotinas críticas</li>
                                 </ul>
                             </div>
                         </div>
@@ -326,42 +376,55 @@
             <div class="row mt-4">
                 <div class="col-12">
                     <div class="card p-4">
-                        <h4 class="text-center mb-3">Impacto dos Dashboards na Saúde</h4>
-                        <p>Na área da saúde, a visualização de dados não é apenas uma ferramenta de gestão, mas um
-                            instrumento que pode salvar vidas. Dashboards especializados permitem:</p>
+                        <h3 class="text-center mb-3">Como a CoderTec pode ajudar</h3>
+                        <p>Desenvolvemos dashboards sob medida e, quando fizer sentido, conectamos o painel com
+                            automação, ciência de dados e inteligência artificial para reduzir trabalho manual e ampliar
+                            a qualidade das decisões.</p>
 
                         <div class="row text-center mt-4">
                             <div class="col-md-3">
-                                <div class="icon-container health-icon mx-auto">
+                                <div class="icon-container business-icon mx-auto">
                                     <i class="bi bi-clock fs-4"></i>
                                 </div>
-                                <h5>Resposta Rápida</h5>
-                                <p>Identificação imediata de alterações no estado dos pacientes</p>
+                                <h4 class="h5">Dados organizados</h4>
+                                <p>Centralizamos os números certos para leitura rápida da operação</p>
                             </div>
                             <div class="col-md-3">
-                                <div class="icon-container health-icon mx-auto">
-                                    <i class="bi bi-shield-check fs-4"></i>
+                                <div class="icon-container business-icon mx-auto">
+                                    <i class="bi bi-arrow-repeat fs-4"></i>
                                 </div>
-                                <h5>Segurança do Paciente</h5>
-                                <p>Redução de erros médicos através de alertas e verificações</p>
+                                <h4 class="h5">Menos trabalho manual</h4>
+                                <p>Integramos fontes de dados e reduzimos relatórios feitos à mão</p>
                             </div>
                             <div class="col-md-3">
-                                <div class="icon-container health-icon mx-auto">
-                                    <i class="bi bi-cash-coin fs-4"></i>
+                                <div class="icon-container business-icon mx-auto">
+                                    <i class="bi bi-bar-chart-line fs-4"></i>
                                 </div>
-                                <h5>Otimização de Custos</h5>
-                                <p>Melhor gestão de recursos e redução de desperdícios</p>
+                                <h4 class="h5">Indicadores sob medida</h4>
+                                <p>Montamos painéis conforme as prioridades reais do negócio</p>
                             </div>
                             <div class="col-md-3">
-                                <div class="icon-container health-icon mx-auto">
-                                    <i class="bi bi-person-check fs-4"></i>
+                                <div class="icon-container business-icon mx-auto">
+                                    <i class="bi bi-cpu fs-4"></i>
                                 </div>
-                                <h5>Experiência do Paciente</h5>
-                                <p>Atendimento mais ágil e personalizado</p>
+                                <h4 class="h5">Evolução da solução</h4>
+                                <p>Conectamos dashboards com automação, IA e análise mais avançada quando necessário</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="text-center mt-5 pt-3">
+            <div class="cta-section">
+                <h2 class="mb-3">Fale com a CoderTec sobre seus indicadores</h2>
+                <p class="mb-4">Se você precisa enxergar melhor faturamento, vendas, produtividade, agenda ou
+                    atendimento, podemos estruturar um dashboard sob medida para a sua operação.</p>
+                <p class="mb-4">Quando o projeto pede mais profundidade, podemos integrar esses painéis com <a
+                        href="/pt/servicos/ciencia-de-dados/" class="link-light fw-semibold">ciência de dados</a> e <a
+                        href="/pt/servicos/automacao/" class="link-light fw-semibold">automação de processos</a>.</p>
+                <a href="/pt/index.html#contato" class="btn btn-light btn-lg text-black">Solicite um dashboard sob medida</a>
             </div>
         </section>
     </div>
