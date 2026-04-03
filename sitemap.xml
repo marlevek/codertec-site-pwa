@@ -31,4 +31,10 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://codertec.com.br/es/soluciones/agentes-ia/" />
   </url>
 
+  <url>
+    <loc>https://codertec.com.br/pt/planos-de-sites/</loc>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/planos-de-sites/" />
+  </url>
+
 </urlset>
