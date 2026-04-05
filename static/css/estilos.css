@@ -657,6 +657,20 @@ img.shadow-sm:hover {
     margin-bottom: 0;
 }
 
+.plans-pricing-note {
+    max-width: 760px;
+    margin: -1rem 0 2rem;
+    padding: 0.95rem 1.1rem;
+    border-radius: 16px;
+    background: #eef6ff;
+    border: 1px solid #d3e6fb;
+    color: #425466;
+}
+
+.plans-pricing-note strong {
+    color: #052441;
+}
+
 .plans-value-box,
 .plans-benefit-card,
 .plans-backup-card,
@@ -706,7 +720,7 @@ img.shadow-sm:hover {
 
 .plans-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5rem;
 }
 
@@ -726,6 +740,10 @@ img.shadow-sm:hover {
     border: 2px solid #3782cc;
     transform: translateY(-10px);
     box-shadow: 0 22px 46px rgba(55, 130, 204, 0.18);
+}
+
+.plan-card.plan-card-wordpress {
+    border-color: #cfe2ff;
 }
 
 .plan-badge {
@@ -753,7 +771,7 @@ img.shadow-sm:hover {
 
 .plan-audience {
     color: #5f6f82;
-    min-height: 52px;
+    min-height: 72px;
 }
 
 .plan-price-group {
@@ -775,6 +793,14 @@ img.shadow-sm:hover {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+}
+
+.plan-price-caption {
+    display: block;
+    color: #6b7f93;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-top: 0.3rem;
 }
 
 .plan-price-box strong {
@@ -815,6 +841,17 @@ img.shadow-sm:hover {
 .plan-price-option-highlight {
     border-color: #3782cc;
     background: #eef6ff;
+}
+
+.plan-spotlight {
+    margin: 0.25rem 0 1.4rem;
+    padding: 0.9rem 1rem;
+    border-left: 4px solid #3782cc;
+    border-radius: 14px;
+    background: #f3f8fd;
+    color: #052441;
+    font-size: 0.95rem;
+    font-weight: 600;
 }
 
 .plan-divider-title {
@@ -969,13 +1006,23 @@ img.shadow-sm:hover {
     margin-bottom: 1rem;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     .plans-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .plan-card.plan-card-featured {
         transform: none;
+    }
+
+    .plan-audience {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .plans-pricing-note {
+        margin-top: -0.5rem;
     }
 }
 

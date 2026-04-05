@@ -122,13 +122,13 @@ PAGES = {
     },
     "pt/planos-de-sites/index.html": {
         "url": f"{SITE_URL}/pt/planos-de-sites/",
-        "title": "Criação de Sites + Hospedagem Profissional | CoderTec",
+        "title": "Criação de Sites e WordPress Personalizado + Hospedagem | CoderTec",
         "description": (
-            "Tenha seu site profissional com hospedagem, suporte e presença no Google. "
-            "Planos acessíveis para psicólogos, dentistas e empresas."
+            "Criação de sites profissionais, WordPress personalizado, hospedagem, "
+            "manutenção e suporte. Soluções para empresas, clínicas, consultórios e blogs profissionais."
         ),
-        "twitter_title": "Criação de Sites + Hospedagem | CoderTec",
-        "twitter_description": "Planos a partir de R$49/mês com suporte, segurança e presença no Google.",
+        "twitter_title": "Sites + WordPress Personalizado | CoderTec",
+        "twitter_description": "Criação do site e plano mensal separados, com hospedagem, suporte e WordPress sob medida.",
         "image": PLAN_IMAGE_URL,
         "image_alt": "Arte da CoderTec com o texto Criação de Sites + Hospedagem e planos a partir de R$49 por mês.",
     },
