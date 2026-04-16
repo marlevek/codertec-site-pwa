@@ -132,17 +132,17 @@ PAGES = {
         "image": PLAN_IMAGE_URL,
         "image_alt": "Arte da CoderTec com o texto Criação de Sites + Hospedagem e planos a partir de R$49 por mês.",
     },
-    "pt/produtos/psicoassist/index.html": {
-        "url": f"{SITE_URL}/pt/produtos/psicoassist/",
-        "title": "PsicoAssist para Psicólogos e Clínicas | CoderTec",
+    "pt/produtos/psicosense/index.html": {
+        "url": f"{SITE_URL}/pt/produtos/psicosense/",
+        "title": "Psicosense para Psicólogos e Clínicas | CoderTec",
         "description": (
-            "Conheça o PsicoAssist, solução com IA e automação para psicólogos e clínicas "
+            "Conheça o Psicosense, solução com IA e automação para psicólogos e clínicas "
             "organizarem atendimentos e ganharem eficiência."
         ),
-        "twitter_title": "PsicoAssist para Psicólogos e Clínicas | CoderTec",
+        "twitter_title": "Psicosense para Psicólogos e Clínicas | CoderTec",
         "twitter_description": "IA e automação para organizar atendimentos e ganhar eficiência clínica.",
         "image": DEFAULT_IMAGE_URL,
-        "image_alt": "Arte institucional da CoderTec em azul e amarelo para o produto PsicoAssist.",
+        "image_alt": "Arte institucional da CoderTec em azul e amarelo para o produto Psicosense.",
     },
     "pt/servicos/automacao/index.html": {
         "url": f"{SITE_URL}/pt/servicos/automacao/",
