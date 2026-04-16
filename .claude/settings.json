@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/Backup_windows/Wamp_www/jobace-landing/**)"
+    ],
+    "additionalDirectories": [
+      "d:\\Backup_windows\\Wamp_www\\jobace-landing"
+    ]
+  }
+}
