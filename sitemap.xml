@@ -37,4 +37,35 @@
     <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/planos-de-sites/" />
   </url>
 
+  <!-- PRODUTOS -->
+  <url>
+    <loc>https://codertec.com.br/pt/produtos/psicosense/</loc>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/produtos/psicosense/" />
+  </url>
+
+  <url>
+    <loc>https://codertec.com.br/pt/produtos/jobace/</loc>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/produtos/jobace/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://codertec.com.br/en/products/jobace/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://codertec.com.br/es/productos/jobace/" />
+  </url>
+
+  <url>
+    <loc>https://codertec.com.br/en/products/jobace/</loc>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://codertec.com.br/en/products/jobace/" />
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/produtos/jobace/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://codertec.com.br/es/productos/jobace/" />
+  </url>
+
+  <url>
+    <loc>https://codertec.com.br/es/productos/jobace/</loc>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://codertec.com.br/es/productos/jobace/" />
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/produtos/jobace/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://codertec.com.br/en/products/jobace/" />
+  </url>
+
 </urlset>
