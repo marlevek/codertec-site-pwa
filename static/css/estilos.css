@@ -168,6 +168,20 @@ a:active {
     color: #cedff0
 }
 
+.btn-outline-primary,
+.btn-outline-primary:link,
+.btn-outline-primary:visited,
+.btn-outline-primary:active {
+    border-color: #3782cc;
+    color: #004aad;
+}
+
+.btn-outline-primary:hover {
+    background-color: #002244;
+    border-color: #002244;
+    color: #fff;
+}
+
 .card-title {
     font-size: larger;
     font-weight: bolder;
