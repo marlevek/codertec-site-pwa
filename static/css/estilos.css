@@ -437,6 +437,69 @@ img.shadow-sm:hover {
     background: #003f9e;
 }
 
+.real-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.real-case-card {
+    background: #fff;
+    border: 1px solid #d8e5f2;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 24px;
+}
+
+.real-case-icon {
+    align-items: center;
+    background: #f3f8fd;
+    border: 1px solid #d8e5f2;
+    border-radius: 50%;
+    color: #0052cc;
+    display: flex;
+    font-size: 1.7rem;
+    height: 54px;
+    justify-content: center;
+    margin-bottom: 16px;
+    width: 54px;
+}
+
+.real-case-label {
+    color: #4d647a;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.real-case-card h3 {
+    color: #00316e;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.real-case-card p {
+    color: #555;
+    flex: 1;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.psychology-ethics-note {
+    background: #f8fbff;
+    border-left: 4px solid #0052cc;
+    color: #4d647a;
+    line-height: 1.6;
+    margin-top: 24px;
+    padding: 16px 18px;
+}
+
 
 /* ===== HERO SECTION ===== */
 
