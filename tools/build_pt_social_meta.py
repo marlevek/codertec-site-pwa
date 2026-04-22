@@ -120,17 +120,17 @@ PAGES = {
         "image": DEFAULT_IMAGE_URL,
         "image_alt": "Arte institucional da CoderTec em azul e amarelo para serviços de inteligência artificial.",
     },
-    "pt/planos-de-sites/index.html": {
-        "url": f"{SITE_URL}/pt/planos-de-sites/",
-        "title": "Criação de Sites e WordPress Personalizado + Hospedagem | CoderTec",
+    "pt/site-que-trabalha/index.html": {
+        "url": f"{SITE_URL}/pt/site-que-trabalha/",
+        "title": "Planos de Sites | CoderTec",
         "description": (
-            "Criação de sites profissionais, WordPress personalizado, hospedagem, "
-            "manutenção e suporte. Soluções para empresas, clínicas, consultórios e blogs profissionais."
+            "Conheça os planos de sites da CoderTec: criação de sites profissionais com foco em "
+            "credibilidade, WhatsApp, captação de contatos e estrutura pronta para evoluir com automação e IA."
         ),
-        "twitter_title": "Sites + WordPress Personalizado | CoderTec",
-        "twitter_description": "Criação do site e plano mensal separados, com hospedagem, suporte e WordPress sob medida.",
+        "twitter_title": "Planos de Sites | CoderTec",
+        "twitter_description": "Sites profissionais com foco em credibilidade, WhatsApp, captação de contatos e evolução comercial.",
         "image": PLAN_IMAGE_URL,
-        "image_alt": "Arte da CoderTec com o texto Criação de Sites + Hospedagem e planos a partir de R$49 por mês.",
+        "image_alt": "Arte da CoderTec sobre planos de sites profissionais com WhatsApp, captação de contatos e apoio comercial.",
     },
     "pt/produtos/psicosense/index.html": {
         "url": f"{SITE_URL}/pt/produtos/psicosense/",
@@ -567,9 +567,9 @@ def build_assets() -> None:
     STATIC_IMG_DIR.mkdir(parents=True, exist_ok=True)
     create_og_image(
         STATIC_IMG_DIR / "og-planos-sites-v2.jpg",
-        "Criação de Sites + Hospedagem",
-        "Planos a partir de R$49/mês",
-        "Suporte, segurança e presença no Google para psicólogos, dentistas e empresas.",
+        "Planos de Sites que Trabalham",
+        "WhatsApp, contatos e hospedagem",
+        "Sites profissionais com foco em credibilidade, captação de contatos e evolução comercial.",
         "Compartilhe a CoderTec",
     )
     create_og_image(
