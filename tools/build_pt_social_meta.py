@@ -14,9 +14,10 @@ LOGO_PATH = ROOT / "static" / "images" / "logo_codertec_atual.png"
 SITE_URL = "https://codertec.com.br"
 DEFAULT_IMAGE_PATH = "/static/img/default-og.jpg"
 PLAN_IMAGE_PATH = "/static/img/og-planos-sites-v2.jpg"
+PLAN_IMAGE_VERSION = "20260422"
 
 DEFAULT_IMAGE_URL = f"{SITE_URL}{DEFAULT_IMAGE_PATH}"
-PLAN_IMAGE_URL = f"{SITE_URL}{PLAN_IMAGE_PATH}"
+PLAN_IMAGE_URL = f"{SITE_URL}{PLAN_IMAGE_PATH}?v={PLAN_IMAGE_VERSION}"
 
 CANVAS_WIDTH = 1200
 CANVAS_HEIGHT = 630

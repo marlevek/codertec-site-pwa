@@ -1,4 +1,4 @@
-const CACHE_NAME = "codertec-pwa-v2";
+const CACHE_NAME = "codertec-pwa-v3";
 
 const OFFLINE_URL = "/offline.html";
 
