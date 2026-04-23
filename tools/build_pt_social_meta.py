@@ -217,6 +217,42 @@ PAGES = {
         "image": DEFAULT_IMAGE_URL,
         "image_alt": "Arte institucional da CoderTec em azul e amarelo para landing pages.",
     },
+    "pt/sites-para-dentistas/index.html": {
+        "url": f"{SITE_URL}/pt/sites-para-dentistas/",
+        "title": "Sites para Dentistas | CoderTec",
+        "description": (
+            "Criação de sites profissionais para dentistas e clínicas odontológicas, com foco em "
+            "autoridade, Google, WhatsApp e captação de novos pacientes."
+        ),
+        "twitter_title": "Sites para Dentistas | CoderTec",
+        "twitter_description": "Sites odontológicos com foco em autoridade, Google, WhatsApp e captação de pacientes.",
+        "image": DEFAULT_IMAGE_URL,
+        "image_alt": "Arte institucional da CoderTec para sites profissionais para dentistas.",
+    },
+    "pt/sites-para-medicos/index.html": {
+        "url": f"{SITE_URL}/pt/sites-para-medicos/",
+        "title": "Sites para Médicos | CoderTec",
+        "description": (
+            "Criação de sites profissionais para médicos e clínicas, com foco em autoridade, "
+            "Google, WhatsApp e geração de contatos."
+        ),
+        "twitter_title": "Sites para Médicos | CoderTec",
+        "twitter_description": "Sites profissionais para médicos e clínicas com foco em autoridade, Google e WhatsApp.",
+        "image": DEFAULT_IMAGE_URL,
+        "image_alt": "Arte institucional da CoderTec para sites profissionais para médicos.",
+    },
+    "pt/sites-para-psicologos/index.html": {
+        "url": f"{SITE_URL}/pt/sites-para-psicologos/",
+        "title": "Sites para Psicólogos | CoderTec",
+        "description": (
+            "Criação de sites profissionais para psicólogos e clínicas de psicologia, com foco em "
+            "acolhimento, autoridade, Google e geração de contatos."
+        ),
+        "twitter_title": "Sites para Psicólogos | CoderTec",
+        "twitter_description": "Sites para psicólogos com visual acolhedor, Google e contato facilitado.",
+        "image": DEFAULT_IMAGE_URL,
+        "image_alt": "Arte institucional da CoderTec para sites profissionais para psicólogos.",
+    },
     "pt/solucoes/agentes-ia/index.html": {
         "url": f"{SITE_URL}/pt/solucoes/agentes-ia/",
         "title": "Agentes de IA para Atendimento | CoderTec",

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDP6Z4VPDH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DDP6Z4VPDH');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites para Dentistas | CoderTec</title>
+    <meta name="description" content="Criação de sites profissionais para dentistas e clínicas odontológicas, com foco em autoridade, Google, WhatsApp e captação de novos pacientes.">
+    <link rel="canonical" href="https://codertec.com.br/pt/sites-para-dentistas/">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CoderTec">
+    <meta property="og:title" content="Sites para Dentistas | CoderTec">
+    <meta property="og:description" content="Criação de sites profissionais para dentistas e clínicas odontológicas, com foco em autoridade, Google, WhatsApp e captação de novos pacientes.">
+    <meta property="og:url" content="https://codertec.com.br/pt/sites-para-dentistas/">
+    <meta property="og:image" content="https://codertec.com.br/static/img/default-og.jpg">
+    <meta property="og:image:secure_url" content="https://codertec.com.br/static/img/default-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Arte institucional da CoderTec para sites profissionais para dentistas.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sites para Dentistas | CoderTec">
+    <meta name="twitter:description" content="Sites odontológicos com foco em autoridade, Google, WhatsApp e captação de pacientes.">
+    <meta name="twitter:image" content="https://codertec.com.br/static/img/default-og.jpg">
+    <meta name="twitter:image:alt" content="Arte institucional da CoderTec para sites profissionais para dentistas.">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a2540">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/889104c503.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+
+    <style>
+        :root {
+            --dentist-primary: #0a2540;
+            --dentist-blue: #3782cc;
+            --dentist-accent: #ffc107;
+            --dentist-ink: #172033;
+            --dentist-muted: #5d6c80;
+            --dentist-soft: #eef6fb;
+        }
+
+        body {
+            background: #f7f9fc;
+        }
+
+        .dentist-hero {
+            position: relative;
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            background-image: url("/static/images/mock_dentista.png");
+            background-position: center right;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .dentist-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(3, 22, 42, 0.78);
+        }
+
+        .dentist-hero .container {
+            position: relative;
+            z-index: 1;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        .dentist-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: .45rem;
+            color: #fff;
+            background: rgba(255, 193, 7, 0.18);
+            border: 1px solid rgba(255, 193, 7, 0.45);
+            padding: .45rem .8rem;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .dentist-hero h1 {
+            max-width: 820px;
+            font-size: clamp(2.15rem, 4vw, 4.4rem);
+            line-height: 1.08;
+            font-weight: 800;
+            letter-spacing: 0;
+            margin-bottom: 1.25rem;
+        }
+
+        .dentist-hero p {
+            max-width: 760px;
+            color: #e4edf7;
+            font-size: 1.18rem;
+            line-height: 1.7;
+        }
+
+        .dentist-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .85rem;
+            margin-top: 2rem;
+        }
+
+        .dentist-actions .btn {
+            border-radius: 8px;
+            padding: .85rem 1.15rem;
+            font-weight: 700;
+        }
+
+        .dentist-actions .btn-warning,
+        .dentist-actions .btn-warning:link,
+        .dentist-actions .btn-warning:visited,
+        .dentist-actions .btn-warning:active {
+            color: #0a2540 !important;
+        }
+
+        .dentist-actions .btn-outline-light,
+        .dentist-actions .btn-outline-light:link,
+        .dentist-actions .btn-outline-light:visited,
+        .dentist-actions .btn-outline-light:active {
+            color: #fff !important;
+        }
+
+        .dentist-section {
+            padding: 4.5rem 0;
+        }
+
+        .dentist-section.alt {
+            background: #fff;
+        }
+
+        .section-heading {
+            max-width: 780px;
+            margin-bottom: 2rem;
+        }
+
+        .section-heading h2 {
+            color: var(--dentist-primary);
+            font-weight: 800;
+            letter-spacing: 0;
+            margin-bottom: .75rem;
+        }
+
+        .section-heading p {
+            color: var(--dentist-muted);
+            line-height: 1.7;
+        }
+
+        .dentist-card {
+            height: 100%;
+            background: #fff;
+            border: 1px solid #dce6f1;
+            border-radius: 8px;
+            padding: 1.25rem;
+            box-shadow: 0 12px 30px rgba(10, 37, 64, 0.06);
+        }
+
+        .dentist-card i {
+            display: inline-flex;
+            width: 42px;
+            height: 42px;
+            align-items: center;
+            justify-content: center;
+            color: var(--dentist-blue);
+            background: var(--dentist-soft);
+            border-radius: 8px;
+            margin-bottom: .85rem;
+        }
+
+        .dentist-card h3 {
+            color: var(--dentist-ink);
+            font-size: 1.08rem;
+            font-weight: 800;
+            margin-bottom: .55rem;
+        }
+
+        .dentist-card p,
+        .dentist-card li {
+            color: var(--dentist-muted);
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        .dentist-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dentist-list li {
+            display: flex;
+            gap: .7rem;
+            align-items: flex-start;
+            padding: .55rem 0;
+            line-height: 1.45;
+        }
+
+        .dentist-list li::before {
+            content: "";
+            width: .55rem;
+            height: .55rem;
+            flex: 0 0 .55rem;
+            margin-top: .5rem;
+            border-radius: 50%;
+            background: var(--dentist-accent);
+        }
+
+        .steps {
+            counter-reset: step;
+        }
+
+        .step-card {
+            position: relative;
+            height: 100%;
+            background: #fff;
+            border: 1px solid #dce6f1;
+            border-radius: 8px;
+            padding: 1.35rem 1.25rem 1.25rem;
+        }
+
+        .step-card::before {
+            counter-increment: step;
+            content: counter(step);
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            align-items: center;
+            justify-content: center;
+            color: var(--dentist-primary);
+            background: var(--dentist-accent);
+            border-radius: 8px;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .step-card h3 {
+            font-size: 1.05rem;
+            color: var(--dentist-ink);
+            font-weight: 800;
+        }
+
+        .structure-panel {
+            background: var(--dentist-primary);
+            color: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .structure-panel h2,
+        .structure-panel p {
+            color: #fff;
+        }
+
+        .structure-item {
+            height: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .structure-item h3 {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: .45rem;
+        }
+
+        .structure-item p {
+            color: #dbe9f7;
+            font-size: .95rem;
+            line-height: 1.55;
+            margin-bottom: 0;
+        }
+
+        .dentist-final-cta {
+            background: var(--dentist-primary);
+            color: #fff;
+            padding: 4rem 0;
+        }
+
+        .dentist-final-cta h2 {
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        .dentist-final-cta p {
+            max-width: 760px;
+            color: #dbe9f7;
+        }
+
+        .whatsapp-float .bi,
+        .dentist-final-cta .bi,
+        .dentist-hero .bi {
+            color: inherit;
+        }
+
+        @media (max-width: 767px) {
+            .dentist-hero {
+                min-height: 72vh;
+                background-position: center;
+            }
+
+            .dentist-hero::before {
+                background: rgba(3, 22, 42, 0.84);
+            }
+
+            .dentist-hero .container {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+
+            .dentist-actions .btn {
+                width: 100%;
+            }
+
+            .dentist-section {
+                padding: 3.25rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <header class="dentist-hero">
+        <div class="container">
+            <span class="dentist-kicker"><i class="bi bi-stars" aria-hidden="true"></i> CoderTec para odontologia</span>
+            <h1>Sites para Dentistas que transmitem confiança e ajudam a gerar mais contatos</h1>
+            <p>Criação de sites profissionais para dentistas e clínicas odontológicas, com visual moderno, versão mobile, foco em conversão, presença no Google e integração com WhatsApp.</p>
+            <div class="dentist-actions">
+                <a href="https://wa.me/5541988615268?text=Ol%C3%A1%21%20Quero%20solicitar%20um%20or%C3%A7amento%20para%20um%20site%20odontol%C3%B3gico."
+                    class="btn btn-warning btn-lg" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-whatsapp" aria-hidden="true"></i> Solicitar orçamento
+                </a>
+                <a href="#exemplos" class="btn btn-outline-light btn-lg">Ver exemplos</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="dentist-section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Uma solução pensada para dentistas e clínicas odontológicas</h2>
+                    <p>A página é estruturada para apresentar autoridade, orientar o paciente e facilitar o contato sem perder o tom profissional esperado na área da saúde.</p>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-person-badge" aria-hidden="true"></i>
+                            <h3>Dentistas autônomos</h3>
+                            <p>Apresentação profissional para quem precisa fortalecer nome, especialidades e agenda própria.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-building" aria-hidden="true"></i>
+                            <h3>Clínicas odontológicas</h3>
+                            <p>Estrutura para mostrar equipe, tratamentos, localização, convênios e canais de atendimento.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-shield-plus" aria-hidden="true"></i>
+                            <h3>Implantodontistas</h3>
+                            <p>Páginas claras para explicar implantes, avaliação, diferenciais técnicos e próximos passos.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i>
+                            <h3>Ortodontistas</h3>
+                            <p>Conteúdo organizado para aparelhos, alinhadores, acompanhamento e dúvidas frequentes.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-heart" aria-hidden="true"></i>
+                            <h3>Odontopediatras</h3>
+                            <p>Comunicação acolhedora para pais, crianças e rotinas de prevenção no consultório.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-brightness-high" aria-hidden="true"></i>
+                            <h3>Harmonização orofacial</h3>
+                            <p>Apresentação elegante para procedimentos, critérios de segurança e atendimento personalizado.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dentist-section">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-5">
+                        <div class="section-heading mb-lg-0">
+                            <h2>O que entregamos no seu site</h2>
+                            <p>Montamos uma presença digital com as páginas e recursos essenciais para o paciente entender sua atuação e conseguir falar com você rapidamente.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="dentist-card">
+                            <ul class="dentist-list row row-cols-1 row-cols-md-2">
+                                <li class="col">Página inicial profissional</li>
+                                <li class="col">Página sobre a clínica ou profissional</li>
+                                <li class="col">Página de tratamentos</li>
+                                <li class="col">Página de contato com mapa e WhatsApp</li>
+                                <li class="col">Versão mobile</li>
+                                <li class="col">Formulário de contato</li>
+                                <li class="col">Botões estratégicos para agendamento</li>
+                                <li class="col">Integração com redes sociais</li>
+                                <li class="col">Estrutura preparada para SEO</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dentist-section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Mais do que um site bonito: uma presença digital profissional</h2>
+                    <p>O projeto combina visual, conteúdo e caminhos de contato para transformar visitas em conversas reais com pacientes em potencial.</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-palette" aria-hidden="true"></i>
+                            <h3>Visual profissional e personalizado</h3>
+                            <p>Layout alinhado à identidade da clínica, com leitura clara e aparência confiável.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-patch-check" aria-hidden="true"></i>
+                            <h3>Foco em transmitir confiança</h3>
+                            <p>Conteúdo organizado para explicar sua atuação, estrutura, diferenciais e formas de atendimento.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-cursor" aria-hidden="true"></i>
+                            <h3>Páginas pensadas para conversão</h3>
+                            <p>Chamadas para WhatsApp e orçamento em pontos estratégicos da navegação.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-search" aria-hidden="true"></i>
+                            <h3>Estrutura organizada para Google</h3>
+                            <p>Títulos, descrições, hierarquia e conteúdo pensados para uma presença própria mais forte.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-phone" aria-hidden="true"></i>
+                            <h3>Boa experiência no celular</h3>
+                            <p>Carregamento leve, botões acessíveis e navegação confortável para quem chega pelo mobile.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <i class="bi bi-diagram-3" aria-hidden="true"></i>
+                            <h3>Pronto para evoluir</h3>
+                            <p>Possibilidade de expansão com blog, landing pages específicas, automações e atendimento com IA.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dentist-section" id="exemplos">
+            <div class="container">
+                <div class="structure-panel">
+                    <div class="row g-4 align-items-start">
+                        <div class="col-lg-5">
+                            <h2>Estrutura que seu site pode incluir</h2>
+                            <p>Além da página institucional, o projeto pode incluir páginas específicas para tratamentos e especialidades, conforme o perfil do consultório ou da clínica.</p>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="row row-cols-1 row-cols-md-2 g-3">
+                                <div class="col">
+                                    <article class="structure-item">
+                                        <h3>Página institucional</h3>
+                                        <p>Apresenta a clínica, equipe, diferenciais e formas de contato.</p>
+                                    </article>
+                                </div>
+                                <div class="col">
+                                    <article class="structure-item">
+                                        <h3>Página de implantes dentários</h3>
+                                        <p>Focada na apresentação do tratamento e geração de contatos.</p>
+                                    </article>
+                                </div>
+                                <div class="col">
+                                    <article class="structure-item">
+                                        <h3>Página de ortodontia</h3>
+                                        <p>Ideal para destacar tipos de aparelhos, alinhadores e avaliação.</p>
+                                    </article>
+                                </div>
+                                <div class="col">
+                                    <article class="structure-item">
+                                        <h3>Página de clareamento dental</h3>
+                                        <p>Voltada à apresentação do procedimento e conversão.</p>
+                                    </article>
+                                </div>
+                                <div class="col">
+                                    <article class="structure-item">
+                                        <h3>Página de harmonização facial</h3>
+                                        <p>Organizada para serviços estéticos faciais.</p>
+                                    </article>
+                                </div>
+                                <div class="col">
+                                    <article class="structure-item">
+                                        <h3>Página de odontopediatria</h3>
+                                        <p>Comunicação mais acolhedora para pais e responsáveis.</p>
+                                    </article>
+                                </div>
+                                <div class="col">
+                                    <article class="structure-item">
+                                        <h3>Página de lentes de contato dental</h3>
+                                        <p>Apresentação comercial do tratamento estético.</p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dentist-section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Por que investir em um site profissional para dentistas</h2>
+                    <p>Um site próprio ajuda sua marca a ser encontrada, compreendida e lembrada quando o paciente está pronto para escolher atendimento.</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <article class="dentist-card">
+                            <h3>Mais credibilidade online</h3>
+                            <p>Um endereço próprio passa segurança e apresenta seu consultório com mais controle do que apenas redes sociais.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <h3>Melhor apresentação dos tratamentos</h3>
+                            <p>O paciente entende possibilidades, diferenciais e caminhos de atendimento antes de chamar no WhatsApp.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <h3>Facilidade para entrar em contato</h3>
+                            <p>Botões de WhatsApp, formulário, mapa e telefone ficam organizados em uma jornada simples.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <h3>Presença própria</h3>
+                            <p>Seu conteúdo não depende só do alcance de uma rede social ou de posts que desaparecem no feed.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <h3>Mais chances no Google</h3>
+                            <p>Uma estrutura preparada para SEO cria base para ser encontrado em buscas por serviços odontológicos.</p>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="dentist-card">
+                            <h3>Base para crescimento digital</h3>
+                            <p>O site pode receber campanhas, páginas de tratamento, automações, blog e novas integrações.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dentist-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Como funciona</h2>
+                    <p>O processo é guiado para sair do briefing inicial até a publicação com clareza, colaboração e foco comercial.</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4 steps">
+                    <div class="col">
+                        <article class="step-card">
+                            <h3>Entendemos seu momento e objetivo</h3>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="step-card">
+                            <h3>Definimos a estrutura ideal do site</h3>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="step-card">
+                            <h3>Criamos o layout e os textos-base</h3>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="step-card">
+                            <h3>Publicamos com versão mobile e contato integrado</h3>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="step-card">
+                            <h3>Seguimos com manutenção e evolução, se desejar</h3>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dentist-final-cta">
+            <div class="container">
+                <h2>Quer um site profissional para seu consultório ou clínica odontológica?</h2>
+                <p class="mt-3">Podemos criar uma estrutura sob medida para fortalecer sua presença digital e facilitar a geração de novos contatos.</p>
+                <div class="dentist-actions">
+                    <a href="https://wa.me/5541988615268?text=Ol%C3%A1%21%20Quero%20falar%20sobre%20um%20site%20profissional%20para%20dentista."
+                        class="btn btn-warning btn-lg" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-whatsapp" aria-hidden="true"></i> Falar no WhatsApp
+                    </a>
+                    <a href="/pt/index.html#contato" class="btn btn-outline-light btn-lg">Solicitar orçamento</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5541988615268?text=Ol%C3%A1%21%20Quero%20um%20site%20para%20minha%20cl%C3%ADnica%20odontol%C3%B3gica."
+            target="_blank" class="whatsapp-link" aria-label="Fale conosco no WhatsApp" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <button id="btnVoltarAoTopo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/include.js"></script>
+    <script src="/static/js/pwa-install.js"></script>
+    <script src="/static/js/btn_topo.js"></script>
+    <script src="/static/js/navbar-mobile-fix.js"></script>
+</body>
+
+</html>

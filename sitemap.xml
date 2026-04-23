@@ -37,6 +37,24 @@
     <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/site-que-trabalha/" />
   </url>
 
+  <url>
+    <loc>https://codertec.com.br/pt/sites-para-dentistas/</loc>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/sites-para-dentistas/" />
+  </url>
+
+  <url>
+    <loc>https://codertec.com.br/pt/sites-para-medicos/</loc>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/sites-para-medicos/" />
+  </url>
+
+  <url>
+    <loc>https://codertec.com.br/pt/sites-para-psicologos/</loc>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://codertec.com.br/pt/sites-para-psicologos/" />
+  </url>
+
   <!-- PRODUTOS -->
   <url>
     <loc>https://codertec.com.br/pt/produtos/psicosense/</loc>
