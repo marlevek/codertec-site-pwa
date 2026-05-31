@@ -39,18 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function loadChatbot() {
-    console.log("🚀 Iniciando loadChatbot()");
+    // Widget AtendeSite (substitui o chatbot antigo). createElement para o
+    // <script> de fato executar.
+    if (document.getElementById("atendesite-widget")) return;
 
     const script = document.createElement("script");
-    script.src = "/static/js/chatbot-loader.js";
+    script.id = "atendesite-widget";
+    script.src = "https://api.codertec.com.br/widget.js";
+    script.setAttribute("data-tenant", "codertec");
+    script.setAttribute("data-bottom", "170"); // acima do botão de WhatsApp do site
     script.defer = true;
     document.body.appendChild(script);
 
-    script.onload = () => console.log("🤖 chatbot-loader.js carregado!");
-    script.onerror = () => console.error("❌ Erro ao carregar chatbot-loader.js");
-
     document.dispatchEvent(new Event("partialsLoaded"));
-
 }
 
 
