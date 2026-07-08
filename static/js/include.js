@@ -37,7 +37,7 @@ function injectChatbotLoader() {
 
   const script = document.createElement("script");
   script.id = "atendesite-widget";
-  script.src = "https://api.codertec.com.br/widget.js";
+  script.src = "https://api.atendesite.com.br/widget.js";
   script.setAttribute("data-tenant", "codertec");
   script.setAttribute("data-bottom", "170"); // acima do botão de WhatsApp do site
   script.defer = true;
