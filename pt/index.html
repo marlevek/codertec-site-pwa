@@ -458,6 +458,9 @@
                 envie sua mensagem. Vamos entender seu cenário e propor a melhor solução para o seu negócio.</p>
             <form class="shadow p-4" action="/contact.php" method="POST">
                 <input type="hidden" name="lang" value="pt">
+                <div hidden aria-hidden="true" style="display:none !important">
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+                </div>
                 <div class="mb-3">
                     <label for="nome" class="form-label">Seu nome</label>
                     <input type="text" class="form-control" name='nome' id="nome" placeholder="Como podemos chamar você?" required>
