@@ -1,4 +1,4 @@
-﻿# Proteção do formulário de contato
+# Proteção do formulário de contato
 
 ## Arquivos para enviar à hospedagem
 
