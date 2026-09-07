@@ -1,0 +1,133 @@
+.website-cases-heading {
+    margin-top: 4rem;
+    max-width: 760px;
+}
+
+.website-cases-heading > span,
+.website-case-category {
+    color: #0b5ed7;
+    display: block;
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.website-cases-heading h2 {
+    color: #052441;
+    font-size: clamp(1.9rem, 4vw, 2.75rem);
+    margin: .55rem 0 .75rem;
+}
+
+.website-cases-heading p {
+    color: #536a80;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.website-cases-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 2rem;
+}
+
+.website-case-card {
+    background: #fff;
+    border: 1px solid #d8e5f2;
+    border-radius: 22px;
+    box-shadow: 0 16px 38px rgba(5, 36, 65, .07);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.website-case-card-highlight {
+    border-color: #8dbbea;
+}
+
+.website-case-media {
+    aspect-ratio: 16 / 10;
+    background: #edf3f8;
+    display: block;
+    overflow: hidden;
+}
+
+.website-case-media img {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    transition: filter .3s ease, transform .3s ease;
+    width: 100%;
+}
+
+.website-case-media:hover img {
+    filter: saturate(1.03);
+    transform: scale(1.01);
+}
+
+.website-case-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: clamp(1.35rem, 3vw, 1.8rem);
+}
+
+.website-case-content h3 {
+    color: #052441;
+    font-size: 1.35rem;
+    margin: .55rem 0 .65rem;
+}
+
+.website-case-content > p {
+    color: #536a80;
+    line-height: 1.65;
+}
+
+.website-case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    list-style: none;
+    margin: .9rem 0 1.4rem;
+    padding: 0;
+}
+
+.website-case-tags li {
+    background: #eef6ff;
+    border: 1px solid #d3e6fb;
+    border-radius: 999px;
+    color: #315a82;
+    font-size: .8rem;
+    font-weight: 700;
+    padding: .38rem .7rem;
+}
+
+.website-case-content .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+@media (max-width: 767px) {
+    .website-cases-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575px) {
+    .website-case-card {
+        border-radius: 18px;
+    }
+
+    .website-case-content .btn {
+        min-height: 48px;
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .website-case-media img {
+        transition: none;
+    }
+}
