@@ -1,0 +1,20 @@
+/* English portfolio only: keep CTA contrast independent of shared link styles. */
+.portfolio-page .btn-light,
+.portfolio-page .btn-light:visited {
+  color: #052441;
+}
+
+.portfolio-page .btn-primary {
+  background-color: #0759ad;
+  color: #fff;
+}
+
+.portfolio-page .btn-primary:hover {
+  background-color: #052441;
+}
+
+.portfolio-page a:focus-visible,
+.portfolio-page button:focus-visible {
+  outline: 3px solid #b46b00;
+  outline-offset: 4px;
+}
