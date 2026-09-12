@@ -39,6 +39,7 @@ function injectChatbotLoader() {
   script.id = "atendesite-widget";
   script.src = "https://api.atendesite.com.br/widget.js";
   script.setAttribute("data-tenant", "codertec");
+  script.setAttribute("data-lang", "pt");  // idioma desta versão do site — widget traduz a UI e a IA responde nele
   script.setAttribute("data-bottom", "170"); // acima do botão de WhatsApp do site
   script.defer = true;
   document.body.appendChild(script);

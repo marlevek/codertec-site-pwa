@@ -21,24 +21,3 @@
     <p class="pt-4">&copy; 2025 CoderTec. Todos os direitos reservados.</p>
   </div>
 </footer>
-
-<!-- ✅ Chatbot Loader com fallback -->
-<script>
-  (function () {
-    // Evita múltiplos carregamentos
-    if (window.CHATBOT_LOADED) return;
-    window.CHATBOT_LOADED = true;
-
-    // Caminho dinâmico
-    const script = document.createElement("script");
-    script.src =
-      location.hostname === "127.0.0.1" || location.hostname === "localhost"
-        ? "static/js/chatbot-loader.js"
-        : "/static/js/chatbot-loader.js";
-    script.defer = true;
-    document.body.appendChild(script);
-
-    script.onload = () => console.log("💬 Chatbot loader carregado e executado com sucesso!");
-    script.onerror = () => console.error("❌ Erro ao carregar chatbot-loader.js");
-  })();
-</script>

@@ -23,20 +23,3 @@
     <p class="pt-4">&copy; 2025 CoderTec. Todos los derechos reservados.</p>
   </div>
 </footer>
-
-<!-- Chatbot loader -->
-<script>
-  (function () {
-    if (window.CHATBOT_LOADED) return;
-    window.CHATBOT_LOADED = true;
-
-    const isLocal = location.hostname.includes("127.0.0.1") || location.hostname.includes("localhost");
-
-    const script = document.createElement("script");
-    script.src = isLocal ? "/static/js/chatbot-loader.js" : "/static/js/chatbot-loader.js";
-    script.defer = true;
-    document.body.appendChild(script);
-
-    script.onload = () => console.log("💬 Chatbot ES carregado!");
-  })();
-</script>
