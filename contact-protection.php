@@ -2,14 +2,14 @@
 // Shared by every contact endpoint. No SMTP dependencies here.
 function contact_error($key, $lang) {
     $messages = [
-        'pt' => ['method'=>'Use POST para enviar o formulário.', 'invalid'=>'Informe nome (1–120 caracteres), e-mail válido (até 254 bytes) e mensagem (1–5000 caracteres), somente como texto.', 'spam'=>'Mensagem bloqueada pela proteção contra spam.', 'limit'=>'Limite de cinco envios em quinze minutos atingido. Tente novamente mais tarde.', 'storage'=>'Formulário temporariamente indispon?vel. Tente novamente mais tarde.', 'send'=>'Não foi possível enviar a mensagem. Tente novamente mais tarde.'],
-        'en' => ['method'=>'Use POST to submit the form.', 'invalid'=>'Enter a name (1–120 characters), valid email (up to 254 bytes), and message (1–5000 characters), as text only.', 'spam'=>'Message blocked by spam protection.', 'limit'=>'The limit of five submissions in fifteen minutes has been reached. Please try again later.', 'storage'=>'Form temporarily unavailable. Please try again later.', 'send'=>'Unable to send the message. Please try again later.'],
-        'es' => ['method'=>'Utilice POST para enviar el formulario.', 'invalid'=>'Introduzca nombre (1–120 caracteres), correo válido (hasta 254 bytes) y mensaje (1–5000 caracteres), solo como texto.', 'spam'=>'Mensaje bloqueado por la protección contra spam.', 'limit'=>'Se alcanzó el límite de cinco envíos en quince minutos. Inténtelo m?s tarde.', 'storage'=>'Formulario temporalmente no disponible. Inténtelo m?s tarde.', 'send'=>'No se pudo enviar el mensaje. Inténtelo m?s tarde.']
+        'pt' => ['method'=>'Use POST para enviar o formulário.', 'invalid'=>'Informe nome (1–120 caracteres), e-mail válido (até 254 bytes) e mensagem (1–5000 caracteres), somente como texto.', 'spam'=>'Mensagem bloqueada pela proteção contra spam.', 'limit'=>'Limite de cinco envios em quinze minutos atingido. Tente novamente mais tarde.', 'storage'=>'Formulário temporariamente indispon?vel. Tente novamente mais tarde.', 'send'=>'Não foi possível enviar a mensagem. Tente novamente mais tarde.', 'token'=>'Formulário expirado ou JavaScript desativado. Recarregue a página e envie novamente.'],
+        'en' => ['method'=>'Use POST to submit the form.', 'invalid'=>'Enter a name (1–120 characters), valid email (up to 254 bytes), and message (1–5000 characters), as text only.', 'spam'=>'Message blocked by spam protection.', 'limit'=>'The limit of five submissions in fifteen minutes has been reached. Please try again later.', 'storage'=>'Form temporarily unavailable. Please try again later.', 'send'=>'Unable to send the message. Please try again later.', 'token'=>'Form expired or JavaScript disabled. Reload the page and submit again.'],
+        'es' => ['method'=>'Utilice POST para enviar el formulario.', 'invalid'=>'Introduzca nombre (1–120 caracteres), correo válido (hasta 254 bytes) y mensaje (1–5000 caracteres), solo como texto.', 'spam'=>'Mensaje bloqueado por la protección contra spam.', 'limit'=>'Se alcanzó el límite de cinco envíos en quince minutos. Inténtelo m?s tarde.', 'storage'=>'Formulario temporalmente no disponible. Inténtelo m?s tarde.', 'send'=>'No se pudo enviar el mensaje. Inténtelo m?s tarde.', 'token'=>'Formulario caducado o JavaScript desactivado. Recargue la página y envíe de nuevo.']
     ];
     return $messages[$lang][$key];
 }
 function contact_validate($post, $fields) {
-    foreach (array_merge(array_values($fields), ['website', 'lang']) as $field) {
+    foreach (array_merge(array_values($fields), ['website', 'lang', 'form_token']) as $field) {
         if (isset($post[$field]) && !is_string($post[$field])) return ['error'=>'invalid'];
         if (array_key_exists($field, $post) && $post[$field] === null) return ['error'=>'invalid'];
     }
@@ -27,8 +27,8 @@ function contact_validate($post, $fields) {
     }
     if (strlen($data['email']) > 254 || !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) return ['error'=>'invalid'];
     $text = implode(' ', $data);
-    // Exact malicious domain (including subdomains), not unrelated domains containing its name.
-    if (preg_match('/(?<![a-z0-9_-])(?:[a-z0-9_-]+\.)*clickto\.cc(?![a-z0-9_-]|\.[a-z0-9_-])/i', $text)
+    // Exact malicious domains (including subdomains), not unrelated domains containing its name.
+    if (preg_match('/(?<![a-z0-9_-])(?:[a-z0-9_-]+\.)*(?:clickto\.cc|telegra\.ph)(?![a-z0-9_-]|\.[a-z0-9_-])/i', $text)
         || preg_match('/your\s+\$25,000\s+promo\s+code\s+is\s+your\s+treasure/i', $text)) return ['error'=>'spam'];
     return $data;
 }
@@ -45,6 +45,37 @@ function contact_storage_dir() {
         if (stripos($candidate, $root) === 0) throw new RuntimeException('storage');
     }
     return $real;
+}
+function contact_secret($dir) {
+    $path = $dir . '/form-secret.key';
+    $secret = @file_get_contents($path);
+    if (is_string($secret) && strlen($secret) === 64) return $secret;
+    $file = @fopen($path, 'c+');
+    if (!$file) throw new RuntimeException('storage');
+    @chmod($path, 0600);
+    try {
+        if (!flock($file, LOCK_EX)) throw new RuntimeException('storage');
+        $secret = stream_get_contents($file);
+        if (strlen($secret) !== 64) {
+            $secret = bin2hex(random_bytes(32));
+            rewind($file);
+            if (!ftruncate($file, 0) || fwrite($file, $secret) !== 64 || !fflush($file)) throw new RuntimeException('storage');
+        }
+        return $secret;
+    } finally {
+        flock($file, LOCK_UN);
+        fclose($file);
+    }
+}
+// Issued by contact-token.php when the page runs JavaScript; bots posting directly have no token.
+function contact_token_issue($secret, $now = null) {
+    $ts = (string)($now ?? time());
+    return $ts . '.' . hash_hmac('sha256', $ts, $secret);
+}
+function contact_token_valid($token, $secret, $now = null) {
+    if (!is_string($token) || !preg_match('/^(\d{1,12})\.([0-9a-f]{64})$/', $token, $m)) return false;
+    $age = ($now ?? time()) - (int)$m[1];
+    return hash_equals(hash_hmac('sha256', $m[1], $secret), $m[2]) && $age >= 3 && $age <= 7200;
 }
 function contact_rate_limit($dir, $ip, $now = null) {
     if (!filter_var($ip, FILTER_VALIDATE_IP)) throw new RuntimeException('storage');

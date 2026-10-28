@@ -1,4 +1,4 @@
-const CACHE_NAME = "codertec-pwa-v6";
+const CACHE_NAME = "codertec-pwa-v7";
 
 const OFFLINE_URL = "/offline.html";
 
@@ -62,7 +62,7 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
   if (event.request.method !== "GET") return;
   const pathname = new URL(event.request.url).pathname;
-  if (/^\/(?:contact\.php|en\/contact_site_en\.php|es\/contacto_site_es\.php)(?:\/|$)/i.test(pathname)) return;
+  if (/^\/(?:contact\.php|contact-token\.php|en\/contact_site_en\.php|es\/contacto_site_es\.php)(?:\/|$)/i.test(pathname)) return;
 
 
   // Não cachear vídeos, demos, mp4

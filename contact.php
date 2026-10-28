@@ -16,10 +16,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
 $data = contact_validate($_POST, $fields);
 if (isset($data['error'])) contact_fail($data['error'] === 'spam' ? 422 : 400, $data['error'], $lang);
 try {
-    $retry = contact_rate_limit(contact_storage_dir(), $_SERVER['REMOTE_ADDR'] ?? '');
+    $storageDir = contact_storage_dir();
+    $tokenValid = contact_token_valid($_POST['form_token'] ?? '', contact_secret($storageDir));
+    $retry = $tokenValid ? contact_rate_limit($storageDir, $_SERVER['REMOTE_ADDR'] ?? '') : 0;
 } catch (Throwable $e) {
     contact_fail(503, 'storage', $lang);
 }
+if (!$tokenValid) contact_fail(422, 'token', $lang);
 if ($retry) {
     header('Retry-After: ' . $retry);
     contact_fail(429, 'limit', $lang);

@@ -6,7 +6,7 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, *args): return None
 with tempfile.TemporaryDirectory(prefix='codertec-contact-test-') as tmp:
     base = Path(tmp); public = base/'public'; public.mkdir()
-    for name in ['contact.php','contact-protection.php','en/contact_site_en.php','es/contacto_site_es.php']:
+    for name in ['contact.php','contact-protection.php','contact-token.php','en/contact_site_en.php','es/contacto_site_es.php']:
         dest=public/name; dest.parent.mkdir(exist_ok=True); shutil.copy2(ROOT/name,dest)
     mock=public/'PHPMailer/src'; mock.mkdir(parents=True)
     (mock/'PHPMailer.php').write_text('''<?php
@@ -27,7 +27,9 @@ class PHPMailer {
     server=subprocess.Popen(['php','-S',f'127.0.0.1:{port}','-t',str(public)],env=env,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
     opener=urllib.request.build_opener(NoRedirect)
     good={'nome':'Ana <Silva>','email':'ana@example.com','mensagem':'Quero uma promoção para meu site https://example.com?a=1&b=2','website':'','lang':'pt'}
-    def request(data, path='/contact.php', expected=400):
+    token={'value':''}
+    def request(data, path='/contact.php', expected=400, with_token=True):
+        if data is not None and with_token and 'form_token' not in data: data={**data,'form_token':token['value']}
         req=urllib.request.Request(f'http://127.0.0.1:{port}'+path, data=urllib.parse.urlencode(data).encode() if data is not None else None,headers={'X-Forwarded-For':'198.51.100.99'})
         try: response=opener.open(req)
         except urllib.error.HTTPError as error: response=error
@@ -40,6 +42,14 @@ class PHPMailer {
                 with socket.create_connection(('127.0.0.1',port),timeout=.1): break
             except OSError: time.sleep(.1)
         request(None,expected=405)
+        token['value']=json.loads(urllib.request.urlopen(f'http://127.0.0.1:{port}/contact-token.php').read())['token']
+        _,body=request(good,expected=422); assert 'expirado' in body  # issued less than 3s ago
+        time.sleep(3.2)
+        request(good,expected=422,with_token=False)
+        request({**good,'form_token':token['value'][:-1]+('0' if token['value'][-1]!='0' else '1')},expected=422)
+        request({**good,'form_token':'9999999999.'+'a'*64},expected=422)
+        request({'name':'EdwardNax','email':'inanna.na@icloud.com','message':'Read the news'},'/en/contact_site_en.php',422,with_token=False)
+        request({**good,'mensagem':'Read the news https://telegra.ph/Read-the-latest-news-and-earn-50000000-in-a-month-Message-ID-357976-10-05'},expected=422)
         for patch in [{'mensagem':'YOUR $25,000 PROMO CODE IS YOUR TREASURE'}, {'mensagem':'Veja https://m.clickto.cc/test'}, {'website':'bot'}, {'email':'bad'}, {'nome':''}, {'mensagem':'x'*5001}, {'nome':'x'*121}, {'nome':'x\r\nBcc: victim@example.com'}]:
             request({**good,**patch},expected=422 if 'website' in patch or patch.get('mensagem','').startswith(('YOUR','Veja')) else 400)
         for field in ['nome','email','mensagem','website','lang']:
@@ -69,6 +79,6 @@ class PHPMailer {
         # Storage inside the web root must fail closed before SMTP.
         check=base/'storage.php'; check.write_text("<?php require $argv[1]; $_SERVER['DOCUMENT_ROOT']=$argv[2]; putenv('CODERTEC_CONTACT_STORAGE=' . $argv[2]); try {contact_storage_dir(); exit(1);} catch (RuntimeException $e) {exit(0);}")
         subprocess.run(['php',str(check),str(public/'contact-protection.php'),str(public)],check=True)
-        print('PASS: legitimate message, HTML escaping, specific spam, honeypot, invalid email, required/oversized/array fields, legacy routes, languages, HTTP status/redirects, shared rate limit, expiration/cleanup, concurrency, private storage. No real email sent.')
+        print('PASS: signed form token (missing/forged/too fast), telegra.ph, legitimate message, HTML escaping, specific spam, honeypot, invalid email, required/oversized/array fields, legacy routes, languages, HTTP status/redirects, shared rate limit, expiration/cleanup, concurrency, private storage. No real email sent.')
     finally:
         server.terminate(); server.wait(timeout=5)
